@@ -1,0 +1,78 @@
+import { CONTACT, SITE_URL, SOCIAL } from "./site";
+import type { Dictionary, Locale } from "./i18n";
+import type { ServiceContent } from "./i18n";
+
+export function organizationSchema(locale: Locale) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: "Glomark",
+    alternateName: "جلومارك",
+    url: `${SITE_URL}/${locale}/`,
+    logo: `${SITE_URL}/brand/glomark-full.svg`,
+    image: `${SITE_URL}/og/glomark-og.jpg`,
+    description:
+      locale === "ar"
+        ? "جلومارك وكالة تسويق وإنتاج إعلامي في صلالة، عُمان."
+        : "Glomark is a marketing and media production agency in Salalah, Oman.",
+    telephone: CONTACT.phone,
+    email: CONTACT.email,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: CONTACT.street,
+      addressLocality: CONTACT.city,
+      addressRegion: CONTACT.region,
+      addressCountry: CONTACT.countryCode,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: CONTACT.geo.lat,
+      longitude: CONTACT.geo.lng,
+    },
+    areaServed: ["Oman", "Dhofar", "Gulf Cooperation Council"],
+    sameAs: SOCIAL.map((s) => s.href),
+  };
+}
+
+export function serviceSchema(
+  service: ServiceContent,
+  locale: Locale,
+  dict: Dictionary,
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_URL}/${locale}/services/${service.slug}/#service`,
+    name: service.title,
+    description: service.summary,
+    serviceType: service.title,
+    provider: {
+      "@type": "Organization",
+      name: "Glomark",
+      "@id": `${SITE_URL}/#organization`,
+      url: `${SITE_URL}/${locale}/`,
+      telephone: CONTACT.phone,
+      email: CONTACT.email,
+    },
+    areaServed: ["Oman", "Dhofar", "Gulf Cooperation Council"],
+    url: `${SITE_URL}/${locale}/services/${service.slug}/`,
+    inLanguage: locale,
+  };
+}
+
+export function breadcrumbSchema(
+  locale: Locale,
+  items: { name: string; path: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: `${SITE_URL}/${locale}${item.path === "/" ? "/" : item.path + "/"}`,
+    })),
+  };
+}

@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0a0a14;
+  --ink-2: #101024;
+  --ink-3: #16162e;
+  --indigo: #403d92;
+  --indigo-deep: #201e4a;
+  --indigo-soft: #5b57c4;
+  --lime: #b8d444;
+  --lime-bright: #cde85a;
+  --cream: #f4f3ee;
+  --muted: #9b99b5;
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--ink);
+    color: var(--cream);
+    font-feature-settings: "ss01", "cv01";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--lime);
+    color: var(--ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--lime);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display), system-ui, sans-serif;
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  /* Arabic locale: swap the display + body faces for the Arabic face and
+     relax the tight Latin tracking that does not suit Arabic letterforms. */
+  [dir="rtl"] body {
+    font-family: var(--font-arabic), system-ui, sans-serif;
+  }
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4 {
+    font-family: var(--font-arabic), system-ui, sans-serif;
+    letter-spacing: 0;
+    line-height: 1.15;
+  }
+}
+
+@layer components {
+  .container-x {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: clamp(1.25rem, 5vw, 3.5rem);
+  }
+
+  .eyebrow {
+    font-family: var(--font-body), system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--lime);
+  }
+  [dir="rtl"] .eyebrow {
+    letter-spacing: 0.1em;
+    font-family: var(--font-arabic), system-ui, sans-serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      100deg,
+      var(--cream) 0%,
+      var(--cream) 55%,
+      var(--indigo-soft) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .lime-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--lime);
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+  }
+
+  /* Fine dark panel with a hairline indigo edge. */
+  .panel {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.035),
+      rgba(255, 255, 255, 0.01)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Subtle film grain / vignette to keep large dark fields from banding. */
+  .grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(
+      circle at 50% 0%,
+      rgba(91, 87, 196, 0.14),
+      transparent 60%
+    );
+    z-index: 0;
+  }
+}
+
+@layer utilities {
+  .balance {
+    text-wrap: balance;
+  }
+  .pretty {
+    text-wrap: pretty;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Respect reduced-motion globally: kill non-essential animation. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
