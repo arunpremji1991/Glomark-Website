@@ -51,3 +51,84 @@ export const BLOG_SLUGS = [
 ] as const;
 
 export type BlogSlug = (typeof BLOG_SLUGS)[number];
+
+// Canonical portfolio client order + stable slugs (locale-neutral). Each
+// client's logo lives at /media/clients/<slug>.webp (see README).
+export const CLIENT_SLUGS = [
+  "reventure",
+  "firstexchange",
+  "voice-of-the-season",
+  "do-events",
+  "do-chocolate",
+  "do-cafe",
+  "ventura",
+] as const;
+
+export type ClientSlug = (typeof CLIENT_SLUGS)[number];
+
+// External profile/website for each client — locale-neutral.
+export const CLIENT_LINKS: Record<ClientSlug, string> = {
+  reventure: "https://www.instagram.com/reventure.om/",
+  firstexchange: "https://firstexchangeoman.com/",
+  "voice-of-the-season": "https://dhofarcenter.com/voice-of-the-season/",
+  "do-events": "https://www.instagram.com/do.events_oman/",
+  "do-chocolate": "https://www.instagram.com/do_chocolate/",
+  "do-cafe": "https://www.instagram.com/docafe.om/",
+  ventura: "https://www.instagram.com/ventura.sll/",
+};
+
+export interface GalleryItem {
+  file: string; // filename under /media/clients/gallery/
+  href: string; // link to the original post
+  isVideo: boolean;
+}
+
+// Photo/video samples pulled from each client's own feed — real content
+// Glomark produced or published for them, not stock art. Voice of the
+// Season has no gallery yet (no client-provided event photography at time
+// of writing); leave its array empty rather than filling with mockup art.
+export const CLIENT_GALLERY: Record<ClientSlug, GalleryItem[]> = {
+  reventure: [
+    { file: "reventure-1.webp", href: "https://www.instagram.com/reventure.om/p/DP4g6ihCG38/", isVideo: false },
+    { file: "reventure-2.webp", href: "https://www.instagram.com/reventure.om/p/DcBvsvwiFdz/", isVideo: false },
+    { file: "reventure-3.webp", href: "https://www.instagram.com/reventure.om/p/Db-PVQPCF1A/", isVideo: false },
+    { file: "reventure-4.webp", href: "https://www.instagram.com/reventure.om/reel/Db8j9gkoNGr/", isVideo: true },
+    { file: "reventure-5.webp", href: "https://www.instagram.com/reventure.om/p/Db49Mm_iL7B/", isVideo: false },
+    { file: "reventure-6.webp", href: "https://www.instagram.com/reventure.om/reel/Db2icYEIaaz/", isVideo: true },
+  ],
+  firstexchange: [
+    { file: "firstexchange-1.webp", href: "https://firstexchangeoman.com/", isVideo: false },
+    { file: "firstexchange-2.webp", href: "https://firstexchangeoman.com/", isVideo: false },
+  ],
+  "voice-of-the-season": [],
+  "do-events": [
+    { file: "do-events-1.webp", href: "https://www.instagram.com/do.events_oman/p/Db3KmPejC9K/", isVideo: false },
+    { file: "do-events-2.webp", href: "https://www.instagram.com/do.events_oman/reel/Db3K-AQsSys/", isVideo: true },
+    { file: "do-events-3.webp", href: "https://www.instagram.com/do.events_oman/p/Db3KCqijGSn/", isVideo: false },
+    { file: "do-events-4.webp", href: "https://www.instagram.com/do.events_oman/p/DbqKgDGjKiR/", isVideo: false },
+    { file: "do-events-5.webp", href: "https://www.instagram.com/do.events_oman/reel/DbiOAXfMEN_/", isVideo: true },
+    { file: "do-events-6.webp", href: "https://www.instagram.com/do.events_oman/p/DbpudImDC4T/", isVideo: false },
+  ],
+  "do-chocolate": [
+    { file: "do-chocolate-1.webp", href: "https://www.instagram.com/do_chocolate/p/DbsLUjiuiy4/", isVideo: false },
+    { file: "do-chocolate-2.webp", href: "https://www.instagram.com/do_chocolate/p/DbsLNh_OqNS/", isVideo: false },
+    { file: "do-chocolate-3.webp", href: "https://www.instagram.com/do_chocolate/p/DbsLBseOjF7/", isVideo: false },
+    { file: "do-chocolate-4.webp", href: "https://www.instagram.com/do_chocolate/p/Da_FOeIO35H/", isVideo: false },
+    { file: "do-chocolate-5.webp", href: "https://www.instagram.com/do_chocolate/p/Da--sOYOJf3/", isVideo: false },
+    { file: "do-chocolate-6.webp", href: "https://www.instagram.com/do_chocolate/p/Da-_Au3uSwg/", isVideo: false },
+  ],
+  "do-cafe": [
+    { file: "do-cafe-1.webp", href: "https://www.instagram.com/docafe.om/reel/DbsL3iKuXW3/", isVideo: true },
+    { file: "do-cafe-2.webp", href: "https://www.instagram.com/docafe.om/reel/DbVGz-tOoOZ/", isVideo: true },
+    { file: "do-cafe-3.webp", href: "https://www.instagram.com/docafe.om/reel/DbTl9Adu9dw/", isVideo: true },
+    { file: "do-cafe-4.webp", href: "https://www.instagram.com/docafe.om/reel/DbTdTkhq-cX/", isVideo: true },
+    { file: "do-cafe-5.webp", href: "https://www.instagram.com/docafe.om/p/DbDwJHKoLGN/", isVideo: false },
+    { file: "do-cafe-6.webp", href: "https://www.instagram.com/docafe.om/p/DbDvrFBoQRC/", isVideo: false },
+  ],
+  ventura: [
+    { file: "ventura-1.webp", href: "https://www.instagram.com/ventura.sll/p/Dbwb7TuMjGw/", isVideo: false },
+    { file: "ventura-2.webp", href: "https://www.instagram.com/ventura.sll/reel/DbiLAKPo3tN/", isVideo: true },
+    { file: "ventura-3.webp", href: "https://www.instagram.com/ventura.sll/p/Dbbdmv4CN2Q/", isVideo: false },
+    { file: "ventura-4.webp", href: "https://www.instagram.com/ventura.sll/reel/DbLyxx_IdIg/", isVideo: true },
+  ],
+};

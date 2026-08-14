@@ -4,7 +4,8 @@ import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
-import { ServiceGlyph } from "@/components/ServiceGlyph";
+import { ClientLogo } from "@/components/ClientLogo";
+import { LocaleLink } from "@/components/LocaleLink";
 import { CtaBand } from "@/components/home/CtaBand";
 
 export function generateStaticParams() {
@@ -61,35 +62,46 @@ export default async function WorkPage({
       </header>
 
       <div className="container-x py-20 lg:py-28">
-        <Reveal className="panel mb-12 rounded-xl px-6 py-4">
-          <p className="text-[0.86rem] text-cream/60 pretty">
-            {dict.work.placeholderNote}
-          </p>
-        </Reveal>
-
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {dict.work.items.map((item, i) => (
-            <Reveal key={item.title} delay={(i % 3) * 0.07}>
+          {dict.work.clients.map((client, i) => (
+            <Reveal key={client.slug} delay={(i % 3) * 0.07}>
               <TiltCard max={5} className="h-full">
-                <article className="panel flex h-full flex-col overflow-hidden rounded-2xl">
-                  <div className="relative h-48 overflow-hidden bg-indigo-deep/60">
-                    <ServiceGlyph index={i} className="h-full w-full" />
-                  </div>
-                  <div className="p-6">
-                    <p className="text-[0.72rem] font-semibold uppercase tracking-wide text-lime">
-                      {item.category}
-                    </p>
-                    <h2 className="mt-2 font-display text-xl text-cream">
-                      {item.title}
-                    </h2>
-                    <p className="mt-1.5 text-[0.86rem] text-cream/55">
-                      {item.client}
-                    </p>
-                    <p className="mt-3 text-[0.86rem] text-cream/70">
-                      {item.result}
-                    </p>
-                  </div>
-                </article>
+                <LocaleLink
+                  locale={locale}
+                  href={`/work/${client.slug}`}
+                  className="panel group flex h-full flex-col overflow-hidden rounded-2xl"
+                >
+                  <article className="flex h-full flex-col">
+                    <div className="relative h-48 overflow-hidden bg-cream/95">
+                      <ClientLogo
+                        slug={client.slug}
+                        alt={`${client.name} logo`}
+                        className="h-full w-full"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h2 className="font-display text-xl text-cream">
+                        {client.name}
+                      </h2>
+                      <p className="mt-1.5 text-[0.86rem] text-cream/55">
+                        {client.tagline}
+                      </p>
+                      <p className="mt-3 flex-1 text-[0.86rem] leading-relaxed text-cream/70 pretty">
+                        {client.summary}
+                      </p>
+                      <ul className="mt-4 flex flex-wrap gap-1.5">
+                        {client.services.slice(0, 3).map((s) => (
+                          <li
+                            key={s}
+                            className="rounded-full border border-white/10 px-2.5 py-1 text-[0.7rem] text-cream/60"
+                          >
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </article>
+                </LocaleLink>
               </TiltCard>
             </Reveal>
           ))}

@@ -1,4 +1,4 @@
-import type { ServiceSlug, BlogSlug } from "./site";
+import type { ServiceSlug, BlogSlug, ClientSlug } from "./site";
 
 export const locales = ["en", "ar"] as const;
 export type Locale = (typeof locales)[number];
@@ -28,6 +28,19 @@ export interface ServiceContent {
   description: string[]; // full paragraphs for the service page
   deliverables: string[]; // bullet list of what's included
   keyword: string; // primary SEO keyword the page targets
+  metaTitle: string;
+  metaDescription: string;
+}
+
+export interface ClientCase {
+  slug: ClientSlug;
+  name: string;
+  tagline: string; // one-line description of the client
+  services: string[]; // tags shown on the card + detail page
+  summary: string; // short card blurb
+  scope: string[]; // "Scope of work" paragraphs
+  approach: string[]; // "How we worked" paragraphs
+  linkLabel: string; // e.g. "View on Instagram" / "Visit website"
   metaTitle: string;
   metaDescription: string;
 }
@@ -65,6 +78,7 @@ export interface Dictionary {
     viewAllServices: string;
     exploreService: string;
     backToServices: string;
+    backToWork: string;
     backToBlog: string;
     readArticle: string;
     call: string;
@@ -111,13 +125,12 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     intro: string;
-    placeholderNote: string;
-    items: {
-      client: string;
-      title: string;
-      category: string;
-      result: string;
-    }[];
+    scopeTitle: string;
+    approachTitle: string;
+    galleryTitle: string;
+    viewPost: string;
+    watchVideo: string;
+    clients: ClientCase[];
   };
   blog: {
     metaTitle: string;

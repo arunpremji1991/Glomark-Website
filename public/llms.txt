@@ -25,6 +25,10 @@ Glomark offers eight core services, each with its own page under /en/services/<s
 - Service area: Oman, Dhofar region, and the wider Gulf Cooperation Council
 - Languages: English and Arabic (native bilingual delivery, not machine-translated)
 
+## Selected work
+
+Glomark's portfolio at /en/work/ features real clients, each with its own case-study page under /en/work/<slug>/: Reventure (adventure & outdoor experiences), First Exchange (currency exchange), Voice of the Season 2025 (a musical talent event by Dhofar Center), Do. Events, Do. Chocolate & Flowers, Do. Café, and Ventura (Salalah).
+
 ## Blog
 
 Glomark publishes field notes on media, marketing and brand-building at /en/blog/, each with its own page under /en/blog/<slug>/. Current articles: "Why Bilingual Branding Wins in Oman", "Inside a Broadcast-Grade Live Stream: What Actually Goes Into It", "8 Shots Every Brand Film Needs (And Why)", and "Social Content That Earns Attention, Not Just Reach".

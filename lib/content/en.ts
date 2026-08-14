@@ -21,6 +21,7 @@ const en: Dictionary = {
     viewAllServices: "View all services",
     exploreService: "Explore service",
     backToServices: "All services",
+    backToWork: "All work",
     backToBlog: "All articles",
     readArticle: "Read article",
     call: "Call",
@@ -257,49 +258,174 @@ const en: Dictionary = {
   work: {
     metaTitle: "Work & Case Studies | Glomark",
     metaDescription:
-      "A selection of marketing, media and branding work by Glomark — brand films, campaigns, events and identities produced for brands across Oman.",
+      "Real client work by Glomark — branding, media production, websites and social media management for brands across Oman.",
     eyebrow: "Selected work",
     title: "Work that turned ideas into impact",
     intro:
-      "A look at the range of work we produce across media, marketing and branding. Full client case studies are on the way.",
-    placeholderNote:
-      "These are representative examples of our capabilities. Detailed client case studies are being added as we roll out the new site.",
-    items: [
+      "A look at the brands we've partnered with — real clients, across branding, media, web and social.",
+    scopeTitle: "Scope of work",
+    approachTitle: "How we worked",
+    galleryTitle: "From the feed",
+    viewPost: "View post",
+    watchVideo: "Watch video",
+    clients: [
       {
-        client: "Dhofar Tourism",
-        title: "Khareef season brand film",
-        category: "Media Production",
-        result: "Cinematic hero film + 12 social cut-downs",
+        slug: "reventure",
+        name: "Reventure",
+        tagline: "An adventure and outdoor experiences brand in Oman.",
+        services: [
+          "Logo Design",
+          "Branding",
+          "Website Development",
+          "SEO",
+          "Social Media Management",
+        ],
+        summary:
+          "A ground-up identity and website for an adventure brand built to feel as bold as the experiences it sells.",
+        scope: [
+          "We designed Reventure's logo and complete brand identity from the ground up — a mark and visual system built to carry the energy of outdoor adventure across every touchpoint.",
+          "On top of the identity, we built their website with SEO in mind from the first line of code, and we manage their social channels on an ongoing basis, keeping the brand consistently visible between bookings.",
+        ],
+        approach: [
+          "We started with the brand itself: what Reventure does, who it's for, and what makes an adventure worth booking. That positioning shaped the logo, the colour palette and the tone before a single screen was designed.",
+          "The website and SEO work followed the same brief — fast, easy to book from, and structured to be found by people searching for adventure experiences in Oman. Social media management keeps that momentum going month to month.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "Reventure — Branding & Website | Glomark Work",
+        metaDescription:
+          "How Glomark built Reventure's brand identity, website and ongoing social media presence — an adventure and outdoor experiences brand in Oman.",
       },
       {
-        client: "Al Noor Retail Group",
-        title: "Ramadan campaign",
-        category: "Digital Marketing",
-        result: "Multi-channel campaign across Meta & Google",
+        slug: "firstexchange",
+        name: "First Exchange",
+        tagline: "A currency exchange company in Oman.",
+        services: ["Media Production", "Social Media Management", "SEO"],
+        summary:
+          "Media production, social content and SEO for an established exchange business.",
+        scope: [
+          "For First Exchange, our work centres on media production — photo and video content used across their channels — alongside ongoing social media management and SEO to keep the brand visible and easy to find online.",
+        ],
+        approach: [
+          "Financial services brands earn trust through consistency, so our focus has been steady, professional content and a search presence that holds up over time rather than one-off campaigns.",
+        ],
+        linkLabel: "Visit website",
+        metaTitle: "First Exchange — Media & SEO | Glomark Work",
+        metaDescription:
+          "Media production, social media management and SEO by Glomark for First Exchange, a currency exchange company in Oman.",
       },
       {
-        client: "Port Services Co.",
-        title: "Annual conference",
-        category: "Events & Live Broadcasting",
-        result: "500-guest event with live multi-camera stream",
+        slug: "voice-of-the-season",
+        name: "Voice of the Season 2025",
+        tagline: "A musical talent event by Dhofar Center.",
+        services: [
+          "Logo Design",
+          "Branding",
+          "Landing Page Design",
+          "Online Promotions",
+          "Media Production",
+          "Social Media Management",
+        ],
+        summary:
+          "Full event branding and campaign — from logo to landing page to the promotion around it.",
+        scope: [
+          "Voice of the Season 2025 is a musical event run by Dhofar Center. We built the event's brand identity and logo, designed its landing page, and produced the media used across its online promotion and social channels.",
+        ],
+        approach: [
+          "Event branding has to work on a compressed timeline and build excitement fast, so the identity, landing page and promotion were planned together as one campaign rather than separate deliverables — the logo and colour driving the landing page, and both driving the content calendar.",
+        ],
+        linkLabel: "View event page",
+        metaTitle: "Voice of the Season 2025 — Event Branding | Glomark Work",
+        metaDescription:
+          "Logo, branding, landing page and campaign production by Glomark for Voice of the Season 2025, a musical event by Dhofar Center.",
       },
       {
-        client: "Frankincense Co.",
-        title: "Brand identity system",
-        category: "Branding",
-        result: "Bilingual identity, packaging & guidelines",
+        slug: "do-events",
+        name: "Do. Events",
+        tagline: "An events company in Oman.",
+        services: [
+          "Website Development",
+          "Branding",
+          "Media Production",
+          "Social Media Management",
+        ],
+        summary:
+          "A new website and ongoing media and social support for an events business.",
+        scope: [
+          "For Do. Events, we handled branding, built their website, and produce the media and social content that keeps their event work visible between bookings.",
+        ],
+        approach: [
+          "An events business sells trust as much as it sells production — so the site and social presence are built to showcase real work clearly, updated as new events come in.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "Do. Events — Branding & Website | Glomark Work",
+        metaDescription:
+          "Branding, website development, media production and social media management by Glomark for Do. Events, an events company in Oman.",
       },
       {
-        client: "Coastal Eats",
-        title: "Ordering app & website",
-        category: "App & Web Development",
-        result: "Bilingual app + site with online ordering",
+        slug: "do-chocolate",
+        name: "Do. Chocolate & Flowers",
+        tagline: "A chocolate and flowers brand in Oman.",
+        services: [
+          "Ecommerce Website Development",
+          "Branding",
+          "Media Production",
+          "Social Media Management",
+        ],
+        summary: "An online store, brand identity and always-on social content.",
+        scope: [
+          "We built Do. Chocolate & Flowers' online store alongside their brand identity, and produce the photography, video and social content that keeps the shop feeling fresh.",
+        ],
+        approach: [
+          "For a gifting brand, the product has to look as good online as it does in person — so the ecommerce build and the media production were treated as one job, not two.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "Do. Chocolate & Flowers — Ecommerce & Branding | Glomark Work",
+        metaDescription:
+          "Ecommerce website development, branding, media production and social media management by Glomark for Do. Chocolate & Flowers.",
       },
       {
-        client: "Dhofar Cultural Festival",
-        title: "Always-on social",
-        category: "Social Media Management",
-        result: "Full-season content & community management",
+        slug: "do-cafe",
+        name: "Do. Café",
+        tagline: "A café brand in Oman.",
+        services: [
+          "Website Development",
+          "Branding",
+          "Media Production",
+          "Social Media Management",
+        ],
+        summary: "A brand identity, website and ongoing content for a café.",
+        scope: [
+          "We built Do. Café's brand identity and website, and produce the photography, video and social content that keeps the café's feed active.",
+        ],
+        approach: [
+          "A café's brand lives mostly in photos of the space and the menu, so our work leans heavily on media production feeding a consistent, appetite-driving social presence.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "Do. Café — Branding & Website | Glomark Work",
+        metaDescription:
+          "Branding, website development, media production and social media management by Glomark for Do. Café.",
+      },
+      {
+        slug: "ventura",
+        name: "Ventura",
+        tagline: "An experience brand in Salalah.",
+        services: [
+          "Ecommerce Website Development",
+          "Branding",
+          "Media Production",
+          "Social Media Management",
+        ],
+        summary: "An online store, brand identity and always-on social content.",
+        scope: [
+          "For Ventura, we built their online store and brand identity, and manage the media production and social content that keep the brand present between visits.",
+        ],
+        approach: [
+          "The identity and the ecommerce build were designed together so the site feels like a continuation of the brand, not a separate storefront bolted on afterwards.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "Ventura — Ecommerce & Branding | Glomark Work",
+        metaDescription:
+          "Ecommerce website development, branding, media production and social media management by Glomark for Ventura in Salalah.",
       },
     ],
   },
