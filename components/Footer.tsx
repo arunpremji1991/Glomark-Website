@@ -68,6 +68,11 @@ export function Footer({
                 </Link>
               </li>
               <li>
+                <Link href={localeHref(locale, "/blog")} className="text-[0.92rem] text-cream/70 hover:text-lime transition-colors">
+                  {dict.nav.blog}
+                </Link>
+              </li>
+              <li>
                 <Link href={localeHref(locale, "/services")} className="text-[0.92rem] text-cream/70 hover:text-lime transition-colors">
                   {dict.nav.services}
                 </Link>

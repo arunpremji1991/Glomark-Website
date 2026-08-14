@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { locales, isLocale, getDictionary } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -38,6 +39,7 @@ export default async function LocaleLayout({
         {children}
       </main>
       <Footer locale={locale} dict={dict} />
+      <WhatsAppButton label={dict.common.whatsapp} />
     </div>
   );
 }

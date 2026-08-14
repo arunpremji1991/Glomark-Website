@@ -25,18 +25,29 @@ Glomark offers eight core services, each with its own page under /en/services/<s
 - Service area: Oman, Dhofar region, and the wider Gulf Cooperation Council
 - Languages: English and Arabic (native bilingual delivery, not machine-translated)
 
+## Blog
+
+Glomark publishes field notes on media, marketing and brand-building at /en/blog/, each with its own page under /en/blog/<slug>/. Current articles: "Why Bilingual Branding Wins in Oman", "Inside a Broadcast-Grade Live Stream: What Actually Goes Into It", "8 Shots Every Brand Film Needs (And Why)", and "Social Content That Earns Attention, Not Just Reach".
+
 ## Contact
 
 - Phone: +968 9101 8000
+- WhatsApp: https://wa.me/96891018000
 - Email: hello@glomark.om
 - Address: An Nahdah St, Salalah, Oman
 - Website: https://glomark.om
+
+## Social
+
+- Instagram: https://www.instagram.com/glomark.om/
+- LinkedIn: https://www.linkedin.com/company/glomark-om/
 
 ## Key pages
 
 - Home: /en/
 - Services overview: /en/services/
 - Work / case studies: /en/work/
+- Blog: /en/blog/
 - About: /en/about/
 - Contact: /en/contact/
 - Arabic homepage: /ar/

@@ -22,13 +22,10 @@ export const CONTACT = {
     "https://www.google.com/maps?q=An+Nahdah+Street,+Salalah,+Oman&output=embed",
 } as const;
 
-// sameAs profiles for Organization schema. Placeholder handles — swap for the
-// agency's real profiles before launch (see README).
+// sameAs profiles for Organization schema — the agency's real profiles.
 export const SOCIAL = [
-  { name: "Instagram", href: "https://instagram.com/glomark.om" },
-  { name: "Facebook", href: "https://facebook.com/glomark.om" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/company/glomark-om" },
-  { name: "YouTube", href: "https://www.youtube.com/@glomark.om" },
+  { name: "Instagram", href: "https://www.instagram.com/glomark.om/" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/glomark-om/" },
 ] as const;
 
 // Canonical service order + stable slugs (locale-neutral).
@@ -44,3 +41,13 @@ export const SERVICE_SLUGS = [
 ] as const;
 
 export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
+
+// Canonical blog post order + stable slugs (locale-neutral).
+export const BLOG_SLUGS = [
+  "bilingual-branding-in-oman",
+  "anatomy-of-a-live-broadcast",
+  "eight-shots-every-brand-film-needs",
+  "social-content-that-earns-attention",
+] as const;
+
+export type BlogSlug = (typeof BLOG_SLUGS)[number];

@@ -1,4 +1,4 @@
-import type { ServiceSlug } from "./site";
+import type { ServiceSlug, BlogSlug } from "./site";
 
 export const locales = ["en", "ar"] as const;
 export type Locale = (typeof locales)[number];
@@ -32,6 +32,18 @@ export interface ServiceContent {
   metaDescription: string;
 }
 
+export interface BlogPost {
+  slug: BlogSlug;
+  title: string;
+  excerpt: string; // short teaser for cards
+  body: string[]; // full paragraphs for the post page
+  category: string; // ties back to a service, e.g. "Branding"
+  date: string; // ISO date, e.g. "2026-06-02"
+  readTime: string;
+  metaTitle: string;
+  metaDescription: string;
+}
+
 export interface Dictionary {
   locale: Locale;
   dir: "ltr" | "rtl";
@@ -39,6 +51,7 @@ export interface Dictionary {
     home: string;
     services: string;
     work: string;
+    blog: string;
     about: string;
     contact: string;
     startProject: string;
@@ -52,10 +65,13 @@ export interface Dictionary {
     viewAllServices: string;
     exploreService: string;
     backToServices: string;
+    backToBlog: string;
+    readArticle: string;
     call: string;
     email: string;
     location: string;
     scroll: string;
+    whatsapp: string; // aria label for the floating WhatsApp button
   };
   home: {
     metaTitle: string;
@@ -66,8 +82,6 @@ export interface Dictionary {
     heroSub: string;
     heroCtaPrimary: string;
     heroCtaSecondary: string;
-    statsEyebrow: string;
-    stats: { value: string; label: string }[];
     servicesEyebrow: string;
     servicesTitle: string;
     servicesSub: string;
@@ -77,6 +91,9 @@ export interface Dictionary {
     workEyebrow: string;
     workTitle: string;
     workSub: string;
+    blogEyebrow: string;
+    blogTitle: string;
+    blogSub: string;
     ctaTitle: string;
     ctaBody: string;
   };
@@ -101,6 +118,14 @@ export interface Dictionary {
       category: string;
       result: string;
     }[];
+  };
+  blog: {
+    metaTitle: string;
+    metaDescription: string;
+    eyebrow: string;
+    title: string;
+    intro: string;
+    posts: BlogPost[];
   };
   about: {
     metaTitle: string;

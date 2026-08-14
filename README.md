@@ -36,7 +36,9 @@ NEXT_PUBLIC_SITE_URL=https://example.com npm run build
 - `lib/seo.ts`, `lib/schema.ts` — metadata/hreflang builder and JSON-LD (Organization, Service, BreadcrumbList) builders
 - `components/hero/` — the WebGL hero (lazy-loaded, capability-gated, see below)
 - `components/home/ServicesReel.tsx` — the scroll-pinned services showcase on the homepage
-- `public/media/services/*.webp`, `public/og/glomark-og.jpg` — Higgsfield-generated imagery (see below)
+- `components/WhatsAppButton.tsx` — the floating WhatsApp button mounted in `app/[locale]/layout.tsx`, shown on every page, links to `CONTACT.whatsappHref`
+- `app/[locale]/blog/`, `app/[locale]/blog/[slug]/` — blog listing + post pages, statically generated for both locales; post content lives in `lib/content/{en,ar}.ts` → `blog.posts`
+- `public/media/services/*.webp`, `public/media/blog/*.webp`, `public/og/glomark-og.jpg` — Higgsfield-generated imagery (see below)
 
 ## 3D, motion & performance
 
@@ -50,13 +52,14 @@ NEXT_PUBLIC_SITE_URL=https://example.com npm run build
 
 **Production-ready, real content:**
 - All copy for all 8 services, home, about, contact, and nav/footer, in both English and Arabic (not machine-translated filler — written per-locale)
-- Contact details (phone, email, address) and the contact form (see below)
+- 4 real, ready-to-publish blog articles (`lib/content/{en,ar}.ts` → `blog.posts`) with cover art, JSON-LD `BlogPosting` schema, and their own SEO metadata. Add new posts by appending to `BLOG_SLUGS` in `lib/site.ts` and to the `posts` array in both locale files — keep `en`/`ar` structurally in sync (same slugs, same order)
+- Contact details (phone, email, address, WhatsApp) and the contact form (see below)
+- Real social profiles (`lib/site.ts` → `SOCIAL`): Instagram and LinkedIn
 - SEO metadata, JSON-LD, sitemap, robots.txt, `llms.txt`
-- The 8 service visuals and the OG share image, generated via Higgsfield (`nano_banana_pro`) in the brand palette, abstract/geometric per the brand's arc motif — **not stock photography**
+- The 8 service visuals, 4 blog cover images, and the OG share image, generated via Higgsfield (`nano_banana_pro`) in the brand palette — realistic editorial photography, **not stock photography**
 
 **Explicitly placeholder — swap before launch:**
 - `/work` (portfolio/case studies): the 6 items shown are illustrative examples of the *kind* of work Glomark produces, clearly labeled as placeholder in-page ("These are representative examples..."). Real client case studies (with real client names, real images/video, real results) should replace these before launch.
-- `lib/site.ts` → `SOCIAL`: Instagram/Facebook/LinkedIn/YouTube URLs are placeholder handles (`glomark.om`) — replace with the agency's real profile URLs.
 - The Google Maps embed on `/contact` is geocoded to central Salalah (no exact street-level pin) — replace with the exact business location once available.
 - Favicon/OG image: generated abstract art, not a photographed hero shot — fine as a placeholder, but consider a real campaign still for the OG image once available.
 
@@ -68,7 +71,7 @@ NEXT_PUBLIC_SITE_URL=https://example.com npm run build
 - Single `<h1>` per page, semantic `<header>/<nav>/<main>/<article>/<footer>`
 - Unique `<title>`/meta description per page and per service (`lib/content/{en,ar}.ts`)
 - Open Graph + Twitter Card on every page (`lib/seo.ts`)
-- JSON-LD: `Organization` (homepage), `Service` (each of the 16 service pages, 8 × 2 locales), `BreadcrumbList` (all interior pages)
+- JSON-LD: `Organization` (homepage), `Service` (each of the 16 service pages, 8 × 2 locales), `BlogPosting` (each of the 8 blog post pages, 4 × 2 locales), `BreadcrumbList` (all interior pages)
 - `sitemap.xml` with per-URL `hreflang` alternates (en/ar/x-default) and `robots.txt` that explicitly allows `GPTBot`, `ClaudeBot`, `PerplexityBot`, and `Google-Extended` alongside standard crawlers
 - `/llms.txt` at the site root, summarizing the agency, all 8 services, and contact info in plain text for AI answer engines
 - Arabic pages: `lang="ar"` `dir="rtl"` (applied at the locale-layout wrapper — see the comment in `app/[locale]/layout.tsx` for why it's not on `<html>`), with the layout genuinely mirrored via Tailwind's `rtl:`/`[dir="rtl"]`-scoped utilities and logical CSS properties, not just flipped text

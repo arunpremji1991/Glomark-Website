@@ -1,6 +1,6 @@
 import { CONTACT, SITE_URL, SOCIAL } from "./site";
 import type { Dictionary, Locale } from "./i18n";
-import type { ServiceContent } from "./i18n";
+import type { ServiceContent, BlogPost } from "./i18n";
 
 export function organizationSchema(locale: Locale) {
   return {
@@ -58,6 +58,36 @@ export function serviceSchema(
     areaServed: ["Oman", "Dhofar", "Gulf Cooperation Council"],
     url: `${SITE_URL}/${locale}/services/${service.slug}/`,
     inLanguage: locale,
+  };
+}
+
+export function articleSchema(post: BlogPost, locale: Locale) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${SITE_URL}/${locale}/blog/${post.slug}/#article`,
+    headline: post.title,
+    description: post.excerpt,
+    image: `${SITE_URL}/media/blog/${post.slug}.webp`,
+    datePublished: post.date,
+    dateModified: post.date,
+    inLanguage: locale,
+    articleSection: post.category,
+    author: {
+      "@type": "Organization",
+      name: "Glomark",
+      "@id": `${SITE_URL}/#organization`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Glomark",
+      "@id": `${SITE_URL}/#organization`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/brand/glomark-full.svg`,
+      },
+    },
+    mainEntityOfPage: `${SITE_URL}/${locale}/blog/${post.slug}/`,
   };
 }
 

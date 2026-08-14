@@ -38,6 +38,7 @@ export function Header({
     { href: "/", label: dict.nav.home },
     { href: "/services", label: dict.nav.services },
     { href: "/work", label: dict.nav.work },
+    { href: "/blog", label: dict.nav.blog },
     { href: "/about", label: dict.nav.about },
     { href: "/contact", label: dict.nav.contact },
   ];
@@ -61,7 +62,7 @@ export function Header({
 
         <nav
           aria-label={dict.nav.menu}
-          className="hidden lg:flex items-center gap-9"
+          className="hidden lg:flex items-center gap-6 xl:gap-8"
         >
           {navItems.map((item) => {
             const active =
@@ -156,7 +157,6 @@ export function Header({
 
 function LangToggle({
   locale,
-  otherLocale,
   dict,
   restPath,
 }: {
@@ -165,15 +165,53 @@ function LangToggle({
   dict: Dictionary;
   restPath: string;
 }) {
+  const codes: { code: Locale; label: string }[] = [
+    { code: "en", label: "EN" },
+    { code: "ar", label: "AR" },
+  ];
+
   return (
-    <Link
-      href={localeHref(otherLocale, restPath)}
-      hrefLang={otherLocale}
+    <div
+      role="group"
       aria-label={dict.nav.switchTo}
-      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 px-3.5 py-1.5 text-[0.82rem] font-semibold text-cream/85 hover:border-lime/60 hover:text-lime transition-colors"
+      className="inline-flex items-center gap-0.5 rounded-full border border-white/15 bg-white/[0.04] p-1"
     >
-      {dict.nav.switchLabel}
-    </Link>
+      <GlobeIcon className="mx-1.5 h-3.5 w-3.5 shrink-0 text-cream/40" />
+      {codes.map(({ code, label }) => {
+        const active = code === locale;
+        return active ? (
+          <span
+            key={code}
+            aria-current="true"
+            className="rounded-full bg-lime px-2.5 py-1 text-[0.76rem] font-bold tracking-wide text-ink"
+          >
+            {label}
+          </span>
+        ) : (
+          <Link
+            key={code}
+            href={localeHref(code, restPath)}
+            hrefLang={code}
+            className="rounded-full px-2.5 py-1 text-[0.76rem] font-bold tracking-wide text-cream/50 transition-colors hover:text-lime"
+          >
+            {label}
+          </Link>
+        );
+      })}
+    </div>
+  );
+}
+
+function GlobeIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden>
+      <circle cx="8" cy="8" r="6.4" stroke="currentColor" strokeWidth="1.1" />
+      <path
+        d="M2 8h12M8 1.6c1.7 1.8 2.6 4 2.6 6.4S9.7 12.6 8 14.4C6.3 12.6 5.4 10.4 5.4 8S6.3 3.4 8 1.6Z"
+        stroke="currentColor"
+        strokeWidth="1.1"
+      />
+    </svg>
   );
 }
 

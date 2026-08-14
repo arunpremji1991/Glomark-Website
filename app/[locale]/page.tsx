@@ -3,10 +3,10 @@ import { locales, isLocale, getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 import { organizationSchema } from "@/lib/schema";
 import { Hero } from "@/components/home/Hero";
-import { StatsBar } from "@/components/home/StatsBar";
 import { ServicesReel } from "@/components/home/ServicesReel";
 import { Statement } from "@/components/home/Statement";
 import { FeaturedWork } from "@/components/home/FeaturedWork";
+import { BlogPreview } from "@/components/home/BlogPreview";
 import { CtaBand } from "@/components/home/CtaBand";
 
 export function generateStaticParams() {
@@ -45,10 +45,10 @@ export default async function HomePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
       <Hero locale={locale} dict={dict} />
-      <StatsBar dict={dict} />
       <ServicesReel locale={locale} dict={dict} />
       <Statement dict={dict} />
       <FeaturedWork locale={locale} dict={dict} />
+      <BlogPreview locale={locale} dict={dict} />
       <CtaBand locale={locale} dict={dict} />
     </>
   );
