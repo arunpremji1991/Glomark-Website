@@ -3,6 +3,8 @@ import { locales, isLocale, getDictionary } from "@/lib/i18n";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { CallButton } from "@/components/CallButton";
+import { AmbientGlow } from "@/components/AmbientGlow";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -28,6 +30,7 @@ export default async function LocaleLayout({
     // exactly as they would through <html>, so the whole layout mirrors in
     // Arabic, not just text direction.
     <div lang={locale} dir={dict.dir} className="flex min-h-dvh flex-col">
+      <AmbientGlow />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-lime focus:px-4 focus:py-2 focus:text-ink"
@@ -39,6 +42,7 @@ export default async function LocaleLayout({
         {children}
       </main>
       <Footer locale={locale} dict={dict} />
+      <CallButton label={dict.common.callUs} />
       <WhatsAppButton label={dict.common.whatsapp} />
     </div>
   );

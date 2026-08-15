@@ -6,7 +6,6 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import { localeHref } from "@/lib/i18n";
-import { CONTACT } from "@/lib/site";
 import { GlomarkLogo, GlomarkMark } from "./GlomarkMark";
 
 export function Header({
@@ -84,12 +83,6 @@ export function Header({
         </nav>
 
         <div className="hidden lg:flex items-center gap-5">
-          <a
-            href={CONTACT.phoneHref}
-            className="text-[0.9rem] text-cream/70 hover:text-lime transition-colors"
-          >
-            {CONTACT.phone}
-          </a>
           <LangToggle locale={locale} otherLocale={otherLocale} dict={dict} restPath={restPath} />
           <Link
             href={localeHref(locale, "/contact")}
@@ -129,10 +122,7 @@ export function Header({
                   {item.label}
                 </Link>
               ))}
-              <div className="flex items-center justify-between pt-5">
-                <a href={CONTACT.phoneHref} className="text-sm text-cream/70">
-                  {CONTACT.phone}
-                </a>
+              <div className="flex items-center justify-end pt-5">
                 <LangToggle
                   locale={locale}
                   otherLocale={otherLocale}

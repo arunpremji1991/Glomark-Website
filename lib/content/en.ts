@@ -29,6 +29,7 @@ const en: Dictionary = {
     location: "Location",
     scroll: "Scroll",
     whatsapp: "Chat with us on WhatsApp",
+    callUs: "Call us",
   },
   home: {
     metaTitle: "Glomark — Marketing, Media & Branding Agency in Oman",
@@ -45,10 +46,32 @@ const en: Dictionary = {
     servicesTitle: "One studio, the whole brand journey",
     servicesSub:
       "Strategy, story and screen — handled by one team so nothing gets lost between the idea and the audience.",
-    statementEyebrow: "Our belief",
-    statement: "A brand is not a logo. It is the impact it leaves behind.",
+    statementEyebrow: "Our approach",
+    statement: "Strategy first. Craft always. Impact that stays.",
     statementBody:
       "We pair sharp marketing thinking with cinematic craft, so every touchpoint — a broadcast, a campaign, a storefront, an app — feels unmistakably yours and unmistakably premium.",
+    process: [
+      {
+        number: "01",
+        title: "Discover",
+        body: "We get to know your brand, audience, competitors and goals inside out.",
+      },
+      {
+        number: "02",
+        title: "Strategize",
+        body: "We shape a clear marketing and creative strategy grounded in insight.",
+      },
+      {
+        number: "03",
+        title: "Create",
+        body: "Our team turns strategy into design, film, campaigns and code.",
+      },
+      {
+        number: "04",
+        title: "Grow",
+        body: "We track what's working, optimise it, and look for the next opportunity to grow.",
+      },
+    ],
     workEyebrow: "Selected work",
     workTitle: "Stories we helped tell",
     workSub:
@@ -68,6 +91,8 @@ const en: Dictionary = {
     title: "Everything your brand needs to be seen",
     intro:
       "Eight disciplines, one team. Whether you need a single film or a full-year campaign, we plug in where you need us — and we speak both English and Arabic natively.",
+    coverAlt:
+      "Inside the Glomark studio — a cinematographer filming on set beside a designer reviewing brand and website work on screen",
   },
   services: [
     {
@@ -426,6 +451,24 @@ const en: Dictionary = {
         metaTitle: "Ventura — Ecommerce & Branding | Glomark Work",
         metaDescription:
           "Ecommerce website development, branding, media production and social media management by Glomark for Ventura in Salalah.",
+      },
+      {
+        slug: "almoftah",
+        name: "Al-Moftah — Key 2",
+        tagline: "A new residential project by Al-Moftah Real Estate in Muscat.",
+        services: ["Media Production"],
+        summary:
+          "Photo and video production for the launch of Key 2, Al-Moftah's newest project in Muscat.",
+        scope: [
+          "For Key 2, Al-Moftah's newest project in Muscat, our work is media production — the photography and video used to introduce the project and carry its launch promotion across their channels.",
+        ],
+        approach: [
+          "A project launch lives or dies on its first impression, so the brief was straightforward: produce media that makes Key 2 look as considered in photos and video as it is on paper, ready to run across a multi-city promotion from day one.",
+        ],
+        linkLabel: "Visit website",
+        metaTitle: "Al-Moftah — Key 2 Media Production | Glomark Work",
+        metaDescription:
+          "Photo and video production by Glomark for Key 2, Al-Moftah Real Estate's newest project in Muscat.",
       },
     ],
   },

@@ -86,6 +86,7 @@ export interface Dictionary {
     location: string;
     scroll: string;
     whatsapp: string; // aria label for the floating WhatsApp button
+    callUs: string; // aria label for the floating call button
   };
   home: {
     metaTitle: string;
@@ -102,6 +103,7 @@ export interface Dictionary {
     statementEyebrow: string;
     statement: string;
     statementBody: string;
+    process: { number: string; title: string; body: string }[];
     workEyebrow: string;
     workTitle: string;
     workSub: string;
@@ -117,6 +119,7 @@ export interface Dictionary {
     eyebrow: string;
     title: string;
     intro: string;
+    coverAlt: string;
   };
   services: ServiceContent[];
   work: {

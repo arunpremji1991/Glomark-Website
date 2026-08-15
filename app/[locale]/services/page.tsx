@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { locales, isLocale, getDictionary } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
-import { LocaleLink } from "@/components/LocaleLink";
 import { Reveal } from "@/components/Reveal";
-import { TiltCard } from "@/components/TiltCard";
-import { ServiceVisual } from "@/components/ServiceVisual";
+import { ServiceZigzag } from "@/components/services/ServiceZigzag";
 import { CtaBand } from "@/components/home/CtaBand";
 
 export function generateStaticParams() {
@@ -47,8 +46,26 @@ export default async function ServicesPage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
 
-      <header className="border-b border-white/8 bg-ink-2/50">
-        <div className="container-x py-20 lg:py-28">
+      <header className="relative overflow-hidden border-b border-white/8 bg-ink-2/50">
+        <div className="absolute inset-0">
+          <Image
+            src="/media/services/cover.webp"
+            alt={dict.servicesPage.coverAlt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
+        <div
+          aria-hidden
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, rgba(10,10,20,0.7) 0%, rgba(10,10,20,0.88) 100%)",
+          }}
+        />
+        <div className="container-x relative py-24 lg:py-32">
           <Reveal>
             <p className="eyebrow">{dict.servicesPage.eyebrow}</p>
             <h1 className="mt-4 max-w-3xl font-display text-4xl text-cream sm:text-5xl lg:text-6xl balance">
@@ -61,43 +78,7 @@ export default async function ServicesPage({
         </div>
       </header>
 
-      <div className="container-x py-20 lg:py-28">
-        <div id="grid" className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {dict.services.map((service, i) => (
-            <Reveal key={service.slug} id={service.slug} delay={(i % 2) * 0.08}>
-              <TiltCard max={4} className="h-full">
-                <article className="panel flex h-full flex-col overflow-hidden rounded-2xl sm:flex-row">
-                  <div className="relative h-44 shrink-0 overflow-hidden bg-indigo-deep/60 sm:h-auto sm:w-48">
-                    <ServiceVisual
-                      slug={service.slug}
-                      alt={`${service.title} — Glomark`}
-                      priority={i < 4}
-                    />
-                  </div>
-                  <div className="flex flex-1 flex-col p-7">
-                    <span className="text-[0.7rem] font-semibold text-muted">
-                      0{i + 1}
-                    </span>
-                    <h2 className="mt-2 font-display text-2xl text-cream">
-                      {service.title}
-                    </h2>
-                    <p className="mt-2 text-[0.9rem] leading-relaxed text-cream/60">
-                      {service.summary}
-                    </p>
-                    <LocaleLink
-                      locale={locale}
-                      href={`/services/${service.slug}`}
-                      className="mt-5 inline-flex w-fit items-center gap-1.5 text-[0.85rem] font-semibold text-lime lime-underline"
-                    >
-                      {dict.common.exploreService}
-                    </LocaleLink>
-                  </div>
-                </article>
-              </TiltCard>
-            </Reveal>
-          ))}
-        </div>
-      </div>
+      <ServiceZigzag locale={locale} dict={dict} />
 
       <CtaBand locale={locale} dict={dict} />
     </>

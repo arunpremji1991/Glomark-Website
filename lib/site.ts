@@ -62,6 +62,7 @@ export const CLIENT_SLUGS = [
   "do-chocolate",
   "do-cafe",
   "ventura",
+  "almoftah",
 ] as const;
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
@@ -75,6 +76,7 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   "do-chocolate": "https://www.instagram.com/do_chocolate/",
   "do-cafe": "https://www.instagram.com/docafe.om/",
   ventura: "https://www.instagram.com/ventura.sll/",
+  almoftah: "https://www.almoftah.om/",
 };
 
 export interface GalleryItem {
@@ -130,5 +132,9 @@ export const CLIENT_GALLERY: Record<ClientSlug, GalleryItem[]> = {
     { file: "ventura-2.webp", href: "https://www.instagram.com/ventura.sll/reel/DbiLAKPo3tN/", isVideo: true },
     { file: "ventura-3.webp", href: "https://www.instagram.com/ventura.sll/p/Dbbdmv4CN2Q/", isVideo: false },
     { file: "ventura-4.webp", href: "https://www.instagram.com/ventura.sll/reel/DbLyxx_IdIg/", isVideo: true },
+  ],
+  almoftah: [
+    { file: "almoftah-1.webp", href: "https://www.instagram.com/almoftah_realestate/p/Db5l5BuDYMs/", isVideo: false },
+    { file: "almoftah-2.webp", href: "https://www.instagram.com/almoftah_realestate/p/DbpuhR9Co2g/", isVideo: false },
   ],
 };
