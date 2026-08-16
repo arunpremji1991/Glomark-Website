@@ -50,14 +50,15 @@ function shouldRunWebGL(): boolean {
 /** Static, brand-true substitute for phones/low-power devices and
  *  prefers-reduced-motion: a soft indigo-to-ink field with the lime arcs
  *  rendered as gentle CSS gradients — no motion required. */
-function StaticHeroFallback() {
+function StaticHeroFallback({ mirrored = false }: { mirrored?: boolean }) {
+  const x = mirrored ? 22 : 78;
   return (
     <div
       aria-hidden
       className="absolute inset-0"
       style={{
         background:
-          "radial-gradient(60% 50% at 78% 20%, rgba(184,212,68,0.16), transparent 60%)," +
+          `radial-gradient(60% 50% at ${x}% 20%, rgba(184,212,68,0.16), transparent 60%),` +
           "radial-gradient(70% 60% at 15% 85%, rgba(91,87,196,0.28), transparent 60%)," +
           "linear-gradient(180deg, #0a0a14 0%, #101024 60%, #0a0a14 100%)",
       }}
@@ -65,7 +66,7 @@ function StaticHeroFallback() {
   );
 }
 
-export function HeroCanvas() {
+export function HeroCanvas({ mirrored = false }: { mirrored?: boolean }) {
   const [mode, setMode] = useState<"pending" | "webgl" | "static">("pending");
 
   useEffect(() => {
@@ -74,10 +75,10 @@ export function HeroCanvas() {
 
   return (
     <div className="absolute inset-0">
-      <StaticHeroFallback />
+      <StaticHeroFallback mirrored={mirrored} />
       {mode === "webgl" ? (
         <div className="absolute inset-0 opacity-0 animate-[fade-up_1.2s_ease_forwards]">
-          <HeroScene />
+          <HeroScene mirrored={mirrored} />
         </div>
       ) : null}
     </div>

@@ -83,8 +83,10 @@ function ParticleField({ count = 1600 }: { count?: number }) {
   );
 }
 
-// A single glowing arc (comet trail) built from a smooth curve, layered a few
-// times with growing radius + falling opacity to fake a soft bloom.
+// A single glowing arc traced from the Glomark symbol's own comet shape —
+// a closed loop, built from a smooth curve and layered a few times with
+// growing radius + falling opacity to fake a soft bloom. No independent
+// motion of its own; it just rides the shared slow rotation in Rig.
 function Arc({
   curvePoints,
   color = "#b8d444",
@@ -96,7 +98,7 @@ function Arc({
     () =>
       new THREE.CatmullRomCurve3(
         curvePoints.map((p) => new THREE.Vector3(...p)),
-        false,
+        true,
         "catmullrom",
         0.5,
       ),
@@ -104,16 +106,16 @@ function Arc({
   );
 
   const layers = [
-    { r: 0.045, o: 1.0 },
-    { r: 0.12, o: 0.28 },
-    { r: 0.26, o: 0.1 },
+    { r: 0.032, o: 0.85 },
+    { r: 0.09, o: 0.18 },
+    { r: 0.18, o: 0.06 },
   ];
 
   return (
     <group>
       {layers.map((l, i) => (
         <mesh key={i}>
-          <tubeGeometry args={[curve, 140, l.r, 10, false]} />
+          <tubeGeometry args={[curve, 220, l.r, 10, true]} />
           <meshBasicMaterial
             color={color}
             transparent
@@ -158,23 +160,112 @@ function Rig({ children }: { children: React.ReactNode }) {
   return <group ref={group}>{children}</group>;
 }
 
-// Twin-arc motif echoing the Glomark symbol's two comet strokes.
+// Twin-arc motif traced directly from the Glomark symbol's own two comet
+// shapes (public/brand/glomark-symbol.svg), sampled point-for-point along
+// each shape's outline and centered on the mark's shared origin — so this
+// is the actual logo, not an abstract approximation of it.
 const ARC_A: [number, number, number][] = [
-  [-4.2, 2.6, -1],
-  [-2.2, 1.1, 0.4],
-  [-0.2, -0.2, 0.9],
-  [1.8, -1.2, 0.3],
-  [3.6, -1.7, -0.8],
+  [-1.576, 2.584, 0],
+  [-1.125, 3.107, 0.059],
+  [-1.073, 3.763, 0.116],
+  [-1.597, 4.188, 0.172],
+  [-2.28, 4.273, 0.225],
+  [-2.966, 4.175, 0.274],
+  [-3.612, 3.934, 0.318],
+  [-4.208, 3.583, 0.357],
+  [-4.751, 3.154, 0.39],
+  [-5.247, 2.671, 0.416],
+  [-5.818, 2.664, 0.435],
+  [-5.71, 3.338, 0.446],
+  [-5.45, 3.979, 0.45],
+  [-5.78, 3.655, 0.446],
+  [-6.122, 3.054, 0.435],
+  [-6.359, 2.404, 0.416],
+  [-6.482, 1.723, 0.39],
+  [-6.489, 1.032, 0.357],
+  [-6.378, 0.35, 0.318],
+  [-6.156, -0.305, 0.274],
+  [-5.829, -0.915, 0.225],
+  [-5.353, -1.401, 0.172],
+  [-4.829, -1.112, 0.116],
+  [-4.936, -0.434, 0.059],
+  [-5.089, 0.238, 0],
+  [-5.061, 0.928, -0.059],
+  [-4.859, 1.589, -0.116],
+  [-4.484, 2.167, -0.172],
+  [-3.949, 2.602, -0.225],
+  [-3.301, 2.838, -0.274],
+  [-2.617, 2.83, -0.318],
+  [-2.653, 2.244, -0.357],
+  [-3.048, 1.676, -0.39],
+  [-3.45, 1.113, -0.416],
+  [-3.83, 0.534, -0.435],
+  [-4.152, -0.078, -0.446],
+  [-4.372, -0.733, -0.45],
+  [-4.449, -1.42, -0.446],
+  [-4.342, -2.095, -0.435],
+  [-3.815, -2.518, -0.416],
+  [-3.611, -2.249, -0.39],
+  [-3.714, -1.564, -0.357],
+  [-3.705, -0.87, -0.318],
+  [-3.579, -0.193, -0.274],
+  [-3.322, 0.45, -0.225],
+  [-2.961, 1.04, -0.172],
+  [-2.53, 1.581, -0.116],
+  [-2.06, 2.09, -0.059],
 ];
 const ARC_B: [number, number, number][] = [
-  [-3.4, -2.4, -0.6],
-  [-1.4, -1.0, 0.6],
-  [0.5, 0.1, 1.0],
-  [2.4, 1.2, 0.4],
-  [4.2, 2.2, -0.7],
+  [2.98, 1.721, 0],
+  [2.349, 2.433, 0.059],
+  [1.832, 3.234, 0.116],
+  [1.388, 3.012, 0.172],
+  [0.926, 2.176, 0.225],
+  [0.339, 1.429, 0.274],
+  [0.92, 1.03, 0.318],
+  [1.519, 1.745, 0.357],
+  [1.348, 0.807, 0.39],
+  [1.001, -0.082, 0.416],
+  [0.422, -0.837, 0.435],
+  [-0.42, -1.257, 0.446],
+  [-1.254, -0.898, 0.45],
+  [-1.411, 0.02, 0.446],
+  [-1.056, 0.903, 0.435],
+  [-0.443, 1.627, 0.416],
+  [0.21, 2.33, 0.39],
+  [0.797, 3.079, 0.357],
+  [1.143, 3.949, 0.318],
+  [0.679, 4.751, 0.274],
+  [-0.143, 5.234, 0.225],
+  [-1.059, 5.486, 0.172],
+  [-2.015, 5.553, 0.116],
+  [-2.961, 5.448, 0.059],
+  [-3.877, 5.176, 0],
+  [-4.719, 4.735, -0.059],
+  [-4.702, 4.052, -0.116],
+  [-3.841, 4.458, -0.172],
+  [-2.921, 4.696, -0.225],
+  [-1.97, 4.74, -0.274],
+  [-1.03, 4.561, -0.318],
+  [-0.311, 3.975, -0.357],
+  [-0.318, 3.043, -0.39],
+  [-0.822, 2.243, -0.416],
+  [-1.45, 1.52, -0.435],
+  [-2.047, 0.769, -0.446],
+  [-2.486, -0.074, -0.45],
+  [-2.628, -1.014, -0.446],
+  [-2.421, -1.935, -0.435],
+  [-1.812, -2.646, -0.416],
+  [-0.878, -2.628, -0.39],
+  [-0.02, -2.215, -0.357],
+  [0.721, -1.608, -0.318],
+  [1.333, -0.886, -0.274],
+  [1.783, -0.037, -0.225],
+  [2.002, 0.88, -0.172],
+  [2.09, 1.568, -0.116],
+  [2.843, 1.029, -0.059],
 ];
 
-export default function HeroScene() {
+export default function HeroScene({ mirrored = false }: { mirrored?: boolean }) {
   return (
     <Canvas
       dpr={[1, 1.6]}
@@ -186,8 +277,14 @@ export default function HeroScene() {
       <ambientLight intensity={0.6} />
       <Rig>
         <ParticleField />
-        <Arc curvePoints={ARC_A} color="#b8d444" />
-        <Arc curvePoints={ARC_B} color="#7d79e0" />
+        {/* Pushed into the open side of the hero opposite the headline
+            (right in English, left in Arabic — the whole layout mirrors)
+            and well back in depth: small and soft enough to read as a
+            quiet signature mark rather than competing with the text. */}
+        <group position={[mirrored ? -3.9 : 3.9, -0.1, -2.5]} scale={0.5}>
+          <Arc curvePoints={ARC_A} color="#b8d444" />
+          <Arc curvePoints={ARC_B} color="#7d79e0" />
+        </group>
       </Rig>
     </Canvas>
   );

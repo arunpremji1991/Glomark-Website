@@ -3,7 +3,7 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/lib/i18n";
-import { localeHref } from "@/lib/i18n";
+import { localeHref, isRtl } from "@/lib/i18n";
 import { HeroCanvas } from "@/components/hero/HeroCanvas";
 import { GlomarkMark } from "@/components/GlomarkMark";
 
@@ -13,7 +13,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 
   return (
     <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden bg-ink">
-      <HeroCanvas />
+      <HeroCanvas mirrored={isRtl(locale)} />
       {/* Wash to keep hero text readable over the scene at any device. */}
       <div
         aria-hidden
