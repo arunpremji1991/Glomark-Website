@@ -7,12 +7,27 @@
 // in <head>, so this walks every generated HTML file and physically moves
 // it to the literal top — restoring the exact official snippet, including
 // its HTML comments, which JSX can't author directly.
-import { readdirSync, readFileSync, writeFileSync, statSync } from "fs";
+//
+// This only applies to a static export (`out/`, from `output: "export"`
+// in next.config.mjs). Some hosts (e.g. Hostinger's native Next.js
+// deploy) instead run Next as a live server from `.next/`, which never
+// produces `out/` — GTM still works there regardless, since the plain
+// script/noscript tags authored in app/layout.tsx are part of every
+// page's HTML no matter which mode Next builds in; this step just isn't
+// applicable, so it no-ops instead of failing the build.
+import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from "fs";
 import { join } from "path";
 import { fileURLToPath } from "url";
 
 const OUT_DIR = fileURLToPath(new URL("../out", import.meta.url));
 const GTM_ID = "GTM-TQ9R7JN3";
+
+if (!existsSync(OUT_DIR)) {
+  console.log(
+    "[inject-gtm] no out/ directory (not a static export build) — skipping, GTM tags are already present via app/layout.tsx",
+  );
+  process.exit(0);
+}
 
 const HEAD_SNIPPET = `<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
