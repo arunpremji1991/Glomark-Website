@@ -13,6 +13,7 @@ export const CONTACT = {
   addressLine: "An Nahdah St, Salalah, Oman",
   street: "An Nahdah Street",
   city: "Salalah",
+  postalCode: "211",
   region: "Dhofar",
   country: "Oman",
   countryCode: "OM",
@@ -20,6 +21,14 @@ export const CONTACT = {
   geo: { lat: 17.0151, lng: 54.0924 },
   mapEmbed:
     "https://www.google.com/maps?q=An+Nahdah+Street,+Salalah,+Oman&output=embed",
+  // Structured (locale-neutral) form of the "Sunday – Thursday, 9:00 – 18:00"
+  // hours shown in lib/content/*.ts — feeds openingHoursSpecification in
+  // lib/schema.ts rather than parsing the translated display string.
+  hours: {
+    days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
 } as const;
 
 // sameAs profiles for Organization schema — the agency's real profiles.

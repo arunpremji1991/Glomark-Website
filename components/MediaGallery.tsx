@@ -3,10 +3,12 @@ import type { GalleryItem } from "@/lib/site";
 
 export function MediaGallery({
   items,
+  clientName,
   viewLabel,
   watchLabel,
 }: {
   items: GalleryItem[];
+  clientName: string;
   viewLabel: string;
   watchLabel: string;
 }) {
@@ -14,7 +16,7 @@ export function MediaGallery({
 
   return (
     <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-      {items.map((item) => (
+      {items.map((item, i) => (
         <a
           key={item.file}
           href={item.href}
@@ -25,7 +27,7 @@ export function MediaGallery({
         >
           <Image
             src={`/media/clients/gallery/${item.file}`}
-            alt=""
+            alt={`${clientName} — ${item.isVideo ? "video" : "photo"} content by Glomark (${i + 1})`}
             fill
             sizes="(min-width: 1024px) 22vw, 45vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"

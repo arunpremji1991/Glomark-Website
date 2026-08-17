@@ -760,7 +760,7 @@ const en: Dictionary = {
           "For a gifting brand, the product has to look as good online as it does in person — so the ecommerce build and the media production were treated as one job, not two.",
         ],
         linkLabel: "View on Instagram",
-        metaTitle: "Do. Chocolate & Flowers — Ecommerce & Branding | Glomark Work",
+        metaTitle: "Do. Chocolate & Flowers — Ecommerce, Branding | Glomark",
         metaDescription:
           "Ecommerce website development, branding, media production and social media management by Glomark for Do. Chocolate & Flowers.",
       },
@@ -905,7 +905,7 @@ const en: Dictionary = {
           "After that, the content has to reward the stop. A hook with nothing behind it trains an audience to keep scrolling past your account specifically — the algorithm notices, and so do people. Consistency of voice matters more than volume of posts.",
           "The accounts that grow steadily aren't the ones that go viral once. They're the ones that show up in a recognisable, deliberate voice often enough that being tagged in your comments starts to feel inevitable.",
         ],
-        metaTitle: "Social Content That Earns Attention, Not Just Reach | Glomark",
+        metaTitle: "Social Content That Earns Attention | Glomark",
         metaDescription:
           "Why reach alone is a hollow metric, and what actually keeps someone watching past the first second of a social video.",
       },

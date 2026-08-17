@@ -139,6 +139,7 @@ export default async function ClientCasePage({
             <div className="mt-6">
               <MediaGallery
                 items={gallery}
+                clientName={client.name}
                 viewLabel={dict.work.viewPost}
                 watchLabel={dict.work.watchVideo}
               />

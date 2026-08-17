@@ -5,7 +5,11 @@ import type { ServiceContent, BlogPost } from "./i18n";
 export function organizationSchema(locale: Locale) {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    // Array form: this is the same entity as a search-friendly Organization
+    // and a physically-located, appointment-based ProfessionalService — both
+    // are valid schema.org types for one business, and Google's structured
+    // data guidelines accept multiple @type values on a single node.
+    "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
     "@id": `${SITE_URL}/#organization`,
     name: "Glomark",
     alternateName: "جلومارك",
@@ -22,6 +26,7 @@ export function organizationSchema(locale: Locale) {
       "@type": "PostalAddress",
       streetAddress: CONTACT.street,
       addressLocality: CONTACT.city,
+      postalCode: CONTACT.postalCode,
       addressRegion: CONTACT.region,
       addressCountry: CONTACT.countryCode,
     },
@@ -31,6 +36,12 @@ export function organizationSchema(locale: Locale) {
       longitude: CONTACT.geo.lng,
     },
     areaServed: ["Oman", "Dhofar", "Gulf Cooperation Council"],
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: CONTACT.hours.days,
+      opens: CONTACT.hours.opens,
+      closes: CONTACT.hours.closes,
+    },
     sameAs: SOCIAL.map((s) => s.href),
   };
 }
