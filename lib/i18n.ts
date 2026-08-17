@@ -171,6 +171,7 @@ export interface Dictionary {
     intro: string;
     formName: string;
     formEmail: string;
+    formCountry: string; // aria-label for the phone country-code select
     formPhone: string;
     formCompany: string;
     formService: string;

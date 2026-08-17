@@ -42,6 +42,18 @@ export const CONTACT = {
 // web3forms.com against e-marketing@glomark.om; submissions route there.
 export const WEB3FORMS_ACCESS_KEY = "fd42eb27-1ae6-46ff-9e79-f69aad846c6a";
 
+// Country options for the contact form's phone field (components/ContactForm.tsx)
+// — GCC-focused since that's the region the business targets. Oman first as
+// the default/home market. Extend this list if targeting expands further.
+export const PHONE_COUNTRIES = [
+  { iso: "OM", dial: "+968", flag: "🇴🇲", nameEn: "Oman", nameAr: "عُمان" },
+  { iso: "AE", dial: "+971", flag: "🇦🇪", nameEn: "UAE", nameAr: "الإمارات" },
+  { iso: "SA", dial: "+966", flag: "🇸🇦", nameEn: "Saudi Arabia", nameAr: "السعودية" },
+  { iso: "QA", dial: "+974", flag: "🇶🇦", nameEn: "Qatar", nameAr: "قطر" },
+  { iso: "BH", dial: "+973", flag: "🇧🇭", nameEn: "Bahrain", nameAr: "البحرين" },
+  { iso: "KW", dial: "+965", flag: "🇰🇼", nameEn: "Kuwait", nameAr: "الكويت" },
+] as const;
+
 // sameAs profiles for Organization schema — the agency's real profiles.
 export const SOCIAL = [
   { name: "Instagram", href: "https://www.instagram.com/glomark.om/" },

@@ -955,6 +955,7 @@ const ar: Dictionary = {
       "أخبرنا عن علامتك وما تريد تحقيقه، وسنعاود التواصل معك خلال يوم عمل واحد.",
     formName: "اسمك",
     formEmail: "البريد الإلكتروني",
+    formCountry: "رمز الدولة",
     formPhone: "رقم الهاتف",
     formCompany: "الشركة (اختياري)",
     formService: "ما الذي تحتاجه؟",

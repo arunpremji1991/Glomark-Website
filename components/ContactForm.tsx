@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import type { Dictionary } from "@/lib/i18n";
-import { WEB3FORMS_ACCESS_KEY } from "@/lib/site";
+import { WEB3FORMS_ACCESS_KEY, PHONE_COUNTRIES } from "@/lib/site";
 import { SuccessModal } from "@/components/SuccessModal";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -10,7 +10,8 @@ type Status = "idle" | "loading" | "success" | "error";
 export function ContactForm({ dict }: { dict: Dictionary }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
+  const [countryDial, setCountryDial] = useState<string>(PHONE_COUNTRIES[0].dial);
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [company, setCompany] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
@@ -19,6 +20,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
+    const phone = `${countryDial} ${phoneNumber}`.trim();
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -45,7 +47,8 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
         setStatus("success");
         setName("");
         setEmail("");
-        setPhone("");
+        setCountryDial(PHONE_COUNTRIES[0].dial);
+        setPhoneNumber("");
         setCompany("");
         setService("");
         setMessage("");
@@ -99,16 +102,30 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
             <label htmlFor="phone" className="mb-1.5 block text-[0.8rem] font-medium text-cream/70">
               {dict.contact.formPhone}
             </label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              required
-              placeholder="+968 9101 8000"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className={inputClass}
-            />
+            <div className="flex gap-2">
+              <select
+                aria-label={dict.contact.formCountry}
+                value={countryDial}
+                onChange={(e) => setCountryDial(e.target.value)}
+                className={`${inputClass} w-[6.5rem] shrink-0 appearance-none px-2.5 text-center`}
+              >
+                {PHONE_COUNTRIES.map((c) => (
+                  <option key={c.iso} value={c.dial}>
+                    {c.flag} {c.dial}
+                  </option>
+                ))}
+              </select>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                required
+                placeholder="9101 8000"
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
+                className={`${inputClass} min-w-0 flex-1`}
+              />
+            </div>
           </div>
           <div>
             <label htmlFor="company" className="mb-1.5 block text-[0.8rem] font-medium text-cream/70">

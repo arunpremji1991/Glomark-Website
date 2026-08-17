@@ -953,6 +953,7 @@ const en: Dictionary = {
       "Tell us about your brand and what you want to achieve. We'll get back to you within one business day.",
     formName: "Your name",
     formEmail: "Email address",
+    formCountry: "Country code",
     formPhone: "Phone number",
     formCompany: "Company (optional)",
     formService: "What do you need?",
