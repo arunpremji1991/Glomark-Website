@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { locales, isLocale, getDictionary } from "@/lib/i18n";
-import { SERVICE_SLUGS } from "@/lib/site";
+import { SERVICE_SLUGS, SERVICE_TO_CLIENTS } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
-import { serviceSchema, breadcrumbSchema } from "@/lib/schema";
+import { serviceSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { LocaleLink } from "@/components/LocaleLink";
 import { Reveal } from "@/components/Reveal";
 import { ServiceVisual } from "@/components/ServiceVisual";
+import { ServiceProcess } from "@/components/services/ServiceProcess";
+import { ServiceTrust } from "@/components/services/ServiceTrust";
+import { RelatedWork } from "@/components/services/RelatedWork";
+import { ServiceFaq } from "@/components/services/ServiceFaq";
+import { MoreServices } from "@/components/services/MoreServices";
 import { CtaBand } from "@/components/home/CtaBand";
 
 export function generateStaticParams() {
@@ -53,8 +58,13 @@ export default async function ServiceDetailPage({
     { name: dict.nav.services, path: "/services" },
     { name: service.title, path: `/services/${service.slug}` },
   ]);
+  const faq = faqSchema(service.faq);
 
-  const next = dict.services[(index + 1) % dict.services.length];
+  const relatedClients = SERVICE_TO_CLIENTS[service.slug]
+    .map((clientSlug) => dict.work.clients.find((c) => c.slug === clientSlug))
+    .filter((c): c is (typeof dict.work.clients)[number] => Boolean(c));
+
+  const otherServices = dict.services.filter((s) => s.slug !== service.slug);
 
   return (
     <>
@@ -67,6 +77,11 @@ export default async function ServiceDetailPage({
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
       />
 
       <header className="relative overflow-hidden border-b border-white/8 bg-ink-2/50">
@@ -108,6 +123,9 @@ export default async function ServiceDetailPage({
       <div className="container-x py-20 lg:py-28">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.5fr_1fr]">
           <Reveal className="max-w-prose2 space-y-6">
+            <h2 className="font-display text-2xl text-cream sm:text-3xl balance">
+              {service.descriptionHeading}
+            </h2>
             {service.description.map((para, i) => (
               <p key={i} className="text-lg leading-relaxed text-cream/75 pretty">
                 {para}
@@ -145,17 +163,28 @@ export default async function ServiceDetailPage({
           </Reveal>
         </div>
 
-        <Reveal delay={0.15} className="mt-20 border-t border-white/8 pt-10">
-          <p className="eyebrow">{locale === "ar" ? "التالي" : "Next"}</p>
-          <LocaleLink
-            locale={locale}
-            href={`/services/${next.slug}`}
-            className="mt-3 inline-block font-display text-3xl text-cream hover:text-lime transition-colors sm:text-4xl"
-          >
-            {next.title} →
-          </LocaleLink>
-        </Reveal>
+        <ServiceProcess title={dict.servicesPage.processTitle} steps={service.process} />
+
+        <RelatedWork
+          locale={locale}
+          title={dict.servicesPage.relatedWorkTitle}
+          clients={relatedClients}
+        />
+
+        <ServiceFaq title={dict.servicesPage.faqTitle} items={service.faq} />
+
+        <MoreServices
+          locale={locale}
+          title={dict.servicesPage.moreServicesTitle}
+          services={otherServices}
+        />
       </div>
+
+      <ServiceTrust
+        eyebrow={dict.servicesPage.trustEyebrow}
+        title={dict.servicesPage.trustTitle}
+        points={dict.servicesPage.trustPoints}
+      />
 
       <CtaBand locale={locale} dict={dict} />
     </>

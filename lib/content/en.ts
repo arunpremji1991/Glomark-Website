@@ -93,6 +93,26 @@ const en: Dictionary = {
       "Eight disciplines, one team. Whether you need a single film or a full-year campaign, we plug in where you need us — and we speak both English and Arabic natively.",
     coverAlt:
       "Inside the Glomark studio — a cinematographer filming on set beside a designer reviewing brand and website work on screen",
+    processTitle: "How we work",
+    trustEyebrow: "Why Glomark",
+    trustTitle: "Trusted by brands across Salalah, Muscat and the Gulf",
+    trustPoints: [
+      {
+        title: "Based in Salalah",
+        body: "Our studio is home-grown in Salalah, Dhofar — with production crews and campaigns that regularly reach Muscat and the wider Gulf.",
+      },
+      {
+        title: "Bilingual by default",
+        body: "Every deliverable, from a brand film to a line of code, is built to work natively in both Arabic and English — not translated as an afterthought.",
+      },
+      {
+        title: "One accountable team",
+        body: "Strategy, production and delivery sit under one roof, so nothing gets lost in a hand-off between agencies.",
+      },
+    ],
+    relatedWorkTitle: "See it in action",
+    faqTitle: "Frequently asked questions",
+    moreServicesTitle: "Explore our other services",
   },
   services: [
     {
@@ -101,9 +121,11 @@ const en: Dictionary = {
       tagline: "Film, photography and motion that stop the scroll.",
       summary:
         "End-to-end video and photo production — concept, crew, shoot and post — built for brands that want to look cinematic.",
+      descriptionHeading: "Video production services in Salalah, Muscat and across Oman",
       description: [
         "From brand films and TV commercials to product photography and social cut-downs, our production team handles the whole pipeline: concept, script, storyboard, casting, location, crew, and a full post-production suite for edit, colour, sound and motion graphics.",
-        "We travel across Oman and the Gulf for every shoot. Every frame is planned around where it will live — a 60-second hero film and its 9:16 social versions come out of the same shoot day, so your budget works harder.",
+        "We're based in Salalah and shoot across Dhofar, Muscat and the wider Gulf — for a launch in Muscat or a campaign back home in Salalah, the same production standard travels with us. Every frame is planned around where it will live: a 60-second hero film and its 9:16 social versions come out of the same shoot day, so your budget works harder.",
+        "As a full production house rather than a single freelancer, we hold the crew, gear and post-production pipeline in-house — camera operators, drone pilots, colourists and editors who've worked together on brand films across Oman for years. That means faster turnarounds and one team accountable for the finished film, not a chain of freelancers assembled per project.",
       ],
       deliverables: [
         "Brand films & TV commercials",
@@ -113,10 +135,50 @@ const en: Dictionary = {
         "Motion graphics & 2D/3D animation",
         "Social-ready cut-downs (9:16, 1:1, 16:9)",
       ],
-      keyword: "video production company Oman",
-      metaTitle: "Media Production in Oman | Glomark",
+      process: [
+        {
+          title: "Brief & concept",
+          body: "We start with your goals, audience and budget, then shape a concept and shot list built around where the film will actually be used.",
+        },
+        {
+          title: "Pre-production",
+          body: "Casting, locations, permits and crew are locked before day one, so shoot day runs to plan, not around surprises.",
+        },
+        {
+          title: "Production",
+          body: "Our in-house crew films across Salalah, Muscat and the wider Gulf, capturing the hero cut and its social versions in one session.",
+        },
+        {
+          title: "Post & delivery",
+          body: "Edit, colour grading, sound design and motion graphics happen in-house, with revisions built into the timeline until it's ready to publish.",
+        },
+      ],
+      faq: [
+        {
+          question: "How much does a brand film cost in Oman?",
+          answer:
+            "Cost depends on scope — a single-location product film is a different budget to a multi-day brand campaign with drone and cast. We scope every project around your goals and give a clear, itemised quote before any filming starts, so there are no surprises once production begins.",
+        },
+        {
+          question: "Do you travel outside Salalah for shoots?",
+          answer:
+            "Yes — we shoot regularly in Muscat and across Dhofar and the wider Gulf. Being based in Salalah keeps us close to southern Oman, but the crew, gear and production standard travel with us wherever the shoot is.",
+        },
+        {
+          question: "How long does video production take from brief to delivery?",
+          answer:
+            "A straightforward product or social shoot can go from brief to delivered film in one to two weeks. A full brand film with multi-day shooting, casting and heavier post-production typically runs three to six weeks — we'll give you a realistic timeline once we understand the scope.",
+        },
+        {
+          question: "Do you provide both video and photography from the same shoot?",
+          answer:
+            "Usually, yes. Most shoots are planned to capture stills and motion together, so a single production day can deliver your hero film, its social cut-downs, and a set of photography for the same budget.",
+        },
+      ],
+      keyword: "video production company Salalah",
+      metaTitle: "Video Production Company in Salalah, Oman | Glomark",
       metaDescription:
-        "Cinematic video and photography production in Oman — brand films, commercials, drone, editing and motion graphics. End-to-end media production by Glomark.",
+        "Cinematic video production in Salalah, Muscat and across Oman — brand films, commercials, drone and motion graphics. End-to-end media production by Glomark.",
     },
     {
       slug: "events-planning",
@@ -124,9 +186,11 @@ const en: Dictionary = {
       tagline: "Launches, conferences and experiences, produced end to end.",
       summary:
         "Concept, logistics, staging and content capture for events that feel like a moment — not just a meeting.",
+      descriptionHeading: "Event planning and production in Salalah, Muscat and across Oman",
       description: [
         "We plan and produce corporate launches, conferences, exhibitions and cultural events — handling concept, venue, staging, AV, branding, run-of-show and on-site management so the day runs without a seam.",
-        "Because we are a media house first, every event is designed to be captured. Photography, video, live coverage and same-day recap reels are built into the plan, so your event keeps working long after the lights come down.",
+        "Based in Salalah, we run events across Dhofar and travel for launches and conferences in Muscat and beyond — from an intimate product reveal to a multi-day conference with hundreds of guests, the same run-of-show discipline applies wherever it's held.",
+        "Because we are a media house first, every event is designed to be captured, not just staged. Photography, video, live coverage and same-day recap reels are built into the plan from the first meeting, not bolted on afterwards — so your event keeps working for your brand long after the lights come down.",
       ],
       deliverables: [
         "Event concept & creative direction",
@@ -136,10 +200,50 @@ const en: Dictionary = {
         "Photo, video & live coverage",
         "Same-day recap & highlight reels",
       ],
-      keyword: "event management company Oman",
-      metaTitle: "Events Planning & Production in Oman | Glomark",
+      process: [
+        {
+          title: "Concept & planning",
+          body: "We map the event's goals, guest experience and budget into a concept and a detailed run-of-show before any venue is booked.",
+        },
+        {
+          title: "Production setup",
+          body: "Staging, AV, branding and vendor logistics are coordinated and confirmed ahead of the event, in Salalah, Muscat or wherever it's held.",
+        },
+        {
+          title: "On-site delivery",
+          body: "Our team manages the day itself — run-of-show, vendors and troubleshooting — while our crew captures photo, video and live coverage.",
+        },
+        {
+          title: "Recap & reporting",
+          body: "Same-day highlight reels and a full photo/video set are delivered fast, so the event keeps generating attention after it ends.",
+        },
+      ],
+      faq: [
+        {
+          question: "Do you plan events outside Salalah?",
+          answer:
+            "Yes — we regularly run events in Muscat and across the wider Gulf, alongside our home base in Salalah and Dhofar. Wherever the event is, the same planning and on-site team travels with it.",
+        },
+        {
+          question: "Can you handle both the event production and the media coverage?",
+          answer:
+            "That's exactly how we prefer to work. Because we're a media house as well as an events team, photography, video and live coverage are planned into the event from day one, rather than hired separately afterwards.",
+        },
+        {
+          question: "How far in advance should we book an event?",
+          answer:
+            "For a straightforward launch or product reveal, four to six weeks is usually enough. A multi-day conference or an event with custom staging and a longer guest list benefits from eight to twelve weeks, mainly to lock venue, vendors and content in good time.",
+        },
+        {
+          question: "Do you handle vendor and venue coordination, or just the creative side?",
+          answer:
+            "Both. We manage the full run-of-show — venue, staging, AV and vendor coordination — alongside the creative direction and branding, so you have one accountable team rather than juggling multiple suppliers yourself.",
+        },
+      ],
+      keyword: "event management company Salalah",
+      metaTitle: "Event Management Company in Salalah, Oman | Glomark",
       metaDescription:
-        "Full-service event planning and production in Oman — launches, conferences and exhibitions with staging, branding and built-in media coverage by Glomark.",
+        "Full-service event planning and production in Salalah, Muscat and Oman — launches, conferences and exhibitions with built-in media coverage by Glomark.",
     },
     {
       slug: "live-broadcasting",
@@ -147,9 +251,11 @@ const en: Dictionary = {
       tagline: "Multi-camera live streams that look broadcast-grade.",
       summary:
         "Reliable multi-camera live production and streaming for events, launches and broadcasts — to any screen, any platform.",
+      descriptionHeading: "Live broadcasting and streaming production in Salalah, Muscat and Oman",
       description: [
         "We deliver professional live broadcasts: multi-camera switching, live graphics, replay, lower-thirds and simultaneous streaming to YouTube, social platforms and private channels — with bilingual captioning where you need it.",
-        "Our crews handle everything from a single-camera webinar to a stadium-scale production, with redundant encoders and connectivity so the stream stays up when it matters most.",
+        "Our crews handle everything from a single-camera webinar to a stadium-scale production, with redundant encoders and connectivity so the stream stays up when it matters most — whether the event is in Salalah, Muscat or elsewhere in the Gulf.",
+        "Live broadcasting has one shot to get it right — there's no reshoot once the stream is live. That's why every broadcast is planned like a mini production: a camera plan mapped to the run-of-show, graphics and captions prepared in advance, and a backup connection running in parallel, so a dropped signal never becomes a dropped stream.",
       ],
       deliverables: [
         "Multi-camera live switching",
@@ -159,10 +265,50 @@ const en: Dictionary = {
         "Bilingual live captioning",
         "Redundant encoding & connectivity",
       ],
-      keyword: "live streaming production Oman",
-      metaTitle: "Live Broadcasting & Streaming in Oman | Glomark",
+      process: [
+        {
+          title: "Broadcast plan",
+          body: "We map camera positions, graphics and platform delivery to your run-of-show before the event, so nothing is improvised live.",
+        },
+        {
+          title: "Technical setup",
+          body: "Cameras, switchers, encoders and a backup connection are rigged and tested on site, wherever the event is held.",
+        },
+        {
+          title: "Live production",
+          body: "Our crew switches, captions and streams the event in real time, to YouTube, social platforms or a private channel.",
+        },
+        {
+          title: "Delivery & replay",
+          body: "Instant replay clips and the full broadcast recording are delivered fast for reposting and archives.",
+        },
+      ],
+      faq: [
+        {
+          question: "What internet connection do you need for a reliable live stream?",
+          answer:
+            "We bring our own redundant connectivity — typically a primary fibre or 4G/5G link plus a backup — so the stream doesn't depend solely on a venue's Wi-Fi. We assess connectivity at every venue in advance as part of planning.",
+        },
+        {
+          question: "Can you stream to multiple platforms at once?",
+          answer:
+            "Yes — a single broadcast can go out simultaneously to YouTube, Instagram, Facebook and a private channel or website embed, all set up in the encoder before the event starts.",
+        },
+        {
+          question: "Do you provide live captions in both Arabic and English?",
+          answer:
+            "Yes, bilingual live captioning is available and is planned into the broadcast setup in advance, rather than added after the fact.",
+        },
+        {
+          question: "How many cameras do we need for our event?",
+          answer:
+            "It depends on the venue and format — a panel discussion might need two to three cameras, while a conference with a stage and audience reactions often benefits from four or more. We'll recommend a camera plan once we understand the event.",
+        },
+      ],
+      keyword: "live streaming production company Salalah",
+      metaTitle: "Live Streaming Production in Salalah, Oman | Glomark",
       metaDescription:
-        "Broadcast-grade multi-camera live streaming in Oman — events, launches and conferences streamed to any platform with live graphics and bilingual captions by Glomark.",
+        "Broadcast-grade live streaming in Salalah, Muscat and Oman — multi-camera production streamed to any platform with live graphics and bilingual captions.",
     },
     {
       slug: "digital-marketing",
@@ -170,9 +316,11 @@ const en: Dictionary = {
       tagline: "Campaigns engineered to reach the right people and convert.",
       summary:
         "Paid media, SEO and performance campaigns that turn attention into measurable results.",
+      descriptionHeading: "Digital marketing services for brands in Salalah, Muscat and Oman",
       description: [
-        "We plan and run performance campaigns across Meta, Google, TikTok and YouTube — from audience strategy and creative to daily optimisation and transparent reporting. Every dirham is tracked against the outcome that matters to you.",
-        "Paired with SEO, content and marketing automation, our digital work compounds: a campaign that performs today while building the search visibility and audience that pay off for months.",
+        "We plan and run performance campaigns across Meta, Google, TikTok and YouTube — from audience strategy and creative to daily optimisation and transparent reporting. Every rial is tracked against the outcome that matters to you.",
+        "We work with brands based in Salalah and across Oman — from local businesses competing for customers in Dhofar to national brands running campaigns in Muscat and the Gulf. Local market knowledge shapes every campaign: the platforms Omani audiences actually use, the seasons and moments that move them, and messaging that reads naturally in both Arabic and English.",
+        "Paired with SEO, content and marketing automation, our digital work compounds: a campaign that performs today while building the search visibility and audience that pay off for months — the same thinking that keeps our own clients ranking above their competitors in Salalah and Oman.",
       ],
       deliverables: [
         "Paid social & search campaigns",
@@ -182,10 +330,50 @@ const en: Dictionary = {
         "Analytics dashboards & reporting",
         "A/B testing & optimisation",
       ],
-      keyword: "digital marketing agency Oman",
-      metaTitle: "Digital Marketing Agency in Oman | Glomark",
+      process: [
+        {
+          title: "Audience & goals",
+          body: "We start with who you're trying to reach — in Salalah, across Oman or the wider Gulf — and what result actually matters: leads, sales or visibility.",
+        },
+        {
+          title: "Strategy & setup",
+          body: "Campaigns, tracking and landing pages are built and connected before a single rial is spent, so results are measurable from day one.",
+        },
+        {
+          title: "Launch & optimise",
+          body: "We run and adjust campaigns daily against real performance data, refining audiences and creative as results come in.",
+        },
+        {
+          title: "Report & grow",
+          body: "Transparent monthly reporting shows what's working, what changed, and where the next opportunity to grow is.",
+        },
+      ],
+      faq: [
+        {
+          question: "Which platforms do you recommend for digital marketing in Oman?",
+          answer:
+            "It depends on your audience — Meta (Instagram and Facebook) and Google Ads cover most Omani consumer campaigns well, while TikTok and YouTube are strong for reach with younger audiences. We recommend the mix based on where your customers actually spend time, not a one-size-fits-all list.",
+        },
+        {
+          question: "How much should a small business in Salalah budget for digital marketing?",
+          answer:
+            "There's no fixed number — it depends on your goals and how competitive your category is. We build campaigns that scale with your budget and show you the expected reach and results before you commit, so you can decide with real numbers in front of you.",
+        },
+        {
+          question: "Do you run campaigns for businesses outside Salalah?",
+          answer:
+            "Yes — we run digital marketing for clients across Muscat, Dhofar and the wider Gulf. Digital campaigns don't require us to be on-site, so location isn't a limitation the way it can be for production work.",
+        },
+        {
+          question: "How soon will I see results from a digital marketing campaign?",
+          answer:
+            "Paid campaigns typically show early signal — clicks, engagement, leads — within the first one to two weeks, though we usually recommend a four-week minimum before judging performance. SEO is slower and more durable, usually building over two to six months.",
+        },
+      ],
+      keyword: "digital marketing agency Salalah",
+      metaTitle: "Digital Marketing Agency in Salalah, Oman | Glomark",
       metaDescription:
-        "Performance digital marketing in Oman — paid social, Google Ads, SEO and analytics that turn attention into measurable results. Data-led campaigns by Glomark.",
+        "Performance digital marketing for brands in Salalah, Muscat and Oman — paid social, Google Ads, SEO and analytics that turn attention into results.",
     },
     {
       slug: "branding",
@@ -193,9 +381,11 @@ const en: Dictionary = {
       tagline: "Identities with a point of view — built to last.",
       summary:
         "Naming, logo, visual identity and brand guidelines that make you recognisable and hard to copy.",
+      descriptionHeading: "Branding and identity design for businesses in Salalah, Muscat and Oman",
       description: [
         "We build brands from the strategy up: positioning, naming, tone of voice, logo, colour, typography and a complete visual system — documented in guidelines your whole team can use.",
-        "Bilingual by design, every identity we create is crafted to work beautifully in both Arabic and English, so your brand feels native to audiences across Oman and the wider region.",
+        "Bilingual by design, every identity we create is crafted to work beautifully in both Arabic and English, so your brand feels native to audiences across Salalah, Muscat and the wider region — not translated as an afterthought.",
+        "We've built identities for brands headquartered in Salalah and for national projects launching in Muscat, and the same process applies either way: strategy first, so the name, logo and colour palette all trace back to a clear idea of who you are and who you're for — not a mood board picked because it looked nice.",
       ],
       deliverables: [
         "Brand strategy & positioning",
@@ -205,10 +395,50 @@ const en: Dictionary = {
         "Brand guidelines & asset kits",
         "Collateral & packaging design",
       ],
-      keyword: "branding agency Oman",
-      metaTitle: "Branding & Identity Design in Oman | Glomark",
+      process: [
+        {
+          title: "Discovery",
+          body: "We learn your business, audience and competitors, and pin down the positioning your brand needs to own.",
+        },
+        {
+          title: "Naming & strategy",
+          body: "If you need a name, we develop and test options; either way, we lock the strategic brief the identity will be built from.",
+        },
+        {
+          title: "Identity design",
+          body: "Logo, colour, typography and the visual system come together — designed bilingually in Arabic and English from the same brief.",
+        },
+        {
+          title: "Guidelines & rollout",
+          body: "You receive a full brand guideline and asset kit, so your team can apply the identity consistently across every touchpoint.",
+        },
+      ],
+      faq: [
+        {
+          question: "How long does a branding project take?",
+          answer:
+            "A focused logo and identity project typically takes three to five weeks. A full rebrand with naming, strategy and a complete visual system usually runs six to ten weeks, depending on how many rounds of feedback are needed.",
+        },
+        {
+          question: "Do you design brands in both Arabic and English?",
+          answer:
+            "Yes — bilingual identity is standard on every project, not an add-on. We design the Arabic and English versions of your logo and typography together, from the same brief, so neither language feels like an afterthought.",
+        },
+        {
+          question: "Can you rebrand an existing business without losing brand recognition?",
+          answer:
+            "Yes — we can evolve an existing identity rather than replace it outright, keeping the elements your customers already recognise while modernising what's holding the brand back. We'll recommend the right approach once we understand your situation.",
+        },
+        {
+          question: "Do you work with businesses outside Salalah?",
+          answer:
+            "Yes — we've built identities for clients based in Salalah as well as national projects launching in Muscat. Branding work doesn't require us to be on-site, so we take projects from across Oman and the Gulf.",
+        },
+      ],
+      keyword: "branding agency Salalah",
+      metaTitle: "Branding Agency in Salalah, Oman | Glomark",
       metaDescription:
-        "Strategic branding in Oman — positioning, naming, logo and bilingual Arabic/English identity systems that make brands recognisable and premium. Brand design by Glomark.",
+        "Strategic branding and identity design in Salalah, Muscat and Oman — bilingual Arabic/English brand systems that make you recognisable. By Glomark.",
     },
     {
       slug: "website-development",
@@ -216,9 +446,11 @@ const en: Dictionary = {
       tagline: "Fast, bilingual websites that rank and convert.",
       summary:
         "Design and build of high-performance, SEO-ready websites in Arabic and English.",
+      descriptionHeading: "Website design and development for businesses in Salalah, Muscat and Oman",
       description: [
         "We design and develop websites that are fast, accessible and built to be found — with clean semantic markup, structured data and Core Web Vitals in mind from the first line of code.",
         "Every site ships fully bilingual with proper right-to-left Arabic layouts, a content structure your team can manage, and the analytics and tracking your marketing needs to prove results.",
+        "We build for businesses based in Salalah and across Oman who want a website that actually shows up when customers search — whether that's someone looking for a service in Dhofar or a national audience in Muscat. That means the site is built to rank from day one, not retrofitted for SEO after launch.",
       ],
       deliverables: [
         "UX & UI design",
@@ -228,10 +460,50 @@ const en: Dictionary = {
         "CMS & content structure",
         "Analytics & tracking setup",
       ],
-      keyword: "website development company Oman",
-      metaTitle: "Website Development in Oman | Glomark",
+      process: [
+        {
+          title: "Discovery & structure",
+          body: "We map your pages, content and user journeys around what your customers actually search for and need to find.",
+        },
+        {
+          title: "Design",
+          body: "UX and visual design come together in your brand's identity, built bilingually for Arabic and English from the same layout.",
+        },
+        {
+          title: "Build",
+          body: "We develop with clean, semantic code, structured data and Core Web Vitals performance built in, not patched on later.",
+        },
+        {
+          title: "Launch & handover",
+          body: "Analytics and tracking are set up before launch, and your team gets a content structure they can actually manage.",
+        },
+      ],
+      faq: [
+        {
+          question: "How long does it take to build a website?",
+          answer:
+            "A focused business website typically takes three to five weeks from content-ready brief to launch. A larger site with ecommerce or custom functionality usually runs six to ten weeks. We'll give you a realistic timeline once we understand the scope.",
+        },
+        {
+          question: "Will my website work properly in Arabic?",
+          answer:
+            "Yes — every site we build ships fully bilingual with correct right-to-left Arabic layouts, not just translated text dropped into an English template. Arabic and English are designed and tested as equals.",
+        },
+        {
+          question: "Will my new website actually rank on Google?",
+          answer:
+            "We build every site with SEO fundamentals in place from day one — clean semantic code, fast load times, structured data and proper meta tags — which gives you a real foundation to rank on. Ranking also depends on ongoing content and competition in your category, which is where our digital marketing service can help.",
+        },
+        {
+          question: "Can you build an online store, not just a brochure website?",
+          answer:
+            "Yes — we've built ecommerce sites for clients across Oman, including gifting and retail brands. We'll recommend the right platform and structure based on your product range and how you want to manage orders.",
+        },
+      ],
+      keyword: "website development company Salalah",
+      metaTitle: "Website Development Company in Salalah, Oman | Glomark",
       metaDescription:
-        "Fast, bilingual, SEO-ready website design and development in Oman. Accessible Arabic/English sites built for Core Web Vitals and conversion by Glomark.",
+        "Fast, bilingual, SEO-ready websites for businesses in Salalah, Muscat and Oman. Built for Core Web Vitals and conversion by Glomark.",
     },
     {
       slug: "social-media-management",
@@ -239,9 +511,11 @@ const en: Dictionary = {
       tagline: "Always-on channels that build an audience, not just posts.",
       summary:
         "Strategy, content, community and reporting to keep your brand consistently present and growing.",
+      descriptionHeading: "Social media management for brands in Salalah, Muscat and across Oman",
       description: [
         "We run your social channels end to end: monthly content strategy, bilingual copy, design and video, scheduling, community management and reporting — all in your brand voice.",
         "Backed by our production studio, your feed gets a steady supply of scroll-stopping photo and video, not stock and filler. We plan campaigns and always-on content together so growth is deliberate, not accidental.",
+        "We manage channels for cafés, retail and events brands in Salalah as well as national businesses reaching audiences in Muscat and beyond — and the content is shot locally, not bought from a stock library, so it actually looks like your business, in your city.",
       ],
       deliverables: [
         "Monthly content strategy & calendar",
@@ -251,10 +525,50 @@ const en: Dictionary = {
         "Community management",
         "Monthly performance reporting",
       ],
-      keyword: "social media management Oman",
-      metaTitle: "Social Media Management in Oman | Glomark",
+      process: [
+        {
+          title: "Strategy & calendar",
+          body: "We build a monthly content plan around your brand voice, goals and the platforms your audience actually uses.",
+        },
+        {
+          title: "Content production",
+          body: "Our in-house studio shoots photo and video specifically for your feed, in Salalah or wherever your business operates.",
+        },
+        {
+          title: "Publishing & community",
+          body: "Content goes out on a consistent schedule, with community management keeping conversations active and on-brand.",
+        },
+        {
+          title: "Reporting & refinement",
+          body: "Monthly reporting shows what's working, and the next month's plan adjusts based on real performance, not guesswork.",
+        },
+      ],
+      faq: [
+        {
+          question: "Do you create the content yourselves, or just post it?",
+          answer:
+            "We create it. Because we're a full production studio, most of the photo and video on your feed is shot specifically for your brand — not sourced from stock libraries — which is why it tends to perform better and actually look like your business.",
+        },
+        {
+          question: "How many posts per month do you typically manage?",
+          answer:
+            "It varies by plan and platform — most brands land somewhere between twelve and twenty pieces of content a month across their channels. We'll recommend a cadence based on your goals and what your audience actually responds to.",
+        },
+        {
+          question: "Do you handle Arabic and English content, or just one language?",
+          answer:
+            "Both, as standard. Copy is written bilingually so your brand reads naturally in Arabic and English, rather than one language being an afterthought or a direct translation of the other.",
+        },
+        {
+          question: "Can you manage social media for a business outside Salalah?",
+          answer:
+            "Yes — while our production studio is based in Salalah, we manage social channels for clients across Muscat and the wider Gulf, travelling for content shoots as needed.",
+        },
+      ],
+      keyword: "social media management Salalah",
+      metaTitle: "Social Media Management in Salalah, Oman | Glomark",
       metaDescription:
-        "Bilingual social media management in Oman — strategy, content, community and reporting that grow your audience. Scroll-stopping content from Glomark's studio.",
+        "Bilingual social media management for brands in Salalah, Muscat and Oman — strategy, in-house content and reporting that grow your audience.",
     },
     {
       slug: "application-development",
@@ -262,9 +576,11 @@ const en: Dictionary = {
       tagline: "Mobile and web apps that feel effortless to use.",
       summary:
         "Product design and development of iOS, Android and web apps — from prototype to launch.",
+      descriptionHeading: "Mobile and web app development for businesses in Salalah, Muscat and Oman",
       description: [
         "We design and build mobile and web applications — from discovery and UX to development, testing and launch — with clean, maintainable code and interfaces that feel effortless in both Arabic and English.",
         "Whether it's a customer app, an internal tool or a bilingual platform, we ship reliable products and stay on for the iterations, analytics and support that keep them growing.",
+        "We build for businesses across Oman who need software that works the way their customers actually think in both languages — an ordering app that reads naturally in Arabic, a booking platform that handles RTL layouts correctly, an internal tool your team in Salalah or Muscat can actually use without a manual.",
       ],
       deliverables: [
         "Product discovery & UX",
@@ -274,10 +590,50 @@ const en: Dictionary = {
         "QA, testing & app-store launch",
         "Analytics, support & iteration",
       ],
-      keyword: "mobile app development Oman",
-      metaTitle: "App Development in Oman | Glomark",
+      process: [
+        {
+          title: "Discovery",
+          body: "We map the problem the app needs to solve, who it's for, and what \"done\" actually looks like before any screens are designed.",
+        },
+        {
+          title: "UX & design",
+          body: "Interfaces are designed bilingually in Arabic and English from the start, with RTL layouts handled properly, not patched on.",
+        },
+        {
+          title: "Development",
+          body: "We build with clean, maintainable code, testing continuously rather than saving QA for the end of the project.",
+        },
+        {
+          title: "Launch & support",
+          body: "We handle app-store submission and stay on for analytics, iteration and support once real users are on the app.",
+        },
+      ],
+      faq: [
+        {
+          question: "How much does it cost to build a mobile app in Oman?",
+          answer:
+            "It depends heavily on scope — a simple booking or ordering app is a very different project to a multi-feature customer platform. We scope every project in detail and give you a clear quote before development starts, so there are no surprises partway through.",
+        },
+        {
+          question: "Do you build for both iOS and Android?",
+          answer:
+            "Yes — depending on your audience and budget, we can build natively for both platforms or use a cross-platform approach that ships to iOS and Android from one codebase, which we'll recommend based on your specific needs.",
+        },
+        {
+          question: "Will the app work properly in Arabic, including right-to-left layout?",
+          answer:
+            "Yes — Arabic and RTL support is built in from the design stage, not added afterwards. We test every interface in both languages to make sure the layout, navigation and text all read correctly in Arabic.",
+        },
+        {
+          question: "Do you provide support after the app launches?",
+          answer:
+            "Yes — we stay on after launch for bug fixes, analytics review and ongoing iteration, since most apps need adjustment once real users start using them. We'll agree on a support arrangement that fits your needs.",
+        },
+      ],
+      keyword: "mobile app development company Salalah",
+      metaTitle: "Mobile App Development in Salalah, Oman | Glomark",
       metaDescription:
-        "Mobile and web app development in Oman — iOS, Android and progressive web apps with bilingual Arabic/English interfaces, built from prototype to launch by Glomark.",
+        "Mobile and web app development in Salalah, Muscat and Oman — bilingual iOS, Android and web apps built from prototype to launch by Glomark.",
     },
   ],
   work: {

@@ -67,6 +67,22 @@ export const CLIENT_SLUGS = [
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
 
+// Which real client case studies to surface on each service page's "see it
+// in action" section — only clients whose `services` tags (lib/content/*)
+// actually include that discipline. Two services (live-broadcasting,
+// application-development) have no matching client yet; omit rather than
+// force an unrelated case study, same principle as CLIENT_GALLERY above.
+export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
+  "media-production": ["almoftah", "voice-of-the-season", "do-cafe"],
+  "events-planning": ["voice-of-the-season", "do-events"],
+  "live-broadcasting": [],
+  "digital-marketing": ["reventure", "firstexchange"],
+  branding: ["reventure", "do-chocolate", "ventura"],
+  "website-development": ["reventure", "do-chocolate", "ventura"],
+  "social-media-management": ["do-cafe", "ventura", "reventure"],
+  "application-development": [],
+};
+
 // External profile/website for each client — locale-neutral.
 export const CLIENT_LINKS: Record<ClientSlug, string> = {
   reventure: "https://www.instagram.com/reventure.om/",

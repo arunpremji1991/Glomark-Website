@@ -26,7 +26,10 @@ export interface ServiceContent {
   tagline: string; // one-line promise
   summary: string; // short card description
   description: string[]; // full paragraphs for the service page
+  descriptionHeading: string; // keyword-rich H2 above the description body
   deliverables: string[]; // bullet list of what's included
+  process: { title: string; body: string }[]; // "How we work" steps, this service
+  faq: { question: string; answer: string }[]; // service-specific FAQ, feeds FAQPage schema
   keyword: string; // primary SEO keyword the page targets
   metaTitle: string;
   metaDescription: string;
@@ -120,6 +123,13 @@ export interface Dictionary {
     title: string;
     intro: string;
     coverAlt: string;
+    processTitle: string; // label above each service's "How we work" steps
+    trustEyebrow: string;
+    trustTitle: string;
+    trustPoints: { title: string; body: string }[]; // shared local-credibility band, all service pages
+    relatedWorkTitle: string; // label above the "see it in action" case studies
+    faqTitle: string;
+    moreServicesTitle: string; // label above the cross-links to other services
   };
   services: ServiceContent[];
   work: {
