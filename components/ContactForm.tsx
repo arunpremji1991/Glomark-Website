@@ -73,7 +73,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
   // generates w-full later than the numbered width scale, so equal-
   // specificity classes added afterward can't override it by source order).
   const countrySelectClass =
-    "w-28 shrink-0 rounded-xl border border-white/12 bg-white/[0.03] px-2 py-3 text-[0.95rem] text-cream outline-none transition-colors focus:border-lime/60 appearance-none";
+    "w-24 shrink-0 rounded-xl border border-white/12 bg-white/[0.03] px-1.5 py-3 text-[0.95rem] text-cream outline-none transition-colors focus:border-lime/60 appearance-none";
 
   return (
     <>
