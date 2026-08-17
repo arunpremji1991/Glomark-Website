@@ -68,6 +68,12 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
 
   const inputClass =
     "w-full rounded-xl border border-white/12 bg-white/[0.03] px-4 py-3 text-[0.95rem] text-cream placeholder:text-cream/35 outline-none transition-colors focus:border-lime/60";
+  // Deliberately doesn't spread inputClass — its "w-full" would win the
+  // cascade over any narrower width utility added after it (Tailwind
+  // generates w-full later than the numbered width scale, so equal-
+  // specificity classes added afterward can't override it by source order).
+  const countrySelectClass =
+    "w-28 shrink-0 rounded-xl border border-white/12 bg-white/[0.03] px-2 py-3 text-[0.95rem] text-cream outline-none transition-colors focus:border-lime/60 appearance-none";
 
   return (
     <>
@@ -113,19 +119,19 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
                 aria-label={dict.contact.formCountry}
                 value={countryIso}
                 onChange={(e) => setCountryIso(e.target.value)}
-                className={`${inputClass} w-32 shrink-0 appearance-none truncate ps-2.5 pe-1.5 sm:w-40`}
+                className={countrySelectClass}
               >
                 <optgroup label={dict.contact.formCountryGcc}>
                   {GCC_COUNTRIES.map((c) => (
-                    <option key={c.iso} value={c.iso}>
-                      {countryFlag(c.iso)} {dict.locale === "ar" ? c.nameAr : c.nameEn} {c.dial}
+                    <option key={c.iso} value={c.iso} title={dict.locale === "ar" ? c.nameAr : c.nameEn}>
+                      {countryFlag(c.iso)} {c.dial}
                     </option>
                   ))}
                 </optgroup>
                 <optgroup label={dict.contact.formCountryOther}>
                   {OTHER_COUNTRIES.map((c) => (
-                    <option key={c.iso} value={c.iso}>
-                      {countryFlag(c.iso)} {dict.locale === "ar" ? c.nameAr : c.nameEn} {c.dial}
+                    <option key={c.iso} value={c.iso} title={dict.locale === "ar" ? c.nameAr : c.nameEn}>
+                      {countryFlag(c.iso)} {c.dial}
                     </option>
                   ))}
                 </optgroup>
