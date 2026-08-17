@@ -10,6 +10,10 @@ export const CONTACT = {
   whatsappHref: "https://wa.me/96891018000",
   email: "hello@glomark.om",
   emailHref: "mailto:hello@glomark.om",
+  // Destination for the contact-form "Send your brief" submission only —
+  // general "email us" links elsewhere on the site still use `email` above.
+  leadsEmail: "e-marketing@glomark.om",
+  leadsEmailHref: "mailto:e-marketing@glomark.om",
   addressLine: "An Nahdah St, Salalah, Oman",
   street: "An Nahdah Street",
   city: "Salalah",

@@ -13,7 +13,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const subject = `Project brief — ${name || "New enquiry"}`;
+    const subject = `Website Leads — ${name || "New enquiry"}`;
     const lines = [
       `Name: ${name}`,
       `Email: ${email}`,
@@ -23,7 +23,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
       message,
     ].filter((l): l is string => l !== null);
     const body = lines.join("\n");
-    window.location.href = `${CONTACT.emailHref}?subject=${encodeURIComponent(
+    window.location.href = `${CONTACT.leadsEmailHref}?subject=${encodeURIComponent(
       subject,
     )}&body=${encodeURIComponent(body)}`;
   }
