@@ -172,6 +172,8 @@ export interface Dictionary {
     formName: string;
     formEmail: string;
     formCountry: string; // aria-label for the phone country-code select
+    formCountryGcc: string; // optgroup label for GCC countries
+    formCountryOther: string; // optgroup label for the rest of the world
     formPhone: string;
     formCompany: string;
     formService: string;

@@ -2,7 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 import type { Dictionary } from "@/lib/i18n";
-import { WEB3FORMS_ACCESS_KEY, PHONE_COUNTRIES } from "@/lib/site";
+import { WEB3FORMS_ACCESS_KEY, GCC_COUNTRIES, OTHER_COUNTRIES, countryFlag } from "@/lib/site";
 import { SuccessModal } from "@/components/SuccessModal";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -10,7 +10,12 @@ type Status = "idle" | "loading" | "success" | "error";
 export function ContactForm({ dict }: { dict: Dictionary }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [countryDial, setCountryDial] = useState<string>(PHONE_COUNTRIES[0].dial);
+  // Selection is keyed by ISO code, not dial code — several countries share
+  // a dial code (US/Canada both +1, Russia/Kazakhstan both +7), and a
+  // controlled <select> needs a unique value per option to track the right
+  // one as selected.
+  const [countryIso, setCountryIso] = useState<string>(GCC_COUNTRIES[0].iso);
+  const allCountries = [...GCC_COUNTRIES, ...OTHER_COUNTRIES];
   const [phoneNumber, setPhoneNumber] = useState("");
   const [company, setCompany] = useState("");
   const [service, setService] = useState("");
@@ -20,7 +25,8 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("loading");
-    const phone = `${countryDial} ${phoneNumber}`.trim();
+    const country = allCountries.find((c) => c.iso === countryIso) ?? GCC_COUNTRIES[0];
+    const phone = `${country.dial} ${phoneNumber}`.trim();
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
@@ -47,7 +53,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
         setStatus("success");
         setName("");
         setEmail("");
-        setCountryDial(PHONE_COUNTRIES[0].dial);
+        setCountryIso(GCC_COUNTRIES[0].iso);
         setPhoneNumber("");
         setCompany("");
         setService("");
@@ -105,15 +111,24 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
             <div className="flex gap-2">
               <select
                 aria-label={dict.contact.formCountry}
-                value={countryDial}
-                onChange={(e) => setCountryDial(e.target.value)}
-                className={`${inputClass} w-[6.5rem] shrink-0 appearance-none px-2.5 text-center`}
+                value={countryIso}
+                onChange={(e) => setCountryIso(e.target.value)}
+                className={`${inputClass} w-32 shrink-0 appearance-none truncate ps-2.5 pe-1.5 sm:w-40`}
               >
-                {PHONE_COUNTRIES.map((c) => (
-                  <option key={c.iso} value={c.dial}>
-                    {c.flag} {c.dial}
-                  </option>
-                ))}
+                <optgroup label={dict.contact.formCountryGcc}>
+                  {GCC_COUNTRIES.map((c) => (
+                    <option key={c.iso} value={c.iso}>
+                      {countryFlag(c.iso)} {dict.locale === "ar" ? c.nameAr : c.nameEn} {c.dial}
+                    </option>
+                  ))}
+                </optgroup>
+                <optgroup label={dict.contact.formCountryOther}>
+                  {OTHER_COUNTRIES.map((c) => (
+                    <option key={c.iso} value={c.iso}>
+                      {countryFlag(c.iso)} {dict.locale === "ar" ? c.nameAr : c.nameEn} {c.dial}
+                    </option>
+                  ))}
+                </optgroup>
               </select>
               <input
                 id="phone"

@@ -956,6 +956,8 @@ const ar: Dictionary = {
     formName: "اسمك",
     formEmail: "البريد الإلكتروني",
     formCountry: "رمز الدولة",
+    formCountryGcc: "دول الخليج",
+    formCountryOther: "كل الدول",
     formPhone: "رقم الهاتف",
     formCompany: "الشركة (اختياري)",
     formService: "ما الذي تحتاجه؟",

@@ -954,6 +954,8 @@ const en: Dictionary = {
     formName: "Your name",
     formEmail: "Email address",
     formCountry: "Country code",
+    formCountryGcc: "GCC",
+    formCountryOther: "All countries",
     formPhone: "Phone number",
     formCompany: "Company (optional)",
     formService: "What do you need?",
