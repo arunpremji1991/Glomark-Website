@@ -171,9 +171,11 @@ export interface Dictionary {
     intro: string;
     formName: string;
     formEmail: string;
+    formPhone: string;
     formCompany: string;
     formService: string;
     formServiceDefault: string;
+    formServiceOther: string;
     formMessage: string;
     formSubmit: string;
     formSending: string;

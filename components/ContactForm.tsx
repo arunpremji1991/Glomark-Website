@@ -10,6 +10,7 @@ type Status = "idle" | "loading" | "success" | "error";
 export function ContactForm({ dict }: { dict: Dictionary }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [service, setService] = useState("");
   const [message, setMessage] = useState("");
@@ -32,6 +33,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
           from_name: "Glomark Website",
           name,
           email,
+          phone,
           company: company || undefined,
           service: service || undefined,
           message,
@@ -43,6 +45,7 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
         setStatus("success");
         setName("");
         setEmail("");
+        setPhone("");
         setCompany("");
         setService("");
         setMessage("");
@@ -93,6 +96,21 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           <div>
+            <label htmlFor="phone" className="mb-1.5 block text-[0.8rem] font-medium text-cream/70">
+              {dict.contact.formPhone}
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+              placeholder="+968 9101 8000"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className={inputClass}
+            />
+          </div>
+          <div>
             <label htmlFor="company" className="mb-1.5 block text-[0.8rem] font-medium text-cream/70">
               {dict.contact.formCompany}
             </label>
@@ -105,25 +123,29 @@ export function ContactForm({ dict }: { dict: Dictionary }) {
               className={inputClass}
             />
           </div>
-          <div>
-            <label htmlFor="service" className="mb-1.5 block text-[0.8rem] font-medium text-cream/70">
-              {dict.contact.formService}
-            </label>
-            <select
-              id="service"
-              name="service"
-              value={service}
-              onChange={(e) => setService(e.target.value)}
-              className={`${inputClass} appearance-none`}
-            >
-              <option value="">{dict.contact.formServiceDefault}</option>
-              {dict.services.map((s) => (
-                <option key={s.slug} value={s.title}>
-                  {s.title}
-                </option>
-              ))}
-            </select>
-          </div>
+        </div>
+
+        <div>
+          <label htmlFor="service" className="mb-1.5 block text-[0.8rem] font-medium text-cream/70">
+            {dict.contact.formService}
+          </label>
+          <select
+            id="service"
+            name="service"
+            value={service}
+            onChange={(e) => setService(e.target.value)}
+            className={`${inputClass} appearance-none`}
+          >
+            <option value="">{dict.contact.formServiceDefault}</option>
+            {dict.services.map((s) => (
+              <option key={s.slug} value={s.title}>
+                {s.title}
+              </option>
+            ))}
+            <option value={dict.contact.formServiceOther}>
+              {dict.contact.formServiceOther}
+            </option>
+          </select>
         </div>
 
         <div>
