@@ -12,8 +12,9 @@ export const CONTACT = {
   emailHref: "mailto:hello@glomark.om",
   // Destination for the contact-form "Send your brief" submission only —
   // general "email us" links elsewhere on the site still use `email` above.
+  // Delivery is via Web3Forms (see WEB3FORMS_ACCESS_KEY below), which routes
+  // to whichever address was verified when the access key was created.
   leadsEmail: "e-marketing@glomark.om",
-  leadsEmailHref: "mailto:e-marketing@glomark.om",
   addressLine: "An Nahdah St, Salalah, Oman",
   street: "An Nahdah Street",
   city: "Salalah",
@@ -34,6 +35,12 @@ export const CONTACT = {
     closes: "18:00",
   },
 } as const;
+
+// Web3Forms access key for the contact-form submission (components/ContactForm.tsx).
+// Safe to keep client-side — Web3Forms access keys are designed for public,
+// browser-side use (like a form ID), not a secret credential. Generated at
+// web3forms.com against e-marketing@glomark.om; submissions route there.
+export const WEB3FORMS_ACCESS_KEY = "fd42eb27-1ae6-46ff-9e79-f69aad846c6a";
 
 // sameAs profiles for Organization schema — the agency's real profiles.
 export const SOCIAL = [

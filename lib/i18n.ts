@@ -176,7 +176,12 @@ export interface Dictionary {
     formServiceDefault: string;
     formMessage: string;
     formSubmit: string;
+    formSending: string;
     formNote: string;
+    formError: string;
+    successTitle: string;
+    successBody: string;
+    successClose: string;
     directTitle: string;
     hoursTitle: string;
     hours: string;
