@@ -22,10 +22,10 @@ export const CONTACT = {
   region: "Dhofar",
   country: "Oman",
   countryCode: "OM",
-  // Approx. Salalah centre — used for the map embed and geo schema.
-  geo: { lat: 17.0151, lng: 54.0924 },
-  mapEmbed:
-    "https://www.google.com/maps?q=An+Nahdah+Street,+Salalah,+Oman&output=embed",
+  // Exact pin from the verified Google Business Profile listing (not a
+  // geocoded guess from the street address, which landed ~500m off).
+  geo: { lat: 17.0196643, lng: 54.0926487 },
+  mapEmbed: "https://www.google.com/maps?q=17.0196643,54.0926487&output=embed",
   // Structured (locale-neutral) form of the "Sunday – Thursday, 9:00 – 18:00"
   // hours shown in lib/content/*.ts — feeds openingHoursSpecification in
   // lib/schema.ts rather than parsing the translated display string.
