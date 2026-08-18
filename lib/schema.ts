@@ -79,7 +79,7 @@ export function articleSchema(post: BlogPost, locale: Locale) {
     "@id": `${SITE_URL}/${locale}/blog/${post.slug}/#article`,
     headline: post.title,
     description: post.excerpt,
-    image: `${SITE_URL}/media/blog/${post.slug}.webp`,
+    image: [`${SITE_URL}/media/blog/${post.slug}.webp`],
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: locale,

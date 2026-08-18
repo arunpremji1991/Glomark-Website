@@ -31,6 +31,31 @@ function formatDate(iso: string, locale: string) {
   }).format(new Date(iso));
 }
 
+// Parses the one supported inline markup in post body paragraphs —
+// "[label](url)" — into a real link; anything else passes through as plain
+// text unchanged, so existing posts with no bracket syntax render exactly
+// as before. External links (http/https) open in a new tab to match the
+// site's existing convention for outbound links (see work/[slug]/page.tsx).
+function renderRichText(text: string) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return parts.map((part, i) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    if (!match) return part;
+    const [, label, href] = match;
+    const isExternal = /^https?:\/\//.test(href);
+    return (
+      <a
+        key={i}
+        href={href}
+        className="text-lime underline decoration-lime/40 underline-offset-2 transition-colors hover:decoration-lime"
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
+        {label}
+      </a>
+    );
+  });
+}
+
 export async function generateMetadata({
   params: { locale, slug },
 }: {
@@ -43,6 +68,9 @@ export async function generateMetadata({
     path: `/blog/${slug}`,
     title: resolved.post.metaTitle,
     description: resolved.post.metaDescription,
+    type: "article",
+    publishedTime: resolved.post.date,
+    ...(resolved.post.ogImage ? { ogImage: resolved.post.ogImage } : {}),
   });
 }
 
@@ -115,7 +143,7 @@ export default async function BlogPostPage({
         <Reveal className="mx-auto max-w-prose2 space-y-6">
           {post.body.map((para, i) => (
             <p key={i} className="text-lg leading-relaxed text-cream/75 pretty">
-              {para}
+              {renderRichText(para)}
             </p>
           ))}
         </Reveal>

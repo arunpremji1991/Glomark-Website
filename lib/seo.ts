@@ -12,12 +12,19 @@ export function buildMetadata({
   title,
   description,
   ogImage = "/og/glomark-og.jpg",
+  type = "website",
+  publishedTime,
 }: {
   locale: Locale;
   path: string;
   title: string;
   description: string;
   ogImage?: string;
+  // "article" + publishedTime are only used by blog posts (see
+  // app/[locale]/blog/[slug]/page.tsx); every other caller omits both and
+  // keeps today's "website" behaviour unchanged.
+  type?: "website" | "article";
+  publishedTime?: string;
 }): Metadata {
   const clean = path === "/" ? "" : path;
   const languages: Record<string, string> = {};
@@ -36,16 +43,29 @@ export function buildMetadata({
       canonical,
       languages,
     },
-    openGraph: {
-      title,
-      description,
-      url: canonical,
-      siteName: "Glomark",
-      locale: locale === "ar" ? "ar_OM" : "en_OM",
-      alternateLocale: locale === "ar" ? "en_OM" : "ar_OM",
-      type: "website",
-      images: [{ url: imageUrl, width: 1200, height: 630, alt: title }],
-    },
+    openGraph:
+      type === "article"
+        ? {
+            title,
+            description,
+            url: canonical,
+            siteName: "Glomark",
+            locale: locale === "ar" ? "ar_OM" : "en_OM",
+            alternateLocale: locale === "ar" ? "en_OM" : "ar_OM",
+            type: "article",
+            publishedTime,
+            images: [{ url: imageUrl, width: 1200, height: 630, alt: title }],
+          }
+        : {
+            title,
+            description,
+            url: canonical,
+            siteName: "Glomark",
+            locale: locale === "ar" ? "ar_OM" : "en_OM",
+            alternateLocale: locale === "ar" ? "en_OM" : "ar_OM",
+            type: "website",
+            images: [{ url: imageUrl, width: 1200, height: 630, alt: title }],
+          },
     twitter: {
       card: "summary_large_image",
       title,
