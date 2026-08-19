@@ -43,102 +43,108 @@ export function Header({
   ];
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
-        scrolled
-          ? "bg-ink/85 backdrop-blur-md border-b border-white/8"
-          : "bg-transparent border-b border-transparent"
-      }`}
-    >
-      <div className="container-x flex h-[72px] items-center justify-between">
-        <Link
-          href={localeHref(locale, "/")}
-          className="shrink-0"
-          aria-label="Glomark — home"
+    <header className="sticky top-0 z-50 pt-3 sm:pt-4">
+      <div className="container-x">
+        <div
+          className={`mx-auto flex h-16 w-full max-w-5xl items-center justify-between rounded-full border pl-3 pr-3 backdrop-blur-2xl transition-all duration-300 lg:pl-6 ${
+            scrolled
+              ? "border-white/20 bg-white/[0.1] shadow-[0_10px_40px_-8px_rgba(0,0,0,0.65)]"
+              : "border-white/12 bg-white/[0.06] shadow-[0_8px_30px_-10px_rgba(0,0,0,0.5)]"
+          }`}
         >
-          <GlomarkLogo />
-        </Link>
-
-        <nav
-          aria-label={dict.nav.menu}
-          className="hidden lg:flex items-center gap-6 xl:gap-8"
-        >
-          {navItems.map((item) => {
-            const active =
-              item.href === "/"
-                ? restPath === "/"
-                : restPath.startsWith(item.href);
-            return (
-              <Link
-                key={item.href}
-                href={localeHref(locale, item.href)}
-                className={`text-[0.92rem] font-medium tracking-wide transition-colors hover:text-lime ${
-                  active ? "text-lime" : "text-cream/85"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
-
-        <div className="hidden lg:flex items-center gap-5">
-          <LangToggle locale={locale} otherLocale={otherLocale} dict={dict} restPath={restPath} />
           <Link
-            href={localeHref(locale, "/contact")}
-            className="inline-flex items-center rounded-full bg-lime px-5 py-2.5 text-[0.86rem] font-semibold text-ink transition-transform hover:scale-[1.03] active:scale-[0.98]"
+            href={localeHref(locale, "/")}
+            className="shrink-0"
+            aria-label="Glomark — home"
           >
-            {dict.nav.startProject}
+            <GlomarkLogo />
           </Link>
-        </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          aria-label={open ? dict.nav.close : dict.nav.menu}
-          aria-expanded={open}
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-cream"
-        >
-          <BurgerIcon open={open} />
-        </button>
+          <nav
+            aria-label={dict.nav.menu}
+            className="hidden lg:flex items-center gap-6 xl:gap-8"
+          >
+            {navItems.map((item) => {
+              const active =
+                item.href === "/"
+                  ? restPath === "/"
+                  : restPath.startsWith(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={localeHref(locale, item.href)}
+                  className={`relative pb-1 text-[0.92rem] font-medium tracking-wide transition-colors hover:text-lime ${
+                    active
+                      ? "text-cream after:absolute after:inset-x-0 after:-bottom-1 after:h-[2px] after:rounded-full after:bg-lime"
+                      : "text-cream/70"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
+
+          <div className="hidden lg:flex items-center gap-4">
+            <LangToggle locale={locale} otherLocale={otherLocale} dict={dict} restPath={restPath} />
+            <Link
+              href={localeHref(locale, "/contact")}
+              className="inline-flex items-center rounded-full bg-lime px-5 py-2.5 text-[0.86rem] font-semibold text-ink transition-transform hover:scale-[1.03] active:scale-[0.98]"
+            >
+              {dict.nav.startProject}
+            </Link>
+          </div>
+
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-label={open ? dict.nav.close : dict.nav.menu}
+            aria-expanded={open}
+            className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-cream"
+          >
+            <BurgerIcon open={open} />
+          </button>
+        </div>
       </div>
 
       <AnimatePresence>
         {open ? (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:hidden overflow-hidden bg-ink/97 backdrop-blur-md border-b border-white/8"
-          >
-            <div className="container-x flex flex-col gap-1 py-6">
-              {navItems.map((item) => (
+          <div className="container-x lg:hidden">
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+              className="mx-auto mt-3 max-w-5xl overflow-hidden rounded-3xl border border-white/12 bg-ink/95 backdrop-blur-2xl"
+            >
+              <div className="flex flex-col gap-1 px-6 py-6">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={localeHref(locale, item.href)}
+                    className="py-3 text-lg font-display font-medium text-cream border-b border-white/6 last:border-0"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <div className="flex items-center justify-end pt-5">
+                  <LangToggle
+                    locale={locale}
+                    otherLocale={otherLocale}
+                    dict={dict}
+                    restPath={restPath}
+                  />
+                </div>
                 <Link
-                  key={item.href}
-                  href={localeHref(locale, item.href)}
-                  className="py-3 text-lg font-display font-medium text-cream border-b border-white/6 last:border-0"
+                  href={localeHref(locale, "/contact")}
+                  className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-lime px-5 py-3 text-sm font-semibold text-ink"
                 >
-                  {item.label}
+                  <GlomarkMark className="h-4 w-auto text-ink" title="" />
+                  {dict.nav.startProject}
                 </Link>
-              ))}
-              <div className="flex items-center justify-end pt-5">
-                <LangToggle
-                  locale={locale}
-                  otherLocale={otherLocale}
-                  dict={dict}
-                  restPath={restPath}
-                />
               </div>
-              <Link
-                href={localeHref(locale, "/contact")}
-                className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-lime px-5 py-3 text-sm font-semibold text-ink"
-              >
-                <GlomarkMark className="h-4 w-auto text-ink" title="" />
-                {dict.nav.startProject}
-              </Link>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         ) : null}
       </AnimatePresence>
     </header>
