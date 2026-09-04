@@ -862,6 +862,174 @@ const en: Dictionary = {
         ogImage: "/og/ai-news-roundup-september-2026-og.webp",
       },
       {
+        slug: "choosing-a-video-production-company-in-salalah",
+        title: "Before You Hire a Video Production Company in Salalah, Ask These 7 Questions",
+        excerpt:
+          "Not every 'video production company' in Salalah is a full crew. Here are the questions worth asking before you book one.",
+        category: "Media Production",
+        date: "2026-09-01",
+        readTime: "4 min read",
+        body: [
+          "A lot of \"video production companies\" in Salalah and Muscat are really one person with a camera and a laptop. That's not necessarily a problem — but it becomes one when a client assumes they're hiring a full crew and post-production pipeline, and finds out mid-project they're not. Before you sign anything, a few pointed questions save a lot of budget and stress later.",
+          "Start with the crew, not the camera. Ask who's actually on set — a director, a camera operator, someone dedicated to sound, a colourist for the edit — or whether one person is meant to do all of it alone. A single-operator shoot can work for a simple product clip, but a brand film with dialogue, multiple locations or a tight schedule needs more than one set of hands, and that shows up in the finished film whether or not the client notices why.",
+          "Ask to see a full production, not just a highlight reel. Anyone can cut together their best ten seconds from a dozen projects. Ask for one complete brand film, start to finish, so you can judge pacing, sound design and how well it actually served the brand's message — not just whether the drone shot looked nice.",
+          "Ask what happens after the shoot. Editing, colour grading, sound design and motion graphics are where a film either becomes cinematic or stays raw footage with cuts. Find out if that work happens in-house or gets outsourced to a third party you'll never speak to — it changes both the quality and the timeline you should expect.",
+          "And ask directly: can they deliver both the hero film and the social cut-downs from the same shoot day? A production team that plans for 9:16 and 1:1 versions from the start gets more usable footage out of the same budget than one that only thinks about the main film and treats social versions as an afterthought.",
+          "None of this is about finding the cheapest option — it's about knowing what you're actually paying for before the camera rolls. If you're planning a shoot in Salalah, Muscat or anywhere in Oman and want to talk through scope before committing to anything, [let's talk](/en/contact/). Our [media production](/en/services/media-production/) team handles the full pipeline in-house, from concept to the final cut.",
+        ],
+        metaTitle: "7 Questions Before Hiring a Video Production Company",
+        metaDescription:
+          "What to ask before hiring a video production company in Salalah or Oman — crew, portfolio, post-production and social cut-downs.",
+        ogImage: "/og/choosing-a-video-production-company-in-salalah-og.webp",
+      },
+      {
+        slug: "why-your-website-isnt-ranking-on-google",
+        title: "Why Isn't Your Website Ranking on Google? A Checklist for Oman Businesses",
+        excerpt:
+          "A website that looks fine and never shows up in search usually comes down to a handful of fixable issues. Here's the checklist.",
+        category: "Website Development",
+        date: "2026-08-29",
+        readTime: "4 min read",
+        body: [
+          "A lot of businesses in Oman have a website that looks fine and still never shows up when a customer actually searches for what they offer. That gap — between \"we have a website\" and \"our website brings us customers\" — usually comes down to a handful of fixable technical and content issues, not bad luck.",
+          "Start with speed. If a site takes more than a few seconds to load on a phone over an average connection, Google notices and so do visitors — most people leave before it finishes loading. Core Web Vitals, Google's real performance benchmark, is now a genuine ranking factor, not a nice-to-have.",
+          "Check whether the site actually has content built around what people search for — real pages with real text about your services and your city, not just a homepage and a contact form. A website with one page can't compete with a website that has a dozen pages each answering a specific question a customer might type into Google.",
+          "Look at the technical basics: does every page have a unique title and description, is there a sitemap, does the Arabic version work properly with correct right-to-left layout and its own metadata, not just translated text bolted onto an English template? Bilingual sites that treat Arabic as an afterthought lose both the ranking and the trust of Arabic-speaking customers.",
+          "And check what happens when someone lands on the site from a search — is there a clear next step, a form that actually submits, a phone number that's tappable on mobile? Ranking gets someone to the site; the site itself has to close the gap from there.",
+          "None of this needs a full rebuild to start improving — but it does need an honest audit. If you want us to look at what's actually holding your site back, [let's talk](/en/contact/). Our [website development](/en/services/website-development/) team builds every site with these fundamentals in from day one, not patched on after launch.",
+        ],
+        metaTitle: "Why Isn't Your Website Ranking on Google? | Glomark",
+        metaDescription:
+          "A practical checklist for Oman businesses whose website isn't ranking — speed, content, bilingual SEO and technical basics.",
+        ogImage: "/og/why-your-website-isnt-ranking-on-google-og.webp",
+      },
+      {
+        slug: "digital-marketing-budget-guide-oman",
+        title: "How Much Should You Really Budget for Digital Marketing in Oman?",
+        excerpt:
+          "There's no fixed number for a digital marketing budget — but there is a smarter way to think about splitting and judging it.",
+        category: "Digital Marketing",
+        date: "2026-08-27",
+        readTime: "4 min read",
+        body: [
+          "\"How much should I spend on digital marketing?\" is one of the first questions almost every business owner in Salalah or Muscat asks — and the honest answer is that there's no fixed number that applies to everyone. What matters more than the total is how the budget is split, and what you're actually measuring against it.",
+          "Start with the goal, not the spend. A campaign built to generate leads for a service business looks completely different from one built to sell products directly — different platforms, different creative, different way of judging whether it worked. Setting a budget before defining what success looks like is how money gets spent without a clear answer to \"did it work?\"",
+          "Split the number in your head into two buckets: media spend (what you actually pay Meta or Google to show your ads) and the work around it — strategy, creative, campaign management and reporting. A small media budget run well by someone paying close attention usually beats a bigger budget left on autopilot.",
+          "Expect a ramp-up period. Paid campaigns typically show early signal — clicks, engagement, early leads — within the first one to two weeks, but a fair judgement of performance usually needs a four-week minimum. SEO is slower still, often building over two to six months. Budgeting for a single month and judging results immediately is one of the most common ways businesses conclude \"digital marketing doesn't work\" when the real issue was timeline, not strategy.",
+          "And factor in where your customers actually are. Meta and Google Ads cover most Omani consumer campaigns well; TikTok and YouTube add reach with younger audiences. The right mix depends on your category, not a one-size-fits-all list copied from somewhere else.",
+          "If you want a realistic number based on your goals and category rather than a generic rule of thumb, [let's talk](/en/contact/). Our [digital marketing](/en/services/digital-marketing/) team builds campaigns that scale with real budgets and show you expected reach before you commit.",
+        ],
+        metaTitle: "Digital Marketing Budget Guide for Oman | Glomark",
+        metaDescription:
+          "How to think about a digital marketing budget in Oman — media spend vs strategy, realistic timelines, and platform choice.",
+        ogImage: "/og/digital-marketing-budget-guide-oman-og.webp",
+      },
+      {
+        slug: "signs-you-need-a-rebrand",
+        title: "5 Signs Your Business Has Outgrown Its Logo",
+        excerpt:
+          "Most rebrands don't start with a decision — they start with a slow realisation. Here are five signs it might be time.",
+        category: "Branding",
+        date: "2026-08-25",
+        readTime: "4 min read",
+        body: [
+          "Most businesses don't wake up one day and decide to rebrand — it's usually a slow realisation that the identity built in the first year no longer matches the business three or five years later. A few signs tend to show up before the decision actually gets made.",
+          "The first is inconsistency. If your logo looks different on your storefront, your Instagram, your invoices and your car wrap — different colours, different spacing, a version someone quickly recreated because no one could find the original file — that's not a design problem, it's a sign there was never a real system to begin with, just a logo.",
+          "The second is growth outpacing the name or look. A business that started as a single café and is now a multi-location brand, or a company that's expanded from one service into several, often finds the original identity was built for a smaller, simpler version of itself and doesn't stretch to cover what the business actually is now.",
+          "The third is the Arabic version being an afterthought — a logo that was designed in English and then squeezed into Arabic later, rather than both versions built together from the same brief. Customers notice when a brand feels native in one language and translated in the other.",
+          "The fourth is competitors starting to look more current. Design trends shift, and an identity that felt sharp five years ago can start to read as dated next to newer competitors — not because the original idea was wrong, but because the execution hasn't moved with it.",
+          "And the fifth is simply not being able to answer, clearly, what the brand stands for beyond the logo itself — no clear positioning, no consistent tone of voice, nothing written down that a new hire could actually use. If two or more of these sound familiar, [let's talk](/en/contact/) about what a rebrand — or a more focused identity refresh — could look like. Our [branding](/en/services/branding/) team builds bilingual identity systems designed to hold up for years, not just look good on launch day.",
+        ],
+        metaTitle: "5 Signs Your Business Has Outgrown Its Logo",
+        metaDescription:
+          "Inconsistent branding, an Arabic afterthought, no real positioning — five signs it might be time for a rebrand in Oman.",
+        ogImage: "/og/signs-you-need-a-rebrand-og.webp",
+      },
+      {
+        slug: "how-often-to-post-on-social-media",
+        title: "How Often Should You Actually Post on Social Media? (Oman Edition)",
+        excerpt:
+          "Posting frequency is the wrong first question. Here's what actually drives social media growth for brands in Oman.",
+        category: "Social Media Management",
+        date: "2026-08-23",
+        readTime: "4 min read",
+        body: [
+          "\"How many times a week should we post?\" is one of the most common questions we get from brands in Salalah and Muscat, and it's usually the wrong first question. Posting frequency matters less than most people assume — consistency and quality of content matter more.",
+          "A brand posting three times a week with content that's actually shot for their business — real photos, real video, a voice that sounds like them — will outperform a brand posting daily with generic stock imagery and captions that could belong to any business. Algorithms reward engagement, not volume, and audiences can tell the difference between content made for them and content that's just filling a calendar.",
+          "That said, consistency does matter — an audience that sees a brand disappear for three weeks and reappear randomly never builds the habit of checking in. Most brands land somewhere between twelve and twenty pieces of content a month across their channels, but the right number depends on the platform, the industry and what the audience actually responds to.",
+          "The bigger question worth asking is who's actually creating the content. A social calendar filled with stock photos and templated graphics reads as exactly that, no matter how often it posts. Content shot specifically for the business — in the café, on the product, at the event — is what actually makes people stop scrolling, and that's a production question as much as a scheduling one.",
+          "And don't overlook the language question: bilingual audiences expect content that reads naturally in both Arabic and English, not one language as the \"real\" version and the other as a translation squeezed in afterwards.",
+          "If your current posting schedule isn't translating into an actual audience, the fix usually isn't posting more — it's posting better. [Let's talk](/en/contact/) about a content strategy built around your brand, not a generic calendar. Our [social media management](/en/services/social-media-management/) team is backed by an in-house production studio, so your feed runs on real content, not stock.",
+        ],
+        metaTitle: "How Often Should You Post on Social Media?",
+        metaDescription:
+          "Posting frequency matters less than most brands think. What actually drives social media growth for businesses in Oman.",
+        ogImage: "/og/how-often-to-post-on-social-media-og.webp",
+      },
+      {
+        slug: "questions-to-ask-an-event-company-in-salalah",
+        title: "Planning an Event in Salalah? 8 Questions to Ask Before You Book Anyone",
+        excerpt:
+          "A few direct questions before you book an event management company in Salalah can save a lot of stress later.",
+        category: "Events Planning",
+        date: "2026-08-21",
+        readTime: "4 min read",
+        body: [
+          "Booking an event management company in Salalah usually happens under time pressure — a launch date is set, and the search for who can pull it off starts later than it should. A few direct questions upfront save a lot of stress in the weeks before the event.",
+          "Ask who actually manages the day itself. Planning a concept is one skill; standing on-site coordinating vendors, staging, AV and a running schedule while problems inevitably come up in real time is another. Some companies are strong on the creative brief and thin on-site — find out which you're getting.",
+          "Ask whether media coverage is built into the plan or bolted on separately. An event that's beautifully staged but only captured on someone's phone loses most of its value the day after it happens — the content is what keeps the event working for the brand afterwards, and it's far better planned from the first meeting than hired as an afterthought once the date is locked.",
+          "Ask about their vendor relationships, specifically in Salalah and Dhofar if that's where the event is — a company that regularly works the same venues and suppliers moves faster and hits fewer surprises than one coordinating unfamiliar vendors for the first time.",
+          "And ask for a realistic timeline. A straightforward launch or product reveal usually needs four to six weeks of lead time; a multi-day conference or an event with custom staging benefits from eight to twelve, mostly to lock venue, vendors and content properly rather than scrambling in the final weeks.",
+          "A good event management partner should be able to answer all of this clearly and immediately — if they can't, that's worth noticing before you book. [Let's talk](/en/contact/) about your event, wherever in Oman it's happening. Our [events planning](/en/services/events-planning/) team handles concept, logistics and same-day content capture as one accountable team.",
+        ],
+        metaTitle: "8 Questions Before Booking an Event Company",
+        metaDescription:
+          "What to ask an event management company in Salalah before you book — on-site delivery, media coverage, vendors and timeline.",
+        ogImage: "/og/questions-to-ask-an-event-company-in-salalah-og.webp",
+      },
+      {
+        slug: "signs-you-need-professional-live-streaming",
+        title: "A Phone and Wi-Fi Isn't a Live Stream: 5 Signs You Need It Done Properly",
+        excerpt:
+          "A phone on a table will technically 'go live.' Here's when that's not enough for your event.",
+        category: "Live Broadcasting",
+        date: "2026-08-20",
+        readTime: "4 min read",
+        body: [
+          "Technically, a phone propped on a table and a venue's Wi-Fi will \"go live.\" Whether it holds up for two hours, looks intentional, and survives a dropped connection at the worst possible moment is a different question — and for a launch, conference or broadcast partner watching closely, that difference matters more than most people expect until it goes wrong.",
+          "The first sign you need it done properly: the event matters enough that a dropped stream would actually cost you something — a client relationship, a sponsor's confidence, an audience that won't come back if it looked amateur. Most stream failures are connectivity failures, not creative ones, and a single Wi-Fi connection with no backup is the most common cause.",
+          "The second sign: the event has more than one thing happening at once — a stage and audience reactions, a panel with several speakers, a product reveal that cuts between multiple angles. A single static camera can't follow any of that; it takes multiple cameras and someone switching between them live, on a beat, not a scramble.",
+          "The third sign: you need it on more than one platform. Streaming to YouTube, Instagram and a private channel simultaneously isn't something a phone's native app handles — it needs an encoder set up in advance for exactly that.",
+          "The fourth and fifth signs: you need graphics — lower-thirds, sponsor cues, live captions — prepared rather than improvised, and you need bilingual captioning if any part of your audience needs it in Arabic. Both have to be planned into the broadcast setup beforehand, not added in the moment.",
+          "Done right, none of this is visible to the audience — which is exactly the point. [Let's talk](/en/contact/) about what your event actually needs. Our [live broadcasting](/en/services/live-broadcasting/) team plans every stream like a mini production, with redundant connectivity so a dropped signal never becomes a dropped stream.",
+        ],
+        metaTitle: "5 Signs You Need a Professional Live Stream",
+        metaDescription:
+          "When a phone and Wi-Fi isn't enough — five signs your event needs a professional live streaming production in Oman.",
+        ogImage: "/og/signs-you-need-professional-live-streaming-og.webp",
+      },
+      {
+        slug: "cost-to-build-a-mobile-app-in-oman",
+        title: "What Does It Actually Cost to Build a Mobile App in Oman?",
+        excerpt:
+          "An honest app development quote starts with scope, not a number. Here's what actually drives the cost.",
+        category: "Application Development",
+        date: "2026-08-19",
+        readTime: "4 min read",
+        body: [
+          "\"How much does an app cost?\" is close to impossible to answer honestly without knowing what the app actually needs to do — and any quote given before that conversation happens is usually either a lowball that grows once real scope appears, or padded high to cover unknowns the company hasn't bothered to ask about.",
+          "The biggest cost driver isn't the platform, it's the feature list. A simple booking or ordering app with a handful of screens is a fundamentally different project from a multi-feature customer platform with payments, accounts, notifications and an admin dashboard. Get specific about what the app needs to do before expecting a specific number back.",
+          "The second driver is native versus cross-platform. Building separately and natively for iOS and Android gives the best performance but roughly doubles the development work; a cross-platform approach ships to both from one codebase for less, with a small trade-off in how deeply it can use platform-specific features. The right call depends on your audience and budget, not a default answer.",
+          "The third, often underestimated cost is what happens after launch. An app isn't finished the day it hits the app store — bug fixes, OS updates, analytics review and iteration based on real user behaviour are ongoing, and a quote that only covers development and stops at launch is quietly leaving out a real part of the total cost.",
+          "And in Oman specifically, factor in bilingual Arabic and English support with proper right-to-left layout from the design stage — retrofitting Arabic support after an app is built in English usually costs more than building both together from the start.",
+          "A realistic quote needs a real conversation about scope first. [Let's talk](/en/contact/) about what you're actually trying to build. Our [application development](/en/services/application-development/) team scopes every project in detail before quoting, so there are no surprises partway through.",
+        ],
+        metaTitle: "What Does a Mobile App Cost in Oman? | Glomark",
+        metaDescription:
+          "What actually drives app development cost in Oman — feature scope, native vs cross-platform, and post-launch support.",
+        ogImage: "/og/cost-to-build-a-mobile-app-in-oman-og.webp",
+      },
+      {
         slug: "ai-news-roundup-august-2026",
         title: "AI News Roundup: Eight Stories Shaping Brand and Media Work",
         excerpt:

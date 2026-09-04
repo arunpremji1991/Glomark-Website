@@ -280,6 +280,14 @@ export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 // Canonical blog post order + stable slugs (locale-neutral).
 export const BLOG_SLUGS = [
   "ai-news-roundup-september-2026",
+  "choosing-a-video-production-company-in-salalah",
+  "why-your-website-isnt-ranking-on-google",
+  "digital-marketing-budget-guide-oman",
+  "signs-you-need-a-rebrand",
+  "how-often-to-post-on-social-media",
+  "questions-to-ask-an-event-company-in-salalah",
+  "signs-you-need-professional-live-streaming",
+  "cost-to-build-a-mobile-app-in-oman",
   "ai-news-roundup-august-2026",
   "bilingual-branding-in-oman",
   "anatomy-of-a-live-broadcast",
