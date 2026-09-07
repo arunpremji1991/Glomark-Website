@@ -14,8 +14,8 @@ export function isLocale(value: string): value is Locale {
 
 /** Build a locale-aware path, e.g. localeHref("ar", "/services") -> "/ar/services". */
 export function localeHref(locale: Locale, path = "/"): string {
-  const clean = path === "/" ? "" : path.replace(/\/$/, "");
-  return `/${locale}${clean}` || `/${locale}`;
+  const clean = path.replace(/\/+$/, "");
+  return `/${locale}${clean}/`;
 }
 
 // ---- Dictionary shape (both locales must satisfy this) -------------------
