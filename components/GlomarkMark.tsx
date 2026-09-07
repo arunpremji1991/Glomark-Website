@@ -7,12 +7,17 @@ export function GlomarkMark({
   className?: string;
   title?: string;
 }) {
+  // An empty title marks the mark as purely decorative (e.g. sitting next to
+  // text that already conveys "Glomark") — hide it from assistive tech
+  // instead of giving an img-role element an empty, invalid accessible name.
+  const decorative = title === "";
   return (
     <svg
       viewBox="0 0 121.86 104.14"
       className={className}
-      role="img"
-      aria-label={title}
+      {...(decorative
+        ? { "aria-hidden": true }
+        : { role: "img", "aria-label": title })}
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >

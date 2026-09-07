@@ -88,7 +88,7 @@ export function Hero({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         aria-hidden
         className="absolute inset-x-0 bottom-8 z-10 hidden justify-center sm:flex"
       >
-        <div className="flex flex-col items-center gap-2 text-cream/40">
+        <div className="flex flex-col items-center gap-2 text-cream/55">
           <span className="text-[0.68rem] uppercase tracking-eyebrow">
             {dict.common.scroll}
           </span>
