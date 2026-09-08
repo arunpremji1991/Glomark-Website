@@ -52,11 +52,12 @@ export interface BlogPost {
   slug: BlogSlug;
   title: string;
   excerpt: string; // short teaser for cards
-  // Full paragraphs for the post page. Supports one lightweight inline markup:
-  // "[label](url)" is parsed into a real link at render time (see
-  // renderRichText in app/[locale]/blog/[slug]/page.tsx) — everything else
-  // renders as plain text exactly as before, so posts with no bracket syntax
-  // (all 4 pre-existing ones) are unaffected.
+  // Full paragraphs for the post page. Two lightweight markup conventions:
+  // "[label](url)" inline in a paragraph is parsed into a real link
+  // (renderRichText in app/[locale]/blog/[slug]/page.tsx); a standalone
+  // entry of exactly "![alt](/path.webp)" renders as a full-width inline
+  // image instead of a paragraph. Everything else renders as plain text,
+  // so posts using neither convention are unaffected.
   body: string[];
   category: string; // ties back to a service, e.g. "Branding"
   date: string; // ISO date, e.g. "2026-06-02"

@@ -4,10 +4,17 @@ import { locales, isLocale, getDictionary } from "@/lib/i18n";
 import { BLOG_SLUGS } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
+import Image from "next/image";
 import { LocaleLink } from "@/components/LocaleLink";
 import { Reveal } from "@/components/Reveal";
 import { BlogVisual } from "@/components/BlogVisual";
 import { CtaBand } from "@/components/home/CtaBand";
+
+// A body entry that is ONLY "![alt](/path.webp)" renders as a full-width
+// inline image instead of a paragraph; everything else (plain text, or text
+// containing "[label](url)" links via renderRichText) is unaffected, so
+// existing posts with no "![...](...)" entries render exactly as before.
+const IMAGE_ENTRY = /^!\[([^\]]*)\]\(([^)]+)\)$/;
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -141,11 +148,22 @@ export default async function BlogPostPage({
 
       <div className="container-x py-20 lg:py-28">
         <Reveal className="mx-auto max-w-prose2 space-y-6">
-          {post.body.map((para, i) => (
-            <p key={i} className="text-lg leading-relaxed text-cream/75 pretty">
-              {renderRichText(para)}
-            </p>
-          ))}
+          {post.body.map((para, i) => {
+            const imageMatch = para.match(IMAGE_ENTRY);
+            if (imageMatch) {
+              const [, alt, src] = imageMatch;
+              return (
+                <div key={i} className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
+                  <Image src={src} alt={alt} fill className="object-cover" />
+                </div>
+              );
+            }
+            return (
+              <p key={i} className="text-lg leading-relaxed text-cream/75 pretty">
+                {renderRichText(para)}
+              </p>
+            );
+          })}
         </Reveal>
 
         <Reveal
