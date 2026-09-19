@@ -1,14 +1,19 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { locales, isLocale, getDictionary } from "@/lib/i18n";
-import { BLOG_SLUGS } from "@/lib/site";
+import { BLOG_SLUGS, SITE_URL } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
+import { formatBlogDate, getCategories, getLatestPosts, getRelatedPosts, toCardData } from "@/lib/blog";
 import Image from "next/image";
-import { LocaleLink } from "@/components/LocaleLink";
 import { Reveal } from "@/components/Reveal";
 import { BlogVisual } from "@/components/BlogVisual";
 import { CtaBand } from "@/components/home/CtaBand";
+import { ArticleBreadcrumbs } from "@/components/blog/ArticleBreadcrumbs";
+import { ArticleShare } from "@/components/blog/ArticleShare";
+import { ReadingProgress } from "@/components/blog/ReadingProgress";
+import { BlogSidebar } from "@/components/blog/BlogSidebar";
+import { RelatedArticles } from "@/components/blog/RelatedArticles";
 
 // A body entry that is ONLY "![alt](/path.webp)" renders as a full-width
 // inline image instead of a paragraph; everything else (plain text, or text
@@ -16,10 +21,11 @@ import { CtaBand } from "@/components/home/CtaBand";
 // existing posts with no "![...](...)" entries render exactly as before.
 const IMAGE_ENTRY = /^!\[([^\]]*)\]\(([^)]+)\)$/;
 
-// A body entry starting with "## " renders as a subheading instead of a
-// paragraph, breaking long posts into scannable sections. Existing posts
-// with no "## " entries are unaffected.
-const HEADING_ENTRY = /^##\s+(.+)$/;
+// A body entry starting with "## " renders as an H2 subheading, "### " as an
+// H3 — breaking long posts into scannable sections. Existing posts with
+// neither entry are unaffected.
+const HEADING2_ENTRY = /^##\s+(.+)$/;
+const HEADING3_ENTRY = /^###\s+(.+)$/;
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -33,14 +39,6 @@ async function resolve(locale: string, slug: string) {
   const index = dict.blog.posts.findIndex((p) => p.slug === slug);
   if (index === -1) return null;
   return { dict, index, post: dict.blog.posts[index] };
-}
-
-function formatDate(iso: string, locale: string) {
-  return new Intl.DateTimeFormat(locale === "ar" ? "ar" : "en-GB", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(new Date(iso));
 }
 
 // Parses the one supported inline markup in post body paragraphs —
@@ -93,16 +91,20 @@ export default async function BlogPostPage({
 }) {
   const resolved = await resolve(locale, slug);
   if (!resolved || !isLocale(locale)) notFound();
-  const { dict, index, post } = resolved;
+  const { dict, post } = resolved;
 
   const schema = articleSchema(post, locale);
-  const breadcrumbs = breadcrumbSchema(locale, [
+  const breadcrumbItems = [
     { name: dict.nav.home, path: "/" },
     { name: dict.nav.blog, path: "/blog" },
     { name: post.title, path: `/blog/${post.slug}` },
-  ]);
+  ];
+  const breadcrumbs = breadcrumbSchema(locale, breadcrumbItems);
 
-  const next = dict.blog.posts[(index + 1) % dict.blog.posts.length];
+  const related = getRelatedPosts(dict.blog.posts, post, 3).map(toCardData);
+  const latest = getLatestPosts(dict.blog.posts, post, 4).map(toCardData);
+  const categories = getCategories(dict.blog.posts);
+  const canonicalUrl = `${SITE_URL}/${locale}/blog/${post.slug}/`;
 
   return (
     <>
@@ -116,6 +118,8 @@ export default async function BlogPostPage({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
+
+      <ReadingProgress dir={dict.dir} />
 
       <header className="relative overflow-hidden border-b border-white/8 bg-ink-2/50">
         <div className="absolute inset-0 opacity-45">
@@ -131,69 +135,92 @@ export default async function BlogPostPage({
         />
         <div className="container-x relative py-20 lg:py-28">
           <Reveal>
-            <LocaleLink
-              locale={locale}
-              href="/blog"
-              className="text-[0.82rem] font-semibold text-cream/60 hover:text-lime"
-            >
-              ← {dict.common.backToBlog}
-            </LocaleLink>
+            <ArticleBreadcrumbs items={breadcrumbItems} locale={locale} />
             <p className="eyebrow mt-5">{post.category}</p>
             <h1 className="mt-3 max-w-3xl font-display text-4xl text-cream sm:text-5xl lg:text-6xl balance">
               {post.title}
             </h1>
-            <p className="mt-5 flex flex-wrap items-center gap-3 text-[0.9rem] text-cream/55">
-              <time dateTime={post.date}>{formatDate(post.date, locale)}</time>
-              <span aria-hidden>·</span>
-              <span>{post.readTime}</span>
-            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-between gap-5">
+              <p className="flex flex-wrap items-center gap-3 text-[0.9rem] text-cream/55">
+                <time dateTime={post.date}>{formatBlogDate(post.date, locale)}</time>
+                <span aria-hidden>·</span>
+                <span>{post.readTime}</span>
+              </p>
+              <ArticleShare
+                url={canonicalUrl}
+                title={post.title}
+                shareLabel={dict.blog.shareTitle}
+                copyLabel={dict.blog.copyLink}
+                copiedLabel={dict.blog.linkCopied}
+              />
+            </div>
           </Reveal>
         </div>
       </header>
 
       <div className="container-x py-20 lg:py-28">
-        <Reveal className="mx-auto max-w-prose2 space-y-6">
-          {post.body.map((para, i) => {
-            const imageMatch = para.match(IMAGE_ENTRY);
-            if (imageMatch) {
-              const [, alt, src] = imageMatch;
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_360px]">
+          <Reveal className="min-w-0 max-w-prose2 space-y-6">
+            {post.body.map((para, i) => {
+              const imageMatch = para.match(IMAGE_ENTRY);
+              if (imageMatch) {
+                const [, alt, src] = imageMatch;
+                return (
+                  <div key={i} className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
+                    <Image src={src} alt={alt} fill className="object-cover" />
+                  </div>
+                );
+              }
+              const heading2Match = para.match(HEADING2_ENTRY);
+              if (heading2Match) {
+                return (
+                  <h2
+                    key={i}
+                    className="!mt-12 font-display text-2xl text-cream sm:text-3xl balance"
+                  >
+                    {heading2Match[1]}
+                  </h2>
+                );
+              }
+              const heading3Match = para.match(HEADING3_ENTRY);
+              if (heading3Match) {
+                return (
+                  <h3
+                    key={i}
+                    className="!mt-9 font-display text-xl text-cream sm:text-2xl balance"
+                  >
+                    {heading3Match[1]}
+                  </h3>
+                );
+              }
               return (
-                <div key={i} className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
-                  <Image src={src} alt={alt} fill className="object-cover" />
-                </div>
+                <p key={i} className="text-lg leading-relaxed text-cream/75 pretty">
+                  {renderRichText(para)}
+                </p>
               );
-            }
-            const headingMatch = para.match(HEADING_ENTRY);
-            if (headingMatch) {
-              return (
-                <h2
-                  key={i}
-                  className="!mt-12 font-display text-2xl text-cream sm:text-3xl balance"
-                >
-                  {headingMatch[1]}
-                </h2>
-              );
-            }
-            return (
-              <p key={i} className="text-lg leading-relaxed text-cream/75 pretty">
-                {renderRichText(para)}
-              </p>
-            );
-          })}
-        </Reveal>
+            })}
+          </Reveal>
 
-        <Reveal
-          delay={0.1}
-          className="mx-auto mt-20 max-w-prose2 border-t border-white/8 pt-10"
-        >
-          <p className="eyebrow">{locale === "ar" ? "التالي" : "Next"}</p>
-          <LocaleLink
+          <BlogSidebar
+            related={related}
+            latest={latest}
+            categories={categories}
             locale={locale}
-            href={`/blog/${next.slug}`}
-            className="mt-3 inline-block font-display text-2xl text-cream hover:text-lime transition-colors sm:text-3xl"
-          >
-            {next.title} →
-          </LocaleLink>
+            readArticleLabel={dict.common.readArticle}
+            relatedTitle={dict.blog.relatedTitle}
+            latestTitle={dict.blog.latestTitle}
+            exploreTitle={dict.blog.exploreTitle}
+          />
+        </div>
+
+        <Reveal delay={0.1} className="mt-20 border-t border-white/8 pt-16 lg:mt-28">
+          <RelatedArticles
+            title={dict.blog.continueReadingTitle}
+            posts={related}
+            locale={locale}
+            readArticleLabel={dict.common.readArticle}
+            variant="cards"
+          />
         </Reveal>
       </div>
 

@@ -52,12 +52,13 @@ export interface BlogPost {
   slug: BlogSlug;
   title: string;
   excerpt: string; // short teaser for cards
-  // Full paragraphs for the post page. Three lightweight markup conventions:
+  // Full paragraphs for the post page. Four lightweight markup conventions:
   // "[label](url)" inline in a paragraph is parsed into a real link
   // (renderRichText in app/[locale]/blog/[slug]/page.tsx); a standalone
   // entry of exactly "![alt](/path.webp)" renders as a full-width inline
   // image instead of a paragraph; a standalone entry starting with "## "
-  // renders as a subheading. Everything else renders as plain text, so
+  // renders as an H2 subheading; a standalone entry starting with "### "
+  // renders as an H3 subheading. Everything else renders as plain text, so
   // posts using none of these conventions are unaffected.
   body: string[];
   category: string; // ties back to a service, e.g. "Branding"
@@ -160,6 +161,22 @@ export interface Dictionary {
     title: string;
     intro: string;
     posts: BlogPost[];
+    // UI chrome for the editorial listing/detail redesign — not article
+    // content, safe to extend without touching any post object.
+    allCategoriesLabel: string; // "All" filter pill
+    categoryNavLabel: string; // aria-label for the category filter group
+    searchLabel: string; // aria-label for the search input
+    searchPlaceholder: string;
+    noResults: string; // shown when search/filter matches nothing
+    loadMore: string;
+    featuredLabel: string; // eyebrow above the featured article
+    relatedTitle: string; // sidebar "Related Articles" module heading
+    latestTitle: string; // sidebar "Latest Updates" module heading
+    exploreTitle: string; // sidebar "Explore Topics" module heading
+    continueReadingTitle: string; // end-of-article related-posts heading
+    shareTitle: string; // aria-label for the share button group
+    copyLink: string;
+    linkCopied: string;
   };
   about: {
     metaTitle: string;

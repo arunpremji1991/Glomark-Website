@@ -838,6 +838,20 @@ const ar: Dictionary = {
     title: "أفكار تستحق الاقتباس",
     intro:
       "ملاحظات في الإعلام والتسويق وبناء العلامات — أشياء نتعلّمها في موقع التصوير وضمن الحملات وفي أحاديث العملاء.",
+    allCategoriesLabel: "الكل",
+    categoryNavLabel: "تصفية المقالات حسب الموضوع",
+    searchLabel: "ابحث في المقالات",
+    searchPlaceholder: "ابحث في المقالات…",
+    noResults: "لا توجد مقالات مطابقة لبحثك.",
+    loadMore: "عرض المزيد",
+    featuredLabel: "أحدث نشرة",
+    relatedTitle: "مقالات ذات صلة",
+    latestTitle: "آخر التحديثات",
+    exploreTitle: "استكشف المواضيع",
+    continueReadingTitle: "تابع القراءة",
+    shareTitle: "شارك هذه المقالة",
+    copyLink: "نسخ الرابط",
+    linkCopied: "تم نسخ الرابط",
     posts: [
       {
         slug: "ai-news-roundup-3",

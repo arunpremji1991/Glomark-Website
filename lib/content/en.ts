@@ -836,6 +836,20 @@ const en: Dictionary = {
     title: "Ideas worth stealing",
     intro:
       "Notes on media, marketing and brand-building — the things we learn on set, in campaigns and in client conversations.",
+    allCategoriesLabel: "All",
+    categoryNavLabel: "Filter articles by topic",
+    searchLabel: "Search articles",
+    searchPlaceholder: "Search articles…",
+    noResults: "No articles match your search.",
+    loadMore: "Load more",
+    featuredLabel: "Latest edition",
+    relatedTitle: "Related Articles",
+    latestTitle: "Latest Updates",
+    exploreTitle: "Explore Topics",
+    continueReadingTitle: "Continue Reading",
+    shareTitle: "Share this article",
+    copyLink: "Copy link",
+    linkCopied: "Link copied",
     posts: [
       {
         slug: "ai-news-roundup-3",
