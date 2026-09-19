@@ -16,6 +16,11 @@ import { CtaBand } from "@/components/home/CtaBand";
 // existing posts with no "![...](...)" entries render exactly as before.
 const IMAGE_ENTRY = /^!\[([^\]]*)\]\(([^)]+)\)$/;
 
+// A body entry starting with "## " renders as a subheading instead of a
+// paragraph, breaking long posts into scannable sections. Existing posts
+// with no "## " entries are unaffected.
+const HEADING_ENTRY = /^##\s+(.+)$/;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     BLOG_SLUGS.map((slug) => ({ locale, slug })),
@@ -156,6 +161,17 @@ export default async function BlogPostPage({
                 <div key={i} className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl">
                   <Image src={src} alt={alt} fill className="object-cover" />
                 </div>
+              );
+            }
+            const headingMatch = para.match(HEADING_ENTRY);
+            if (headingMatch) {
+              return (
+                <h2
+                  key={i}
+                  className="!mt-12 font-display text-2xl text-cream sm:text-3xl balance"
+                >
+                  {headingMatch[1]}
+                </h2>
               );
             }
             return (

@@ -838,6 +838,38 @@ const en: Dictionary = {
       "Notes on media, marketing and brand-building — the things we learn on set, in campaigns and in client conversations.",
     posts: [
       {
+        slug: "ai-news-roundup-3",
+        title: "AI News Roundup: The Store Robot That Kicked Back, and Three Updates Worth Knowing",
+        excerpt:
+          "A Russian store robot's viral kickback, Dyson's AI toothbrush with a built-in camera, retail robots boosting real sales, and AI-generated 3D worlds — four stories from this edition.",
+        category: "AI & Tech",
+        date: "2026-09-19",
+        readTime: "5 min read",
+        body: [
+          "Welcome back to our AI news roundup — the third edition of a series pulling together the AI stories that actually matter for people building brands, not just what's trending in tech circles. Four stories stood out this time, and one of them is impossible to ignore: a shop robot in Russia that appeared to fight back.",
+          "None of them are abstract news for its own sake — they touch how customer-facing AI actually behaves under pressure, what \"smart\" now means for an everyday product, and how fast AI is moving from generating text and images to generating entire places. Here's what happened, and what it means for the work — read our [previous edition](/en/blog/ai-news-roundup-september-2026/) if you missed it.",
+          "## A Robot That Fought Back",
+          "At a Volga Store 64 branch in Saratov, Russia, a customer approached a humanoid store robot named [Syoma](https://insiderpaper.com/humanoid-robot-attacks-customer-in-russian-store-in-saratov/), tried to shake its hand, got no response, and gave it a light shove. The robot lurched forward and kicked at his legs, staff rushed to restrain it, and it was manually powered down — no serious injuries, but the clip (dated September 2) has since racked up more than nine million views. The store's own response was to joke that Syoma needed an \"emotional reboot\" and call the cause \"a mystery\" — no police statement or real explanation has surfaced since. That gap is the real story: the moment a customer-facing robot behaves unpredictably, the internet decides what happened long before the company does. If you're putting any AI or robotics in front of real customers, the plan for \"what if it goes wrong on camera\" matters as much as the technology itself.",
+          "![A humanoid store robot with a glowing blue visor](/media/blog/inline/ai-news-roundup-3-1.webp)",
+          "## A Toothbrush With a Built-In Camera",
+          "Dyson [launched a $499 toothbrush](https://www.washingtonpost.com/technology/2026/09/02/dysons-500-toothbrush-puts-high-tech-camera-your-mouth/) with a built-in 100,000-pixel camera that shows a live feed of your teeth while it brushes, aiming its water jet at the exact spots plaque tends to build up. Philips had already announced a similar AI-powered Sonicare back in July, with on-device guidance and pressure sensing, and the model is only reaching dental professionals this same month. Neither is really about the toothbrush — it's a preview of where \"smart\" is heading for ordinary products: a camera and a feedback loop turning a static object into something that watches, measures and adjusts. For brands, that raises the bar on what \"innovative\" even means as a [branding](/en/services/branding/) claim — a camera alone isn't a differentiator anymore if every category is getting one.",
+          "![A modern electric toothbrush standing upright against a weathered wood background](/media/blog/inline/ai-news-roundup-3-2.webp)",
+          "## The Robots Actually Earning Their Keep",
+          "On the more encouraging side, at the [World Robot Conference](https://www.retailcustomerexperience.com/news/cashierless-robot-store-highlights-automation-at-conference/) in Beijing this August, Chinese robotics company Galaxea demoed a full-size cashierless convenience store where multiple robots completed an entire transaction end to end — one collecting products from the shelf, another bagging and sealing the order. It's a reminder of an old but still-cited case study: [SoftBank's Pepper robot](https://www.marketsandmarkets.com/ResearchInsight/industry-analysis-growing-demand-service-robots-industry-retail-industry.asp), deployed across roughly 1,000 Nestlé stores in Japan back in 2015, is still one of the few customer-facing robots with a real, measurable result attached — a reported 15% lift in Nescafé machine sales, the kind any [digital marketing](/en/services/digital-marketing/) plan should be judged by, not a novelty story. Robots that quietly help move product tend to get far less attention than ones that go viral for the wrong reasons — but they're the ones actually worth studying if the question is return on investment, not attention.",
+          "![Two service robots with touchscreen displays standing in a hotel lobby](/media/blog/inline/ai-news-roundup-3-3.webp)",
+          "## AI Is Starting to Build Whole Worlds",
+          "World Labs unveiled [Atlas](https://www.worldlabs.ai/blog/atlas) on September 1 — an \"omni world model\" that reconstructs an explorable 3D scene from just a couple of photos, rather than a flat image or video clip. Two days later, Runway announced its own [GWM Worlds 2](https://runway.com/research/introducing-gwm-worlds-2), which generates real-time, navigable 720p environments you can walk or drive through. Both are early, and nowhere near ready for a client brief, but it's the same trajectory that took AI from chatbots to photorealistic video in under two years: worth watching for anyone thinking about what an interactive brand experience could look like a few years out, not worth building on yet.",
+          "![An abstract branching network illustration representing an AI model](/media/blog/inline/ai-news-roundup-3-4.webp)",
+          "## What This Means for You",
+          "A few practical takeaways from this edition. Any customer-facing AI or automation needs a real answer for \"what happens when it misbehaves in public,\" because the internet will supply its own answer if you don't. \"Smart\" as a product claim is getting crowded fast — a sensor or a camera alone won't carry a campaign the way it might have a year ago. And the robots actually worth learning from are the boring, working ones with real numbers attached, not the ones going viral. If any of this is shaping a product launch or a content plan this quarter, [let's talk](/en/contact/).",
+          "None of this replaces judgement about what your brand actually needs versus what's just trending this week. It does mean the list of things worth tracking keeps shifting fast — which is exactly why we keep this roundup going. See you in the next edition.",
+        ],
+        metaTitle: "AI News Roundup: The Robot That Kicked Back",
+        metaDescription:
+          "A Russian store robot's viral kickback, Dyson's AI toothbrush, retail service robots, and AI-generated 3D worlds — this edition's four stories.",
+        ogImage: "/og/ai-news-roundup-3-og.webp",
+      },
+      {
         slug: "ai-prompts-for-better-product-photos",
         title: "5 AI Prompts That Turn a Basic Product Photo Into an Ad-Ready One",
         excerpt:

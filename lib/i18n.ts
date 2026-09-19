@@ -52,12 +52,13 @@ export interface BlogPost {
   slug: BlogSlug;
   title: string;
   excerpt: string; // short teaser for cards
-  // Full paragraphs for the post page. Two lightweight markup conventions:
+  // Full paragraphs for the post page. Three lightweight markup conventions:
   // "[label](url)" inline in a paragraph is parsed into a real link
   // (renderRichText in app/[locale]/blog/[slug]/page.tsx); a standalone
   // entry of exactly "![alt](/path.webp)" renders as a full-width inline
-  // image instead of a paragraph. Everything else renders as plain text,
-  // so posts using neither convention are unaffected.
+  // image instead of a paragraph; a standalone entry starting with "## "
+  // renders as a subheading. Everything else renders as plain text, so
+  // posts using none of these conventions are unaffected.
   body: string[];
   category: string; // ties back to a service, e.g. "Branding"
   date: string; // ISO date, e.g. "2026-06-02"
