@@ -279,6 +279,7 @@ export type ServiceSlug = (typeof SERVICE_SLUGS)[number];
 
 // Canonical blog post order + stable slugs (locale-neutral).
 export const BLOG_SLUGS = [
+  "what-is-meta-muse",
   "ai-news-roundup-3",
   "ai-prompts-for-better-product-photos",
   "ai-news-roundup-september-2026",
