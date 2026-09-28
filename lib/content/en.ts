@@ -826,6 +826,26 @@ const en: Dictionary = {
         metaDescription:
           "Photo and video production by Glomark for Key 2, Al-Moftah Real Estate's newest project in Muscat.",
       },
+      {
+        slug: "lazurd-cafe",
+        name: "Lazurd Cafe",
+        tagline: "A specialty coffee brand with four locations across Salalah.",
+        services: ["Media Production"],
+        summary:
+          "A full video shoot and edit, logo animation, and brand placement across cups and store interiors.",
+        scope: [
+          "Lazurd Cafe is a specialty coffee brand with four locations across Salalah — Dhariz Beach, Lazurd Yard, the DU branch and Awqad — open from early morning into the night. Our work for Lazurd centred on media production: a full video shoot and edit built around their food and drink menu, produced to travel well across Instagram and their other social channels rather than sit as a single one-off hero video.",
+          "Alongside the video, we produced a logo animation for Lazurd — turning their static palm-and-wave mark into a short, motion-ready sting that opens and closes their video content — and designed how that same logo sits across physical touchpoints, from cups to the shop interior, so the brand feels consistent whether a customer meets it on screen or on the table in front of them.",
+        ],
+        approach: [
+          "The brief wasn't a single campaign video — it was content built for volume. With four branches and a fast-moving social feed to keep fed, the shoot was planned to capture enough usable footage and coverage in one session to support ongoing posting, not just a single launch moment.",
+          "The logo animation and the physical placement work were treated as one project rather than two separate deliverables: the same motion logic used in the video sting informed how the mark was sized and positioned on cups and around the shop, so the brand reads the same whether someone meets it on Instagram first or walks through the door first.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "Lazurd Cafe — Media Production | Glomark Work",
+        metaDescription:
+          "Video production, logo animation and brand placement by Glomark for Lazurd Cafe, a specialty coffee brand with multiple locations in Salalah, Oman.",
+      },
     ],
   },
   blog: {

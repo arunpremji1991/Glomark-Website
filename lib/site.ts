@@ -312,6 +312,7 @@ export const CLIENT_SLUGS = [
   "do-cafe",
   "ventura",
   "almoftah",
+  "lazurd-cafe",
 ] as const;
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
@@ -322,7 +323,7 @@ export type ClientSlug = (typeof CLIENT_SLUGS)[number];
 // application-development) have no matching client yet; omit rather than
 // force an unrelated case study, same principle as CLIENT_GALLERY above.
 export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
-  "media-production": ["almoftah", "voice-of-the-season", "do-cafe"],
+  "media-production": ["almoftah", "voice-of-the-season", "do-cafe", "lazurd-cafe"],
   "events-planning": ["voice-of-the-season", "do-events"],
   "live-broadcasting": [],
   "digital-marketing": ["reventure", "firstexchange"],
@@ -342,6 +343,7 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   "do-cafe": "https://www.instagram.com/docafe.om/",
   ventura: "https://www.instagram.com/ventura.sll/",
   almoftah: "https://www.almoftah.om/",
+  "lazurd-cafe": "https://www.instagram.com/lazurd.om/",
 };
 
 export interface GalleryItem {
@@ -401,5 +403,11 @@ export const CLIENT_GALLERY: Record<ClientSlug, GalleryItem[]> = {
   almoftah: [
     { file: "almoftah-1.webp", href: "https://www.instagram.com/almoftah_realestate/p/Db5l5BuDYMs/", isVideo: false },
     { file: "almoftah-2.webp", href: "https://www.instagram.com/almoftah_realestate/p/DbpuhR9Co2g/", isVideo: false },
+  ],
+  "lazurd-cafe": [
+    { file: "lazurd-cafe-1.webp", href: "https://www.instagram.com/lazurd.om/p/Da84TSWsV5g/", isVideo: false },
+    { file: "lazurd-cafe-2.webp", href: "https://www.instagram.com/lazurd.om/p/Da81x8dMF9Q/", isVideo: false },
+    { file: "lazurd-cafe-3.webp", href: "https://www.instagram.com/lazurd.om/reel/DNlbYiesaH7/", isVideo: true },
+    { file: "lazurd-cafe-4.webp", href: "https://www.instagram.com/lazurd.om/p/DN8tOT_DJJs/", isVideo: false },
   ],
 };
