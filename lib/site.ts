@@ -313,6 +313,8 @@ export const CLIENT_SLUGS = [
   "ventura",
   "almoftah",
   "lazurd-cafe",
+  "grip-burger",
+  "bahjah-orphan-society",
 ] as const;
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
@@ -326,10 +328,10 @@ export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
   "media-production": ["almoftah", "voice-of-the-season", "do-cafe", "lazurd-cafe"],
   "events-planning": ["voice-of-the-season", "do-events"],
   "live-broadcasting": [],
-  "digital-marketing": ["reventure", "firstexchange"],
-  branding: ["reventure", "do-chocolate", "ventura"],
-  "website-development": ["reventure", "do-chocolate", "ventura"],
-  "social-media-management": ["do-cafe", "ventura", "reventure"],
+  "digital-marketing": ["reventure", "firstexchange", "grip-burger"],
+  branding: ["reventure", "do-chocolate", "ventura", "grip-burger"],
+  "website-development": ["reventure", "do-chocolate", "ventura", "bahjah-orphan-society"],
+  "social-media-management": ["do-cafe", "ventura", "reventure", "grip-burger", "bahjah-orphan-society"],
   "application-development": [],
 };
 
@@ -344,6 +346,8 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   ventura: "https://www.instagram.com/ventura.sll/",
   almoftah: "https://www.almoftah.om/",
   "lazurd-cafe": "https://www.instagram.com/lazurd.om/",
+  "grip-burger": "https://www.instagram.com/grip.om/",
+  "bahjah-orphan-society": "https://www.bahjah.net/",
 };
 
 export interface GalleryItem {
@@ -410,4 +414,11 @@ export const CLIENT_GALLERY: Record<ClientSlug, GalleryItem[]> = {
     { file: "lazurd-cafe-3.webp", href: "https://www.instagram.com/lazurd.om/reel/DNlbYiesaH7/", isVideo: true },
     { file: "lazurd-cafe-4.webp", href: "https://www.instagram.com/lazurd.om/p/DN8tOT_DJJs/", isVideo: false },
   ],
+  "grip-burger": [
+    { file: "grip-burger-1.webp", href: "https://www.instagram.com/grip.om/p/DZ38QxJoL0C/", isVideo: false },
+    { file: "grip-burger-2.webp", href: "https://www.instagram.com/grip.om/p/DZQC6LRNwZY/", isVideo: false },
+    { file: "grip-burger-3.webp", href: "https://www.instagram.com/grip.om/p/DZf5c2bNsOU/", isVideo: false },
+    { file: "grip-burger-4.webp", href: "https://www.instagram.com/grip.om/reel/DYCj0ieNc57/", isVideo: true },
+  ],
+  "bahjah-orphan-society": [],
 };

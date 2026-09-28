@@ -846,6 +846,46 @@ const en: Dictionary = {
         metaDescription:
           "Video production, logo animation and brand placement by Glomark for Lazurd Cafe, a specialty coffee brand with multiple locations in Salalah, Oman.",
       },
+      {
+        slug: "grip-burger",
+        name: "GRIP",
+        tagline: "An American smashed-burger brand taking on Salalah's crowded food scene.",
+        services: ["Branding", "Social Media Management", "Digital Marketing"],
+        summary:
+          "Full-funnel marketing — branding, social media and paid campaigns — for a new burger brand that's now one of Salalah's most talked-about.",
+        scope: [
+          "GRIP opened in Salalah selling something the city didn't already have much of: an authentic American smashed burger. That's a real risk in a market where the fast-casual space is crowded and loyal to what people already know — a new food concept has to earn trust fast, or it disappears before word gets around. GRIP came to us to build that trust from the ground up, across two locations — Wafa Walk and Salalah Gardens Mall.",
+          "Our brief covered the full picture rather than one piece of it: the branding — the bold orange-and-white identity now on GRIP's cups, packaging, uniforms and both stores — alongside the social media management, paid promotions and paid campaigns that would actually get that identity in front of people. Branding gives a new restaurant a reason to be remembered; the media and paid strategy around it is what decides whether anyone sees it in the first place.",
+        ],
+        approach: [
+          "A new brand can't out-wait its competitors, so the strategy leaned on both channels at once rather than one after the other: paid campaigns and promotions to put GRIP in front of Salalah fast, and a consistent social media presence — built around the food itself, not just the offers — to give people a reason to keep it in mind once they'd seen it.",
+          "The identity work and the media strategy were built to reinforce each other from day one, so a customer meeting GRIP through a paid ad, an Instagram reel, or in person at either branch gets the same bold, confident brand every time. It's worked: GRIP has grown into one of Salalah's most talked-about burger spots, with its second branch opening at Salalah Gardens Mall covered by local media, and its reels regularly picked up and reshared by food and lifestyle accounts across the city.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "GRIP — Branding & Marketing Strategy | Glomark Work",
+        metaDescription:
+          "Branding, social media management and paid campaigns by Glomark for GRIP, an American smashed-burger brand now one of Salalah's most talked-about.",
+      },
+      {
+        slug: "bahjah-orphan-society",
+        name: "Omani Bahjah Orphan Society",
+        tagline: "A Dhofar-wide charity caring for orphans and widows across Salalah.",
+        services: ["Website Development", "Social Media Management"],
+        summary:
+          "A dedicated campaign landing page and ongoing social media management for one of Dhofar's leading charitable societies.",
+        scope: [
+          "Omani Bahjah Orphan Society is a charitable association covering all of Dhofar Governorate, providing financial, educational, psychological and social support to orphans and widows from its centre in East Salalah. An organisation doing that much real work — training courses, food and housing support, school sponsorships and more — still needs people to actually find it, understand what it does, and act, whether that's a donor giving to a specific campaign or a family reaching out for support. That's a communication challenge as much as a charitable one.",
+          "Our work for Bahjah covers a dedicated landing page, designed and built specifically for one of the society's campaigns — a single, focused destination instead of asking a supporter to dig through a general website for the right programme and the right way to give — alongside ongoing management of their social media, where most people actually encounter the society's work day to day.",
+        ],
+        approach: [
+          "A charity's credibility is its biggest asset, so the campaign page was built to move fast without cutting corners: clear about what the campaign supports, clear about how to give, and built to work as well on a phone shared in a WhatsApp group as it does anywhere else.",
+          "On social, the approach is the same one we'd use for any brand trying to earn attention — consistent posting, clear storytelling, content that explains the society's actual programmes rather than only asking for support — because a charity people understand is a charity people trust enough to give to.",
+        ],
+        linkLabel: "Visit website",
+        metaTitle: "Omani Bahjah Orphan Society — Web & Social | Glomark Work",
+        metaDescription:
+          "Campaign landing page design and development, and social media management by Glomark for Omani Bahjah Orphan Society in Salalah, Oman.",
+      },
     ],
   },
   blog: {
