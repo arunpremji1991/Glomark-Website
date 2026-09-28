@@ -722,69 +722,80 @@ const en: Dictionary = {
       {
         slug: "do-events",
         name: "Do. Events",
-        tagline: "An events company in Oman.",
+        tagline: "Fourteen years of VIP weddings and government events in Dhofar — mostly known by word of mouth.",
         services: [
           "Website Development",
           "Branding",
           "Media Production",
           "Social Media Management",
+          "Digital Marketing",
         ],
         summary:
-          "A new website and ongoing media and social support for an events business.",
+          "Turning 14 years of government and VIP event work into a real digital presence — and opening a B2B channel that never existed.",
         scope: [
-          "For Do. Events, we handled branding, built their website, and produce the media and social content that keeps their event work visible between bookings.",
+          "Do. Events has spent 14 years running VIP weddings, government conferences and major community events across Dhofar — the kind of work that earns a national award and standing relationships with government institutions. The problem was never the work; it was that almost none of it existed anywhere a stranger could find it. A private company planning a launch event, or a family with no personal connection to the business, had no website, no pricing, no case studies and no way to picture what 14 years of experience actually looked like — so they went with whichever competitor answered first.",
+          "Our work for Do. Events centres on a dedicated website and a real digital presence across social and search, built around the work that already exists rather than starting from zero. That means turning flagship events into proper case studies, expanding the visual identity into a full brand guideline, and building a genuine B2B pathway: a corporate profile that speaks separately to government, private-sector and education clients, plus a direct outreach plan to the people in Dhofar's institutions who actually book events.",
         ],
         approach: [
-          "An events business sells trust as much as it sells production — so the site and social presence are built to showcase real work clearly, updated as new events come in.",
+          "Trust is the real product in events, so the content leans human rather than promotional: founders talking through why the company does things the way it does, team leads walking through how they handle a last-minute problem on-site, and real client testimonials — the kind of material no advertisement can fake, and the kind Do. Events had never turned into anything public in 14 years.",
+          "This first phase is also the foundation for a longer-term idea: specialised sub-brands under the Do. Events name — for conferences, festivals, weddings and exhibitions — so a government client and a couple planning a wedding each meet a brand that speaks directly to what they need, instead of one general events company trying to speak to everyone at once. The goal for this stage is straightforward: make 14 years of proven work findable by anyone who starts, as most people do, with a Google search.",
         ],
         linkLabel: "View on Instagram",
-        metaTitle: "Do. Events — Branding & Website | Glomark Work",
+        metaTitle: "Do. Events — Branding, Website & B2B Strategy | Glomark Work",
         metaDescription:
-          "Branding, website development, media production and social media management by Glomark for Do. Events, an events company in Oman.",
+          "A website, brand guidelines, case studies and a new B2B outreach channel by Glomark for Do. Events, a 14-year VIP wedding and government events company in Dhofar.",
       },
       {
         slug: "do-chocolate",
         name: "Do. Chocolate & Flowers",
-        tagline: "A chocolate and flowers brand in Oman.",
+        tagline: "Genuinely high-end chocolate and flowers, quietly priced out of its own market by perception.",
         services: [
           "Ecommerce Website Development",
           "Branding",
           "Media Production",
           "Social Media Management",
+          "Digital Marketing",
         ],
-        summary: "An online store, brand identity and always-on social content.",
+        summary:
+          "Giving a real, high-quality product the storytelling and pricing clarity it never had — across two Salalah branches.",
         scope: [
-          "We built Do. Chocolate & Flowers' online store alongside their brand identity, and produce the photography, video and social content that keeps the shop feeling fresh.",
+          "Do. Chocolate & Flowers runs two branches in Salalah selling genuinely high-quality, internationally comparable chocolate — but a lot of Salalah had quietly decided the brand was expensive and not for them, without ever seeing a price. Competitors leaned into that exact idea in their own marketing. The real story — that Do. has options across a real range of budgets — was true, but it was never the one being told.",
+          "Our work covers the full customer journey: an ecommerce website that finally gives Do. a digital storefront and a clear path from browsing to ordering, and a content system built around naming and telling the story of individual chocolate varieties — ingredients, filling, the thing that makes each one different — so a customer can order by name instead of pointing at a box. Content is planned around one high-production campaign film each season, cut down into the dozens of reels, stories and ads that actually reach people day to day.",
         ],
         approach: [
-          "For a gifting brand, the product has to look as good online as it does in person — so the ecommerce build and the media production were treated as one job, not two.",
+          "People don't buy chocolate and flowers — they buy a feeling they can't put into words, which is why some of the strongest content is the simplest: a box opening, a bouquet arriving, the couple of seconds of real reaction in between. It's also planned around who the gift is for and why it's being given, rather than treating every customer the same way.",
+          "Fixing the \"expensive\" perception meant fixing the whole picture at once, not just posting nicer photos: responding to reviews that had gone unanswered, giving the product a real identity instead of a generic one, and opening a corporate gifting catalogue for the companies and institutions currently spending that budget elsewhere because Do. never showed up as an option. It's also built to work alongside Do. Café, so a single visit to one becomes a reason to visit the other.",
         ],
         linkLabel: "View on Instagram",
-        metaTitle: "Do. Chocolate & Flowers — Ecommerce, Branding | Glomark",
+        metaTitle: "Do. Chocolate & Flowers — Ecommerce & Content | Glomark",
         metaDescription:
-          "Ecommerce website development, branding, media production and social media management by Glomark for Do. Chocolate & Flowers.",
+          "Ecommerce website, product storytelling and a corporate gifting channel by Glomark for Do. Chocolate & Flowers, a two-branch gifting brand in Salalah.",
       },
       {
         slug: "do-cafe",
         name: "Do. Café",
-        tagline: "A café brand in Oman.",
+        tagline: "A brand-new café that had to arrive on opening day already known.",
         services: [
           "Website Development",
           "Branding",
           "Media Production",
           "Social Media Management",
+          "Digital Marketing",
         ],
-        summary: "A brand identity, website and ongoing content for a café.",
+        summary:
+          "Building a full public identity and pre-launch campaign for a café that started with a logo and nothing else.",
         scope: [
-          "We built Do. Café's brand identity and website, and produce the photography, video and social content that keeps the café's feed active.",
+          "Do. Café launched in 2026 as a brand-new concept under the Do. Chocolate & Flowers umbrella — and a few weeks out from opening, it had an official logo and nothing else: no menu, no pricing, no photos of the space, no active social accounts. A café doesn't get a second chance at a first impression, and correcting a bad one later is far harder than building the right one from day one.",
+          "Our work covered everything between that starting point and opening day: menu design, photography of the space and the food, and a pre-launch content campaign timed to build an audience that was already waiting by the time the doors opened, rather than starting from zero. That included a launch event with media coverage, influencer seeding to reach beyond Do.'s existing following, and a full Google Business, Maps and local SEO presence live before day one.",
         ],
         approach: [
-          "A café's brand lives mostly in photos of the space and the menu, so our work leans heavily on media production feeding a consistent, appetite-driving social presence.",
+          "The positioning is deliberate — \"the small-occasions café\" — a space for the catch-ups and small celebrations that don't need a big venue, in a category Salalah's café scene hadn't claimed yet. Every piece of content frames one of those small moments and places Do. Café exactly where it belongs.",
+          "It's also built to work with the rest of the Do. family rather than stand alone: sitting alongside Do. Chocolate & Flowers means a coffee visit can naturally turn into a gift stop, turning one trip into two experiences. Past the opening, the plan keeps going — loyalty cards, a second-visit discount, monthly influencer mentions and small contests designed to turn regular customers into the people who bring their friends next time.",
         ],
         linkLabel: "View on Instagram",
-        metaTitle: "Do. Café — Branding & Website | Glomark Work",
+        metaTitle: "Do. Café — Brand Launch & Pre-Launch Campaign | Glomark Work",
         metaDescription:
-          "Branding, website development, media production and social media management by Glomark for Do. Café.",
+          "Full brand identity, menu design, photography and a pre-launch media campaign by Glomark for Do. Café, a new café under the Do. Chocolate & Flowers umbrella in Salalah.",
       },
       {
         slug: "ventura",
