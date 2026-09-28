@@ -852,6 +852,37 @@ const en: Dictionary = {
     linkCopied: "Link copied",
     posts: [
       {
+        slug: "why-big-brands-build-their-own-fonts",
+        title:
+          "Instagram Just Changed Its Logo for the First Time in 10 Years — Here's Why Big Brands Bother Building Custom Fonts",
+        excerpt:
+          "Instagram's first rebrand in a decade wasn't really about the logo — it was about typography. Here's what changed, why it's being called 'Instagzam,' and why brands build custom fonts.",
+        category: "Branding",
+        date: "2026-09-28",
+        readTime: "5 min read",
+        body: [
+          "On August 13, Instagram quietly did one of the more expensive things a brand can do: it redrew its own letters. The app's wordmark changed for the first time in a decade, alongside two brand-new custom typefaces — and within hours, half the internet had renamed it \"Instagzam.\"",
+          "The logo tweak itself is a footnote. The interesting question is why a company already worth hundreds of billions of dollars would bother hand-drawing its own letterforms instead of just picking a nice typeface off Google Fonts like almost everyone else does. The answer says a lot about how the biggest brands in the world actually think about [branding](/en/services/branding/) — and it scales down further than you'd expect.",
+          "## What Actually Changed on August 13",
+          "According to [Meta's own design team](https://www.meta.com/design-at-meta/blog/the-new-instagram-brand-identity/), the new wordmark is entirely custom lettering — not an existing font, so there's nothing to license or download. It mixes a script style for letters like \"s,\" \"r\" and \"g\" with a plainer sans serif for the rest, aiming for something bolder and simpler while keeping the brand's signature cursive feel. Alongside it, Instagram introduced an updated Instagram Sans plus two entirely new typefaces: Instagram Pen, a handwriting face, and Instagram Mono, a monospace font. The rollout is global and gradual, continuing through the rest of 2026 and into next year.",
+          "### The Backlash: Meet \"Instagzam\"",
+          "Reactions split almost immediately. A good chunk of the internet decided the stylised \"r\" reads more like a \"z,\" and \"Instagzam\" jokes were everywhere within hours; other critics called the new lettering hard to read or accused it of looking like \"AI slop.\" [Instagram's head of design, Jasmine Probst, responded directly](https://variety.com/2026/digital/news/instagram-designer-explains-new-logo-responds-to-critics-1236836340/): \"it's been 10 years, and the platform has evolved enormously — it was time for a refresh,\" adding that \"the new mark moves us forward while keeping the same warmth and familiarity people love.\" Not everyone piled on — social media consultant Matt Navarra called it \"fresh, modern, true to the original,\" even while predicting designers would have \"a fun day tearing it apart.\"",
+          "## Why Would a Company This Big Bother With Custom Letters?",
+          "![A close-up of the letter A printed in dozens of different typefaces](/media/blog/inline/why-big-brands-build-their-own-fonts-1.webp)",
+          "This is the part that actually matters for anyone thinking about their own brand: a typeface is never neutral. Every font carries a personality — sharp or soft, formal or playful, cheap or considered — before a single word is even read. A hand-drawn wordmark like Instagram's can never be diluted, because literally no one else can license it; it belongs to one brand and always will. And Instagram Pen specifically mirrors something users already do — layering handwritten text onto photos and Stories — which is a smarter piece of brand strategy than it looks: the typeface reflects behaviour the platform already sees, rather than being imposed on top of it.",
+          "## It's Not Just Instagram — Every Major Platform Has Done This",
+          "Instagram is late to this, if anything. Netflix commissioned [Netflix Sans](https://www.typeroom.eu/article/airbnb-joins-netflix-and-apple-custom-typeface-trend) specifically to stop paying for a licensed typeface (Gotham) at the scale of a global streaming service — the company has said owning its own font saves it millions of dollars a year. Airbnb built its own typeface, Cereal, for a more strategic reason: designer Derek Chan said the company needed something that worked \"beautifully online and offline while reflecting our brand personality,\" which no off-the-shelf font quite managed. Apple, Google and Spotify all run on proprietary type systems of their own. At a certain size, a brand's typeface stops being a design choice and becomes infrastructure — as core to the product as its colour palette or logo.",
+          "## What This Means If You're Building a Brand (Without Meta's Budget)",
+          "Almost no business needs a literally hand-drawn, custom-built typeface — that's an effort reserved for platforms serving billions of people across dozens of scripts. But the underlying lesson scales down perfectly: the typeface you picked because it \"looked fine\" is quietly doing as much work as your logo or colour palette. Most customers will never consciously clock it, but they register it — the same way they register a business as feeling premium, casual, trustworthy or careless within a second of seeing it.",
+          "It matters even more for a bilingual market like Oman. A typeface that looks sharp in English often falls apart the moment it meets Arabic — different letterforms, different rhythm, different weight balance — which is exactly the trap we've written about before in [why bilingual branding wins in Oman](/en/blog/bilingual-branding-in-oman/). If it's been a while since anyone looked hard at the type in your logo, your signage or your Instagram bio, that's usually one of the quieter [signs a business has outgrown its current identity](/en/blog/signs-you-need-a-rebrand/).",
+          "Instagram's redesign, \"Instagzam\" jokes and all, is really just a very expensive reminder of an old design truth: there's no such thing as a neutral font choice. Every brand is already making one, on purpose or by default. If you're not sure which one yours is making, [let's talk](/en/contact/).",
+        ],
+        metaTitle: "Instagram's New Logo and Why Big Brands Build Custom Fonts",
+        metaDescription:
+          "Instagram just changed its wordmark for the first time in 10 years, with two brand-new custom typefaces. Here's what changed — and why big brands do this.",
+        ogImage: "/og/why-big-brands-build-their-own-fonts-og.webp",
+      },
+      {
         slug: "what-is-meta-muse",
         title:
           "What Is Meta Muse? Inside Meta's New AI Agent — and What It Means for Your Brand",
