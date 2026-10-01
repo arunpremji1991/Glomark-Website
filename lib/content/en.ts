@@ -923,6 +923,36 @@ const en: Dictionary = {
     linkCopied: "Link copied",
     posts: [
       {
+        slug: "can-ai-run-your-ad-campaigns-now",
+        title: "Runway Ads: The AI That Writes, Publishes and Optimises Campaigns by Itself",
+        excerpt:
+          "An AI startup says it can write, publish and keep improving your ad campaigns across Meta, Google and TikTok without a person touching most of it. Here's what Runway Ads actually does — and what's still missing.",
+        category: "Digital Marketing",
+        date: "2026-10-01",
+        readTime: "6 min read",
+        body: [
+          "Until this week, running paid ads meant a person writing the copy, picking the creative, choosing the audience, watching the numbers, and adjusting — over and over. On September 30, [Runway](https://runway.com/product/ads) — the AI video company behind some of the most-used generative video tools — launched something built to take most of that loop away from the person doing it: an AI agent that creates ad variations, publishes the ones you approve straight to Meta, Google and TikTok, reads back how they performed, and builds the next round around what actually worked.",
+          "The interesting question isn't whether that's technically impressive — it clearly is. It's whether handing your ad budget to a system like this is actually a good idea yet, and what's left for a marketer or an agency to do once the mechanical parts are automated. Here's what Runway Ads actually does, the results it's showing off, and what any of this means if you're the one approving the ad spend.",
+          "## What Runway Ads Actually Does",
+          "The system runs on a four-step loop. You connect your Meta, Google and TikTok accounts and upload a brand kit — logo, colours, product shots, past winning ads. Runway Ads then generates new video and image variants from that material, tagging each one by hook, audience, format and call to action, and runs it through an automated brand check before it reaches an approval queue (human approval is on by default, though teams can switch to fully automatic publishing). Approved versions go live directly on the connected platforms, and the system reads the performance data back from each one, then builds its next batch of variants around whatever actually earned spend — rather than a person manually editing dozens of versions by hand. It also handles the unglamorous parts: resizing creative for each platform's aspect ratio, localising on-screen text for different markets, and respecting budget guardrails like daily spend caps.",
+          "### The Numbers Runway Is Showing Off",
+          "![A hand drawing an upward-trending growth chart on a whiteboard](/media/blog/inline/can-ai-run-your-ad-campaigns-now-1.webp)",
+          "Runway says it has been running the system internally since July, scaling its own weekly ad output from 77 to roughly 900 ads, while doubling return on ad spend, lifting conversions by 34%, cutting cost per subscriber by 41%, and tying more than $100 million in annual recurring revenue to campaigns run through it. Worth being clear about what that is: it's Runway's own internal case study of its own product, not an independently audited result — a good sign the tool works for at least one company's specific use case, not proof of what it will do for anyone else's.",
+          "## Who's Actually Getting This Right Now",
+          "Runway Ads is currently in a pilot with select enterprise partners — AI coding platform [Lovable](https://lovable.dev/) is the named launch partner — with wider access planned \"in the coming weeks\" rather than open to everyone today. No public pricing has been announced. Runway itself is a $5.3 billion company, and this is squarely aimed at teams already running serious paid-media budgets across multiple platforms, not a small business's first ad campaign.",
+          "## The Part Nobody's Fully Solved: Will People Trust an AI-Made Ad?",
+          "The bigger question hanging over Runway Ads isn't technical — it's whether audiences actually want what it produces. A recent industry survey found 37% of marketers worry their audience will distrust ads they know were made by AI, and the top concerns agencies raise about AI in advertising are data privacy and compliance, followed closely by brand safety, bias and ad fraud. Some brands have started doing the opposite of leaning into AI — deliberately distancing their campaigns from anything that reads as AI-generated, precisely because the backlash is real. None of that makes the technology less capable; it just means the loudest part of this story — the automation — isn't the part that decides whether an ad actually works.",
+          "## What This Means If You Run Paid Ads in Oman",
+          "Realistically, Runway Ads itself isn't built for a small or mid-sized business in Salalah right now — it's an enterprise pilot tool for companies already running hundreds of ad variants a week. But the direction it points to matters regardless of who gets access first: the mechanical side of paid advertising — producing dozens of creative variants, resizing them, watching the numbers, cutting what underperforms — is exactly the part getting automated fastest, across every major platform, not just Runway's.",
+          "That shifts where the real value sits. What doesn't automate well is knowing which two or three ideas are actually worth testing in the first place, what a customer in Salalah responds to that a generic AI model has never seen, and when a campaign needs a human call rather than whatever the algorithm decided \"earned spend\" last week. We've written before about [how to actually budget for digital marketing in Oman](/en/blog/digital-marketing-budget-guide-oman/) — this is the same principle from a different angle: the tools for producing more ads, faster, keep getting cheaper and more automatic. The judgement about which ads are worth producing at all is the part that still has to come from somewhere.",
+          "If you're wondering whether your own paid campaigns are spending money on the right things — automated or not — [let's talk](/en/contact/).",
+        ],
+        metaTitle: "Can AI Run Your Ad Campaigns Now? Runway Ads, Explained",
+        metaDescription:
+          "Runway's new AI creates, publishes and improves ad campaigns on its own. Here's how it works, the real results, and what it means for your ad budget.",
+        ogImage: "/og/can-ai-run-your-ad-campaigns-now-og.webp",
+      },
+      {
         slug: "why-big-brands-build-their-own-fonts",
         title:
           "Instagram Just Changed Its Logo for the First Time in 10 Years — Here's Why Big Brands Bother Building Custom Fonts",
