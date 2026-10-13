@@ -323,6 +323,13 @@ export const CLIENT_SLUGS = [
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
 
+// Bump a client's number here whenever its logo file is replaced. It is added
+// to the image URL (?v=N) so the CDN fetches the new file instead of serving
+// the cached old one for hours.
+export const CLIENT_LOGO_VERSION: Partial<Record<ClientSlug, number>> = {
+  "voice-of-the-season": 2,
+};
+
 // Which real client case studies to surface on each service page's "see it
 // in action" section — only clients whose `services` tags (lib/content/*)
 // actually include that discipline. Two services (live-broadcasting,
