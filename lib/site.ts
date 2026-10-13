@@ -316,6 +316,7 @@ export const CLIENT_SLUGS = [
   "lazurd-cafe",
   "grip-burger",
   "bahjah-orphan-society",
+  "alazm-academy",
 ] as const;
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
@@ -336,6 +337,7 @@ export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
     "do-events",
     "do-chocolate",
     "do-cafe",
+    "alazm-academy",
   ],
   branding: ["reventure", "do-chocolate", "ventura", "grip-burger"],
   "website-development": ["reventure", "do-chocolate", "ventura", "bahjah-orphan-society"],
@@ -356,6 +358,7 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   "lazurd-cafe": "https://www.instagram.com/lazurd.om/",
   "grip-burger": "https://www.instagram.com/grip.om/",
   "bahjah-orphan-society": "https://www.bahjah.net/",
+  "alazm-academy": "https://www.instagram.com/alazm.om/",
 };
 
 export interface GalleryItem {
@@ -429,4 +432,9 @@ export const CLIENT_GALLERY: Record<ClientSlug, GalleryItem[]> = {
     { file: "grip-burger-4.webp", href: "https://www.instagram.com/grip.om/reel/DYCj0ieNc57/", isVideo: true },
   ],
   "bahjah-orphan-society": [],
+  "alazm-academy": [
+    { file: "alazm-academy-1.webp", href: "https://www.instagram.com/alazm.om/p/Dd36zlAMLVh/", isVideo: false },
+    { file: "alazm-academy-2.webp", href: "https://www.instagram.com/alazm.om/p/DdcC2TJMvim/", isVideo: false },
+    { file: "alazm-academy-3.webp", href: "https://www.instagram.com/alazm.om/p/DcmJU2nM0yY/", isVideo: false },
+  ],
 };

@@ -897,6 +897,26 @@ const en: Dictionary = {
         metaDescription:
           "Campaign landing page design and development, and social media management by Glomark for Omani Bahjah Orphan Society in Salalah, Oman.",
       },
+      {
+        slug: "alazm-academy",
+        name: "Al-Azm Academy for Training & Development",
+        tagline: "A training academy that needed quality leads from across Oman, not just reach.",
+        services: ["Digital Marketing"],
+        summary:
+          "A paid social media promotion plan and budget built to bring quality leads from across Oman to a leadership and skills academy.",
+        scope: [
+          "Al-Azm Academy for Training & Development describes its mission as building future leaders: self-development, entrepreneurship and leadership consulting, delivered through courses, workshops and youth initiatives. A training academy lives on the quality of the people who sign up, not the number of people who scroll past — so the brief to us was specific: bring quality leads from across Oman, rather than simply more followers or views.",
+          "We designed a paid social media promotion plan and budget around that objective, covering which programmes to promote, to whom, and how much to spend. We put the plan to the academy; they liked it and went ahead with it as proposed.",
+        ],
+        approach: [
+          "The plan started from the objective rather than the platform: quality leads from Oman. That shaped everything that followed — which programmes were worth promoting, what a lead needed to look like to be worth the spend, and a budget set out in advance, so the academy knew exactly what it was committing to before a single riyal was spent.",
+          "The academy approved the plan and budget as proposed, and the paid promotion has drawn a good response since. Paid promotion for a training business works best as a conversation that starts with an ad and ends with a person who genuinely wants the course — which is why we judge it by the quality of the enquiries, not the number of impressions.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "Al-Azm Academy — Paid Promotion & Lead Generation | Glomark Work",
+        metaDescription:
+          "A paid social media promotion plan and budget by Glomark to bring quality leads from across Oman to Al-Azm Academy for Training & Development.",
+      },
     ],
   },
   blog: {
