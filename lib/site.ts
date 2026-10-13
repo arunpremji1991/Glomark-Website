@@ -318,6 +318,7 @@ export const CLIENT_SLUGS = [
   "bahjah-orphan-society",
   "alazm-academy",
   "world-of-continents",
+  "multaqa-al-kitab",
 ] as const;
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
@@ -328,8 +329,8 @@ export type ClientSlug = (typeof CLIENT_SLUGS)[number];
 // application-development) have no matching client yet; omit rather than
 // force an unrelated case study, same principle as CLIENT_GALLERY above.
 export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
-  "media-production": ["almoftah", "voice-of-the-season", "do-cafe", "lazurd-cafe", "world-of-continents"],
-  "events-planning": ["voice-of-the-season", "do-events"],
+  "media-production": ["almoftah", "voice-of-the-season", "do-cafe", "lazurd-cafe", "world-of-continents", "multaqa-al-kitab"],
+  "events-planning": ["voice-of-the-season", "do-events", "multaqa-al-kitab"],
   "live-broadcasting": [],
   "digital-marketing": [
     "reventure",
@@ -362,6 +363,8 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   "bahjah-orphan-society": "https://www.bahjah.net/",
   "alazm-academy": "https://www.instagram.com/alazm.om/",
   "world-of-continents": "https://www.instagram.com/world.continents.om/",
+  // No dedicated social channels or site for this event — link to official coverage.
+  "multaqa-al-kitab": "https://www.omannews.gov.om/topics/ar/6/show/466882",
 };
 
 export interface GalleryItem {
@@ -445,4 +448,5 @@ export const CLIENT_GALLERY: Record<ClientSlug, GalleryItem[]> = {
     { file: "world-of-continents-2.webp", href: "https://www.instagram.com/world.continents.om/reel/Dc3k9BsMPGT/", isVideo: true },
     { file: "world-of-continents-3.webp", href: "https://www.instagram.com/world.continents.om/reel/Dc6ScLWNGg7/", isVideo: true },
   ],
+  "multaqa-al-kitab": [],
 };

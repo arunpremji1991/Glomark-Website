@@ -937,6 +937,26 @@ const en: Dictionary = {
         metaDescription:
           "Social media promotion, media development and a landing page by Glomark for The World of Continents, a two-month Khareef destination in Salalah, Oman.",
       },
+      {
+        slug: "multaqa-al-kitab",
+        name: "Book Forum 2026",
+        tagline: "A two-week cultural forum and book fair in Salalah, organised and produced end to end.",
+        services: ["Events Planning", "Media Production"],
+        summary:
+          "Overall event organisation and media production for a two-week book and culture forum in Salalah.",
+        scope: [
+          "The Book Forum 2026 (ملتقى الكتاب) ran from 29 April to 13 May at the Sultan Qaboos Youth Complex for Culture and Entertainment in Salalah, convened under the Dhofar Center for Culture, Heritage and Creativity with partners including the Omani Society of Writers and Literati and the Omani Association for People with Disabilities. Its programme combined dialogue sessions, workshops, a book fair and a symposium on culture in the age of artificial intelligence, touching on youth empowerment, intangible heritage, digital transformation and social inclusion.",
+          "A programme with this many strands and partners has to feel like one event to the people attending it. Glomark handled the forum's overall organisation and its media production, so what visitors experienced — the programme, the venue and the content documenting it — came from one team working to one plan, rather than several parties each doing their own part.",
+        ],
+        approach: [
+          "The forum had no standing social media channels of its own to build an audience on, so the event itself had to do the communicating: a clear programme people could follow, and media coverage that documented the sessions and the book fair for everyone who couldn't be there in person.",
+          "Over the fortnight, the forum hosted writers, intellectuals and cultural organisations across dialogue sessions, workshops and the book fair. For an event run by several organisations at once, the work that matters most is the least visible — keeping the schedule, the partners and the media pulling in the same direction from the opening day on 29 April to the close on 13 May.",
+        ],
+        linkLabel: "Read the news coverage",
+        metaTitle: "Book Forum 2026 — Event Organisation & Media | Glomark Work",
+        metaDescription:
+          "Overall event organisation and media production by Glomark for the Book Forum 2026, a two-week cultural forum and book fair in Salalah, Oman.",
+      },
     ],
   },
   blog: {
