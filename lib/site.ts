@@ -317,6 +317,7 @@ export const CLIENT_SLUGS = [
   "grip-burger",
   "bahjah-orphan-society",
   "alazm-academy",
+  "world-of-continents",
 ] as const;
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
@@ -327,7 +328,7 @@ export type ClientSlug = (typeof CLIENT_SLUGS)[number];
 // application-development) have no matching client yet; omit rather than
 // force an unrelated case study, same principle as CLIENT_GALLERY above.
 export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
-  "media-production": ["almoftah", "voice-of-the-season", "do-cafe", "lazurd-cafe"],
+  "media-production": ["almoftah", "voice-of-the-season", "do-cafe", "lazurd-cafe", "world-of-continents"],
   "events-planning": ["voice-of-the-season", "do-events"],
   "live-broadcasting": [],
   "digital-marketing": [
@@ -338,9 +339,10 @@ export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
     "do-chocolate",
     "do-cafe",
     "alazm-academy",
+    "world-of-continents",
   ],
   branding: ["reventure", "do-chocolate", "ventura", "grip-burger"],
-  "website-development": ["reventure", "do-chocolate", "ventura", "bahjah-orphan-society"],
+  "website-development": ["reventure", "do-chocolate", "ventura", "bahjah-orphan-society", "world-of-continents"],
   "social-media-management": ["do-cafe", "ventura", "reventure", "grip-burger", "bahjah-orphan-society"],
   "application-development": [],
 };
@@ -359,6 +361,7 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   "grip-burger": "https://www.instagram.com/grip.om/",
   "bahjah-orphan-society": "https://www.bahjah.net/",
   "alazm-academy": "https://www.instagram.com/alazm.om/",
+  "world-of-continents": "https://www.instagram.com/world.continents.om/",
 };
 
 export interface GalleryItem {
@@ -436,5 +439,10 @@ export const CLIENT_GALLERY: Record<ClientSlug, GalleryItem[]> = {
     { file: "alazm-academy-1.webp", href: "https://www.instagram.com/alazm.om/p/Dd36zlAMLVh/", isVideo: false },
     { file: "alazm-academy-2.webp", href: "https://www.instagram.com/alazm.om/p/DdcC2TJMvim/", isVideo: false },
     { file: "alazm-academy-3.webp", href: "https://www.instagram.com/alazm.om/p/DcmJU2nM0yY/", isVideo: false },
+  ],
+  "world-of-continents": [
+    { file: "world-of-continents-1.webp", href: "https://www.instagram.com/world.continents.om/p/Dcyeq2nsxwS/", isVideo: false },
+    { file: "world-of-continents-2.webp", href: "https://www.instagram.com/world.continents.om/reel/Dc3k9BsMPGT/", isVideo: true },
+    { file: "world-of-continents-3.webp", href: "https://www.instagram.com/world.continents.om/reel/Dc6ScLWNGg7/", isVideo: true },
   ],
 };

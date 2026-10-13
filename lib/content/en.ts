@@ -917,6 +917,26 @@ const en: Dictionary = {
         metaDescription:
           "A paid social media promotion plan and budget by Glomark to bring quality leads from across Oman to Al-Azm Academy for Training & Development.",
       },
+      {
+        slug: "world-of-continents",
+        name: "The World of Continents",
+        tagline: "A two-month Khareef destination in Salalah, with no time to build awareness slowly.",
+        services: ["Digital Marketing", "Media Production", "Website Development"],
+        summary:
+          "Social media promotion, video and media content, and a landing page for a temporary Khareef destination in Salalah.",
+        scope: [
+          "The World of Continents was a temporary destination at Sahl Atin in Salalah during the 2026 Khareef, describing itself as the most comprehensive tourist destination of Dhofar's autumn — a journey around the world, culture and the arts in one place — open for two months only. A seasonal event has a problem a permanent business doesn't: there's no slow build. There are no regulars to win over and no second season to correct mistakes in, so people have to hear about it, understand it and decide to go within days of it opening.",
+          "Our work covered the three things that decision depends on: social media promotion to put the destination in front of Khareef visitors, media development — the videos and content that showed what a visit would actually be like — and a landing page that gave anyone curious one clear place to find out what it was, when it was on and where.",
+        ],
+        approach: [
+          "With a fixed end date, every day on the calendar counted, so the promotion, the content and the landing page were planned as one system rather than three separate jobs: the ads and posts created interest, the media gave people a reason to believe the trip was worth making, and the landing page turned that interest into a clear plan — what, when and where.",
+          "The destination wrapped up on 7 September with a closing ceremony thanking the organisers, supporters, partners and participants who made it happen. For an event with a fixed run there's no second season to learn from — which is why the promotion, content and landing page had to be right from the first week.",
+        ],
+        linkLabel: "View on Instagram",
+        metaTitle: "World of Continents — Event Promotion & Media | Glomark Work",
+        metaDescription:
+          "Social media promotion, media development and a landing page by Glomark for The World of Continents, a two-month Khareef destination in Salalah, Oman.",
+      },
     ],
   },
   blog: {
