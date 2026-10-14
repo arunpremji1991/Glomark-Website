@@ -27,6 +27,11 @@ const IMAGE_ENTRY = /^!\[([^\]]*)\]\(([^)]+)\)$/;
 const HEADING2_ENTRY = /^##\s+(.+)$/;
 const HEADING3_ENTRY = /^###\s+(.+)$/;
 
+// A body entry whose lines all start with "- " renders as a bullet list (one
+// line per item; "[label](url)" links still work inside items). Existing
+// posts have no such entries, so they are unaffected.
+const LIST_ENTRY = /^- /;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     BLOG_SLUGS.map((slug) => ({ locale, slug })),
@@ -191,6 +196,22 @@ export default async function BlogPostPage({
                   >
                     {heading3Match[1]}
                   </h3>
+                );
+              }
+              if (LIST_ENTRY.test(para)) {
+                const items = para
+                  .split("\n")
+                  .map((line) => line.replace(/^-\s+/, "").trim())
+                  .filter(Boolean);
+                return (
+                  <ul key={i} className="space-y-3 rounded-2xl border border-white/8 bg-white/[0.03] p-6 sm:p-7">
+                    {items.map((item, j) => (
+                      <li key={j} className="flex gap-3 text-lg leading-relaxed text-cream/75">
+                        <span aria-hidden className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-lime" />
+                        <span className="min-w-0 pretty">{renderRichText(item)}</span>
+                      </li>
+                    ))}
+                  </ul>
                 );
               }
               return (
