@@ -32,6 +32,12 @@ const HEADING3_ENTRY = /^###\s+(.+)$/;
 // posts have no such entries, so they are unaffected.
 const LIST_ENTRY = /^- /;
 
+// A body entry starting with "::gallery" followed by one "![alt](src)" per
+// line renders as a photo grid (3:2 tiles, two columns; with an odd count the
+// first photo spans the full width). Existing posts don't use it.
+const GALLERY_ENTRY = /^::gallery\n/;
+const GALLERY_IMAGE = /^!\[([^\]]*)\]\(([^)]+)\)$/;
+
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
     BLOG_SLUGS.map((slug) => ({ locale, slug })),
@@ -167,6 +173,34 @@ export default async function BlogPostPage({
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-[1fr_360px]">
           <Reveal className="min-w-0 max-w-prose2 space-y-6">
             {post.body.map((para, i) => {
+              if (GALLERY_ENTRY.test(para)) {
+                const photos = para
+                  .split("\n")
+                  .slice(1)
+                  .map((line) => line.trim().match(GALLERY_IMAGE))
+                  .filter((m): m is RegExpMatchArray => Boolean(m));
+                const oddCount = photos.length % 2 === 1;
+                return (
+                  <div key={i} className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                    {photos.map(([, alt, src], j) => (
+                      <div
+                        key={src}
+                        className={`relative aspect-[3/2] overflow-hidden rounded-2xl bg-white/5 ${
+                          oddCount && j === 0 ? "sm:col-span-2" : ""
+                        }`}
+                      >
+                        <Image
+                          src={src}
+                          alt={alt}
+                          fill
+                          sizes="(min-width: 1024px) 40vw, 100vw"
+                          className="object-cover"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                );
+              }
               const imageMatch = para.match(IMAGE_ENTRY);
               if (imageMatch) {
                 const [, alt, src] = imageMatch;
