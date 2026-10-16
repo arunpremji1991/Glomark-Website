@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { BLOG_SLUGS, type BlogSlug } from "@/lib/site";
+import { BLOG_SLUGS, blogCoverPath, type BlogSlug } from "@/lib/site";
 
 // Higgsfield-generated editorial stills (see README) — one per post, in the
 // brand palette, distinct compositions from the service visuals.
@@ -17,7 +17,7 @@ export function BlogVisual({
   if (!BLOG_SLUGS.includes(slug)) return null;
   return (
     <Image
-      src={`/media/blog/${slug}.webp`}
+      src={blogCoverPath(slug)}
       alt={alt}
       fill
       priority={priority}

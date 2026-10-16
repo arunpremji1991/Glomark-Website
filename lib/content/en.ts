@@ -1033,7 +1033,7 @@ const en: Dictionary = {
         metaTitle: "Tesla's Flying Roadster: What Musk Really Showed",
         metaDescription:
           "Tesla's \"flying\" Roadster in photos: what the 15 October demo actually showed, which claims are unverified, and what brands can learn from the launch.",
-        ogImage: "/og/tesla-flying-roadster-what-elon-musk-actually-showed-og.webp",
+        ogImage: "/og/tesla-flying-roadster-what-elon-musk-actually-showed-og.webp?v=2",
       },
       {
         slug: "digital-marketing-news-this-week-x-lift-tiktok-meta-ai-ads",

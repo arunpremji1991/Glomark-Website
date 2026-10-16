@@ -1036,7 +1036,7 @@ const ar: Dictionary = {
         metaTitle: "رودستر تسلا الطائرة: ما الذي عرضه ماسك فعلاً | جلومارك",
         metaDescription:
           "رودستر تسلا «الطائرة» بالصور: ما أظهره عرض 15 أكتوبر فعلاً، وما لم يُتحقَّق منه، وما تتعلمه العلامات التجارية من الإطلاق.",
-        ogImage: "/og/tesla-flying-roadster-what-elon-musk-actually-showed-og.webp",
+        ogImage: "/og/tesla-flying-roadster-what-elon-musk-actually-showed-og.webp?v=2",
       },
       {
         slug: "digital-marketing-news-this-week-x-lift-tiktok-meta-ai-ads",

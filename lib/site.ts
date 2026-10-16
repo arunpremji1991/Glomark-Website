@@ -305,6 +305,18 @@ export const BLOG_SLUGS = [
 
 export type BlogSlug = (typeof BLOG_SLUGS)[number];
 
+// Bump a post's number here whenever its cover image file is replaced. It is
+// added to the image URL (?v=N) so the CDN fetches the new file instead of
+// serving the cached old one for hours.
+export const BLOG_COVER_VERSION: Partial<Record<BlogSlug, number>> = {
+  "tesla-flying-roadster-what-elon-musk-actually-showed": 2,
+};
+
+export function blogCoverPath(slug: BlogSlug | string): string {
+  const v = BLOG_COVER_VERSION[slug as BlogSlug];
+  return `/media/blog/${slug}.webp${v ? `?v=${v}` : ""}`;
+}
+
 // Canonical portfolio client order + stable slugs (locale-neutral). Each
 // client's logo lives at /media/clients/<slug>.webp (see README).
 export const CLIENT_SLUGS = [

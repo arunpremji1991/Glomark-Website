@@ -1,4 +1,4 @@
-import { CONTACT, SITE_URL, SOCIAL } from "./site";
+import { CONTACT, SITE_URL, SOCIAL, blogCoverPath } from "./site";
 import type { Dictionary, Locale } from "./i18n";
 import type { ServiceContent, BlogPost } from "./i18n";
 
@@ -79,7 +79,7 @@ export function articleSchema(post: BlogPost, locale: Locale) {
     "@id": `${SITE_URL}/${locale}/blog/${post.slug}/#article`,
     headline: post.title,
     description: post.excerpt,
-    image: [`${SITE_URL}/media/blog/${post.slug}.webp`],
+    image: [`${SITE_URL}${blogCoverPath(post.slug)}`],
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: locale,
