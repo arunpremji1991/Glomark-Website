@@ -337,6 +337,7 @@ export const CLIENT_SLUGS = [
   "alazm-academy",
   "world-of-continents",
   "multaqa-al-kitab",
+  "dhalkut-festival",
 ] as const;
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
@@ -354,7 +355,7 @@ export const CLIENT_LOGO_VERSION: Partial<Record<ClientSlug, number>> = {
 // application-development) have no matching client yet; omit rather than
 // force an unrelated case study, same principle as CLIENT_GALLERY above.
 export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
-  "media-production": ["almoftah", "voice-of-the-season", "do-cafe", "lazurd-cafe", "world-of-continents", "multaqa-al-kitab"],
+  "media-production": ["almoftah", "voice-of-the-season", "do-cafe", "lazurd-cafe", "world-of-continents", "multaqa-al-kitab", "dhalkut-festival"],
   "events-planning": ["voice-of-the-season", "do-events", "multaqa-al-kitab"],
   "live-broadcasting": [],
   "digital-marketing": [
@@ -390,6 +391,7 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   "world-of-continents": "https://www.instagram.com/world.continents.om/",
   // No dedicated social channels or site for this event — link to official coverage.
   "multaqa-al-kitab": "https://www.omannews.gov.om/topics/ar/6/show/466882",
+  "dhalkut-festival": "https://www.instagram.com/dhalkut_om/",
 };
 
 export interface GalleryItem {
@@ -474,4 +476,11 @@ export const CLIENT_GALLERY: Record<ClientSlug, GalleryItem[]> = {
     { file: "world-of-continents-3.webp", href: "https://www.instagram.com/world.continents.om/reel/Dc6ScLWNGg7/", isVideo: true },
   ],
   "multaqa-al-kitab": [],
+  // Two festival films (self-hosted, compressed for the web) and the award
+  // photo from the opening celebrations. Hrefs open the file itself.
+  "dhalkut-festival": [
+    { file: "dhalkut-festival-1.webp", href: "/media/clients/video/dhalkut-festival-1.mp4", isVideo: true },
+    { file: "dhalkut-festival-2.webp", href: "/media/clients/video/dhalkut-festival-2.mp4", isVideo: true },
+    { file: "dhalkut-festival-3.webp", href: "/media/clients/gallery/dhalkut-festival-award-full.webp", isVideo: false },
+  ],
 };

@@ -958,6 +958,26 @@ const en: Dictionary = {
         metaDescription:
           "Overall event organisation and media production by Glomark for the Book Forum 2026, a two-week cultural forum and book fair in Salalah, Oman.",
       },
+      {
+        slug: "dhalkut-festival",
+        name: "Sarb Dhalkut Festival 2026",
+        tagline: "A Sarb season festival in the Wilayat of Dhalkut, Dhofar — filmed and promoted by Glomark.",
+        services: ["Media Production", "Marketing"],
+        summary:
+          "Media production and marketing activities for the Sarb Dhalkut Festival 2026 in Dhofar.",
+        scope: [
+          "The Sarb Dhalkut Festival 2026 (مهرجان صرب ضلكوت) brought the Wilayat of Dhalkut in Dhofar together for a festival that closed with a ceremony on 30 October 2026. The festival's own Instagram channel describes it as a gathering to celebrate the beauty of the Sarb season, the authenticity of the place and the spirit of Dhalkut. Glomark's scope was media production and marketing activities for the festival.",
+          "The films we produced show the festival from the air and on the ground: the Dhalkut coastline and mountains, the festival grounds at night, the opening and closing ceremonies, traditional performances, craftspeople at work and children enjoying the evenings. Two of them are shown below.",
+        ],
+        approach: [
+          "A festival like this is over in days, so the footage has to do two jobs: capture the atmosphere for the people who were there, and carry it to everyone who wasn't. We filmed the ceremonies, the performances and the crafts as well as the landscape around them, so the story is about Dhalkut itself and not only the stage.",
+          "At the opening celebrations, His Highness Sayyid Marwan bin Turki Al Said, Governor of Dhofar, recognised Glomark for its part in the festival. It was a proud moment for our team, and a reflection of the creativity and shared effort behind the work.",
+        ],
+        linkLabel: "View the festival on Instagram",
+        metaTitle: "Sarb Dhalkut Festival 2026 — Media & Marketing | Glomark Work",
+        metaDescription:
+          "Media production and marketing activities by Glomark for the Sarb Dhalkut Festival 2026 in Dhofar, recognised by the Governor of Dhofar at the opening celebrations.",
+      },
     ],
   },
   blog: {
