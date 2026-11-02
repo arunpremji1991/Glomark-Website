@@ -861,21 +861,22 @@ const en: Dictionary = {
         slug: "grip-burger",
         name: "GRIP",
         tagline: "An American smashed-burger brand taking on Salalah's crowded food scene.",
-        services: ["Branding", "Social Media Management", "Digital Marketing"],
+        services: ["Branding", "Website Development", "Social Media Management", "Digital Marketing"],
         summary:
-          "Full-funnel marketing — branding, social media and paid campaigns — for a new burger brand that's now one of Salalah's most talked-about.",
+          "Full-funnel marketing — branding, a website, social media and paid campaigns — for a new burger brand that's now one of Salalah's most talked-about.",
         scope: [
           "GRIP opened in Salalah selling something the city didn't already have much of: an authentic American smashed burger. That's a real risk in a market where the fast-casual space is crowded and loyal to what people already know — a new food concept has to earn trust fast, or it disappears before word gets around. GRIP came to us to build that trust from the ground up, across two locations — Wafa Walk and Salalah Gardens Mall.",
           "Our brief covered the full picture rather than one piece of it: the branding — the bold orange-and-white identity now on GRIP's cups, packaging, uniforms and both stores — alongside the social media management, paid promotions and paid campaigns that would actually get that identity in front of people. Branding gives a new restaurant a reason to be remembered; the media and paid strategy around it is what decides whether anyone sees it in the first place.",
+          "We also built GRIP's website, gripburger.om — the brand's home online. It tells the story of an Omani brand born in Dhofar, explains the smash method behind the burger, shows the menu with prices in Omani rials, and lists both Salalah branches, so someone who has just heard about GRIP can see what's on offer and where to find it in a few seconds. It carries the same playful, illustrated style as the rest of the identity, with burger and chef characters and wave patterns.",
         ],
         approach: [
           "A new brand can't out-wait its competitors, so the strategy leaned on both channels at once rather than one after the other: paid campaigns and promotions to put GRIP in front of Salalah fast, and a consistent social media presence — built around the food itself, not just the offers — to give people a reason to keep it in mind once they'd seen it.",
-          "The identity work and the media strategy were built to reinforce each other from day one, so a customer meeting GRIP through a paid ad, an Instagram reel, or in person at either branch gets the same bold, confident brand every time. It's worked: GRIP has grown into one of Salalah's most talked-about burger spots, with its second branch opening at Salalah Gardens Mall covered by local media, and its reels regularly picked up and reshared by food and lifestyle accounts across the city.",
+          "The identity work and the media strategy were built to reinforce each other from day one, so a customer meeting GRIP through a paid ad, an Instagram reel, or in person at either branch gets the same bold, confident brand every time. The website gives all of that somewhere to land: ads and reels can point curious people to one place for the menu and the branches, in the same voice. It's worked: GRIP has grown into one of Salalah's most talked-about burger spots, with its second branch opening at Salalah Gardens Mall covered by local media, and its reels regularly picked up and reshared by food and lifestyle accounts across the city.",
         ],
-        linkLabel: "View on Instagram",
-        metaTitle: "GRIP — Branding & Marketing Strategy | Glomark Work",
+        linkLabel: "Visit website",
+        metaTitle: "GRIP — Branding, Website & Marketing | Glomark Work",
         metaDescription:
-          "Branding, social media management and paid campaigns by Glomark for GRIP, an American smashed-burger brand now one of Salalah's most talked-about.",
+          "Branding, website, social media management and paid campaigns by Glomark for GRIP, an American smashed-burger brand now one of Salalah's most talked-about.",
       },
       {
         slug: "bahjah-orphan-society",

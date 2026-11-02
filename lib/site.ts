@@ -368,7 +368,7 @@ export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
     "world-of-continents",
   ],
   branding: ["reventure", "do-chocolate", "ventura", "grip-burger"],
-  "website-development": ["reventure", "do-chocolate", "ventura", "bahjah-orphan-society", "world-of-continents"],
+  "website-development": ["reventure", "do-chocolate", "ventura", "bahjah-orphan-society", "world-of-continents", "grip-burger"],
   "social-media-management": ["do-cafe", "ventura", "reventure", "grip-burger", "bahjah-orphan-society"],
   "application-development": [],
 };
@@ -384,7 +384,7 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   ventura: "https://www.instagram.com/ventura.sll/",
   almoftah: "https://www.almoftah.om/",
   "lazurd-cafe": "https://www.instagram.com/lazurd.om/",
-  "grip-burger": "https://www.instagram.com/grip.om/",
+  "grip-burger": "https://gripburger.om/",
   "bahjah-orphan-society": "https://www.bahjah.net/",
   "alazm-academy": "https://www.instagram.com/alazm.om/",
   "world-of-continents": "https://www.instagram.com/world.continents.om/",
