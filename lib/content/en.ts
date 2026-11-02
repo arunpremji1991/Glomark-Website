@@ -960,23 +960,38 @@ const en: Dictionary = {
       },
       {
         slug: "dhalkut-festival",
-        name: "Sarb Dhalkut Festival 2026",
-        tagline: "A Sarb season festival in the Wilayat of Dhalkut, Dhofar — filmed and promoted by Glomark.",
-        services: ["Media Production", "Marketing"],
+        name: "Dhulkut Spring Festival 2026",
+        tagline: "A spring festival in the Wilayat of Dhulkut, Dhofar — branded, filmed and promoted by Glomark.",
+        services: ["Branding", "Media Production", "Marketing"],
         summary:
-          "Media production and marketing activities for the Sarb Dhalkut Festival 2026 in Dhofar.",
+          "Brand identity, media production and marketing activities for the Dhulkut Spring Festival 2026 in Dhofar.",
         scope: [
-          "The Sarb Dhalkut Festival 2026 (مهرجان صرب ضلكوت) brought the Wilayat of Dhalkut in Dhofar together for a festival that closed with a ceremony on 30 October 2026. The festival's own Instagram channel describes it as a gathering to celebrate the beauty of the Sarb season, the authenticity of the place and the spirit of Dhalkut. Glomark's scope was media production and marketing activities for the festival.",
-          "The films we produced show the festival from the air and on the ground: the Dhalkut coastline and mountains, the festival grounds at night, the opening and closing ceremonies, traditional performances, craftspeople at work and children enjoying the evenings. Two of them are shown below.",
+          "The Dhulkut Spring Festival 2026 (مهرجان صرب ضلكوت) brought the Wilayat of Dhulkut in Dhofar together for a festival that closed with a ceremony on 30 October 2026. The festival's own Instagram channel describes it as a gathering to celebrate the beauty of the Sarb season, the authenticity of the place and the spirit of Dhulkut. Glomark's scope covered three things: the festival's brand identity, its media production and its marketing activities.",
+          "For the identity, we designed the festival's logo and the visual system around it. The logo is a flowing piece of Arabic calligraphy for the name Dhulkut, with a three-diamond mark, made in Arabic and English versions. Around it sits a family of border patterns and illustrated tiles drawn from the wilayat itself — its coast, its landmarks, the camel route from the shore to the mountain and the tabaldi tree — and five colour themes, each matched to a part of the festival: the sea, Sarb nature, gypsum and stone, fire and frankincense, and folk arts.",
+          "The films we produced show the festival from the air and on the ground: the Dhulkut coastline and mountains, the festival grounds at night, the opening and closing ceremonies, traditional performances, craftspeople at work and children enjoying the evenings. Two of them are shown below.",
         ],
         approach: [
-          "A festival like this is over in days, so the footage has to do two jobs: capture the atmosphere for the people who were there, and carry it to everyone who wasn't. We filmed the ceremonies, the performances and the crafts as well as the landscape around them, so the story is about Dhalkut itself and not only the stage.",
+          "A festival that lasts days needs a look people recognise at once. The identity gives every poster, social post and banner the same shapes and colours, so the festival is recognisable whether it appears on a phone screen or on a flag at the venue. We applied it to social media templates and event flags as examples of how it works in use.",
+          "A festival like this is over in days, so the footage has to do two jobs: capture the atmosphere for the people who were there, and carry it to everyone who wasn't. We filmed the ceremonies, the performances and the crafts as well as the landscape around them, so the story is about Dhulkut itself and not only the stage.",
           "At the opening celebrations, His Highness Sayyid Marwan bin Turki Al Said, Governor of Dhofar, recognised Glomark for its part in the festival. It was a proud moment for our team, and a reflection of the creativity and shared effort behind the work.",
         ],
         linkLabel: "View the festival on Instagram",
-        metaTitle: "Sarb Dhalkut Festival 2026 — Media & Marketing | Glomark Work",
+        metaTitle: "Dhulkut Spring Festival 2026 — Brand Identity & Media | Glomark Work",
         metaDescription:
-          "Media production and marketing activities by Glomark for the Sarb Dhalkut Festival 2026 in Dhofar, recognised by the Governor of Dhofar at the opening celebrations.",
+          "Brand identity, media production and marketing activities by Glomark for the Dhulkut Spring Festival 2026 in Dhofar, recognised by the Governor of Dhofar at the opening celebrations.",
+        galleryTitle: "Festival highlights",
+        brand: {
+          title: "Brand identity",
+          intro:
+            "Pages from the identity guide we made for the festival: the logo and its versions, the patterns and tiles, the colour themes, and the identity in use.",
+          captions: [
+            "The festival logo over the Dhulkut coastline.",
+            "The Arabic and English logos, horizontal versions, and one-colour versions on the festival's brand colours.",
+            "Border patterns and illustrated tiles drawn from the wilayat and its heritage.",
+            "Five colour themes, each matched to a part of the festival: the sea, Sarb nature, gypsum and stone, fire and frankincense, and folk arts.",
+            "The identity in use: social media templates and event flags.",
+          ],
+        },
       },
     ],
   },

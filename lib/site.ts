@@ -347,6 +347,7 @@ export type ClientSlug = (typeof CLIENT_SLUGS)[number];
 // the cached old one for hours.
 export const CLIENT_LOGO_VERSION: Partial<Record<ClientSlug, number>> = {
   "voice-of-the-season": 2,
+  "dhalkut-festival": 2,
 };
 
 // Which real client case studies to surface on each service page's "see it
@@ -368,7 +369,7 @@ export const SERVICE_TO_CLIENTS: Record<ServiceSlug, ClientSlug[]> = {
     "alazm-academy",
     "world-of-continents",
   ],
-  branding: ["reventure", "do-chocolate", "ventura", "grip-burger"],
+  branding: ["reventure", "do-chocolate", "ventura", "grip-burger", "dhalkut-festival"],
   "website-development": ["reventure", "do-chocolate", "ventura", "bahjah-orphan-society", "world-of-continents", "grip-burger"],
   "social-media-management": ["do-cafe", "ventura", "reventure", "grip-burger", "bahjah-orphan-society"],
   "application-development": [],
@@ -392,6 +393,31 @@ export const CLIENT_LINKS: Record<ClientSlug, string> = {
   // No dedicated social channels or site for this event — link to official coverage.
   "multaqa-al-kitab": "https://www.omannews.gov.om/topics/ar/6/show/466882",
   "dhalkut-festival": "https://www.instagram.com/dhalkut_om/",
+};
+
+// Brand-identity artwork Glomark designed for a client, shown on the work
+// page under its own heading. Files live in /media/clients/brand/. "wide"
+// images are full pages of the brand guide; "square" images are social
+// templates and applications. Wide captions come from the client's `brand`
+// copy, in this order, then one caption for the squares.
+export interface BrandImage {
+  file: string;
+  kind: "wide" | "square";
+}
+
+export const BRAND_SHOWCASE: Partial<Record<ClientSlug, BrandImage[]>> = {
+  "dhalkut-festival": [
+    { file: "dhalkut-cover.webp", kind: "wide" },
+    { file: "dhalkut-logo-system.webp", kind: "wide" },
+    { file: "dhalkut-patterns.webp", kind: "wide" },
+    { file: "dhalkut-colours.webp", kind: "wide" },
+    { file: "dhalkut-social-coast.webp", kind: "square" },
+    { file: "dhalkut-social-town.webp", kind: "square" },
+    { file: "dhalkut-social-darbat.webp", kind: "square" },
+    { file: "dhalkut-social-khatla.webp", kind: "square" },
+    { file: "dhalkut-social-tree.webp", kind: "square" },
+    { file: "dhalkut-flags.webp", kind: "square" },
+  ],
 };
 
 export interface GalleryItem {

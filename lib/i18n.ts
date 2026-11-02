@@ -46,6 +46,15 @@ export interface ClientCase {
   linkLabel: string; // e.g. "View on Instagram" / "Visit website"
   metaTitle: string;
   metaDescription: string;
+  galleryTitle?: string; // overrides work.galleryTitle when the gallery isn't from a social feed
+  // Optional brand-identity showcase (see BRAND_SHOWCASE in lib/site.ts).
+  // `captions` follow the order of the showcase's wide images, with one extra
+  // caption at the end for the group of square images.
+  brand?: {
+    title: string;
+    intro: string;
+    captions: string[];
+  };
 }
 
 export interface BlogPost {

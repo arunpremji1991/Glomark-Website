@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { locales, isLocale, getDictionary } from "@/lib/i18n";
-import { CLIENT_SLUGS, CLIENT_LINKS, CLIENT_GALLERY } from "@/lib/site";
+import { CLIENT_SLUGS, CLIENT_LINKS, CLIENT_GALLERY, BRAND_SHOWCASE } from "@/lib/site";
 import { buildMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { LocaleLink } from "@/components/LocaleLink";
 import { Reveal } from "@/components/Reveal";
 import { ClientLogo } from "@/components/ClientLogo";
 import { MediaGallery } from "@/components/MediaGallery";
+import { BrandShowcase } from "@/components/BrandShowcase";
 import { CtaBand } from "@/components/home/CtaBand";
 
 export function generateStaticParams() {
@@ -57,6 +58,7 @@ export default async function ClientCasePage({
   const next = dict.work.clients[(index + 1) % dict.work.clients.length];
   const href = CLIENT_LINKS[client.slug];
   const gallery = CLIENT_GALLERY[client.slug];
+  const brandImages = BRAND_SHOWCASE[client.slug];
 
   return (
     <>
@@ -133,9 +135,25 @@ export default async function ClientCasePage({
           </Reveal>
         </div>
 
+        {brandImages && client.brand ? (
+          <Reveal delay={0.1} className="mt-20">
+            <h2 className="eyebrow">{client.brand.title}</h2>
+            <p className="mt-4 max-w-2xl text-lg leading-relaxed text-cream/75 pretty">
+              {client.brand.intro}
+            </p>
+            <div className="mt-8">
+              <BrandShowcase
+                images={brandImages}
+                captions={client.brand.captions}
+                clientName={client.name}
+              />
+            </div>
+          </Reveal>
+        ) : null}
+
         {gallery.length > 0 ? (
           <Reveal delay={0.12} className="mt-20">
-            <h2 className="eyebrow">{dict.work.galleryTitle}</h2>
+            <h2 className="eyebrow">{client.galleryTitle ?? dict.work.galleryTitle}</h2>
             <div className="mt-6">
               <MediaGallery
                 items={gallery}
