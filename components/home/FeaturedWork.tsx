@@ -3,6 +3,7 @@ import { LocaleLink } from "@/components/LocaleLink";
 import { Reveal } from "@/components/Reveal";
 import { TiltCard } from "@/components/TiltCard";
 import { ClientLogo } from "@/components/ClientLogo";
+import { FEATURED_CLIENT_SLUGS } from "@/lib/site";
 
 export function FeaturedWork({
   locale,
@@ -11,7 +12,9 @@ export function FeaturedWork({
   locale: Locale;
   dict: Dictionary;
 }) {
-  const clients = dict.work.clients.slice(0, 3);
+  const clients = FEATURED_CLIENT_SLUGS.map((slug) =>
+    dict.work.clients.find((c) => c.slug === slug),
+  ).filter((c): c is (typeof dict.work.clients)[number] => Boolean(c));
 
   return (
     <section className="bg-cream py-24 lg:py-32">

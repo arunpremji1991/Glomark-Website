@@ -342,6 +342,17 @@ export const CLIENT_SLUGS = [
 
 export type ClientSlug = (typeof CLIENT_SLUGS)[number];
 
+// Clients shown in the home page "Stories we helped tell" section, newest
+// work first. Add a new client at the top when a case study is published.
+export const FEATURED_CLIENT_SLUGS: ClientSlug[] = [
+  "dhalkut-festival",
+  "grip-burger",
+  "multaqa-al-kitab",
+  "reventure",
+  "firstexchange",
+  "voice-of-the-season",
+];
+
 // Bump a client's number here whenever its logo file is replaced. It is added
 // to the image URL (?v=N) so the CDN fetches the new file instead of serving
 // the cached old one for hours.
